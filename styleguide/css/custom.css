@@ -1,0 +1,251 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'FFKarbidWebRegular';
+  src: url("../fonts/KarbidWeb.eot?#iefix") format("embedded-opentype"), url("../fonts/KarbidWeb.woff") format("woff");
+}
+@font-face {
+  font-family: 'FF Karbid Web Bold';
+  src: url("../fonts/KarbidWeb-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/KarbidWeb-Bold.woff") format("woff");
+}
+/*doc
+
+---
+title: Headings
+name: Headings
+category: Typography
+---
+
+```html_example
+
+<h1>Hello world</h1>
+<h2>Hello world</h2>
+<h3>Hello world</h3>
+<h4>Hello world</h4>
+<h5>Hello world</h5>
+
+```
+
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'FF Karbid Web Bold', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+}
+
+/*doc
+
+---
+title: Body text
+name: Body text
+category: Typography
+---
+
+```html_example
+
+<p>Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+```
+
+*/
+body {
+  font-family: 'FFKarbidWebRegular', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+}
+
+/*doc
+
+---
+title: Colors
+name: Colors
+category: Colors
+---
+
+<div class="row">
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(0,51,128);"><br><br><br><br><br></div>
+    <pre class="text-center">$helsinki-blue-dark</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(0,114,198);"><br><br><br><br><br></div>
+    <pre class="text-center">$helsinki-blue-light</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(255,198,30);"><br><br><br><br><br></div>
+    <pre class="text-center">$helsinki-yellow</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(248,211,98);"><br><br><br><br><br></div>
+    <pre class="text-center">$helsinki-yellow-30</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(255,249,233);"><br><br><br><br><br></div>
+    <pre class="text-center">$helsinki-yellow-10</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(25,25,25);"><br><br><br><br><br></div>
+    <pre class="text-center">$black-90</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(128,128,128);"><br><br><br><br><br></div>
+    <pre class="text-center">$black-50</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(242,242,242);"><br><br><br><br><br></div>
+    <pre class="text-center">$black-5</pre>
+  </div>
+
+</div>
+
+```none_example
+
+```
+
+*/
+/*doc
+
+---
+title: Links
+name: Links
+category: Typography
+---
+
+```html_example
+<a href="#">Linkki</a>
+```
+
+*/
+a:link {
+  color: #0072c6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0072c6;
+  text-decoration: underline;
+}
+
+.yellow-bgr {
+  background-color: #ffc61e;
+}
+
+.blue-bgr, .page-header {
+  background-color: #0072c6;
+}
+
+.grey-bgr {
+  background-color: gray;
+}
+
+/*doc
+
+---
+title: Page heading
+name: Page heading
+category: Basic elements
+---
+
+```html_example
+
+<div class="page-header"><p><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Oma työlista</p>
+</div>
+
+```
+
+*/
+.page-header {
+  height: 40px;
+  color: #fff;
+  margin-top: 0;
+  padding: 10px;
+}
+
+/*doc
+
+---
+title: Message box
+name: Message box
+category: Basic elements
+---
+
+```html_example
+
+<div class="page-header"><p><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Oma työlista</p>
+</div>
+
+```
+
+*/
+.message-bubble {
+  position: relative;
+  border: 1px solid #0072c6;
+  padding: 10px;
+  margin: 20px 0 20px 0;
+  border-radius: 3px;
+}
+
+.message-bubble:after, .message-bubble:before {
+  bottom: 100%;
+  left: 50px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.message-bubble:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #ffffff;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.message-bubble:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-bottom-color: #0072c6;
+  border-width: 11px;
+  margin-left: -11px;
+}
+
+.palaute-actions {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin: 1px;
+}
+
+/*doc
+
+---
+title: Message editor
+name: Message editor
+category: Basic elements
+---
+
+```html_example
+
+<form class="col-lg-12" action="">
+  <textarea class="message-editor form-control" rows="6" placeholder="Kirjoita vastauksesi tähän"></textarea>
+  <div class="form-group">
+    <button class="btn btn-default"type="button" name="button">
+      Tallenna
+    </button>
+    <button class="btn btn-primary" type="button" name="button">
+      Lähetä
+    </button>
+  </div>
+</form>
+
+```
+
+*/
+.message-editor {
+  margin: 20px 0 20px 0;
+  background-color: #eff8ff;
+  border: 1px solid #0072c6;
+}
+
+/*# sourceMappingURL=custom.css.map */

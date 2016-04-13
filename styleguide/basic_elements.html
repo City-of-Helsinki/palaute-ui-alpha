@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Basic elements &ndash; </title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="styles/hgt-syntax.css">
+    <link rel="stylesheet" href="styles/hgt.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/custom.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="css/bootstrap.css">
+      
+        <link rel="stylesheet" href="css/custom.css">
+      
+    
+</head>
+
+  <body class="hgt-body">
+    <div class="hgt-pagehead">
+      <div class="hgt-container">
+        <nav class="hgt-pagehead-nav" role="navigation">
+          <a href="index.html"
+             class="hgt-pagehead-nav-item ">
+            Home
+          </a>
+
+          
+          <a href="typography.html"
+             class="hgt-pagehead-nav-item ">
+            Typography
+          </a>
+          
+          <a href="colors.html"
+             class="hgt-pagehead-nav-item ">
+            Colors
+          </a>
+          
+          <a href="basic_elements.html"
+             class="hgt-pagehead-nav-item selected">
+            Basic elements
+          </a>
+          
+        </nav>
+
+        <h1 class="hgt-pagehead-title"></h1>
+      </div>
+    </div>
+
+    <div class="hgt-styleguide hgt-container">
+      <div class="hgt-columns">
+        
+          <div class="hgt-column one-fourth">
+            <nav class="hgt-menu">
+              
+                
+                  <a href="#Message buble" class="hgt-menu-item">Message bubble</a>
+                
+              
+                
+                  <a href="#Message editor" class="hgt-menu-item">Message editor</a>
+                
+              
+                
+                  <a href="#Page heading" class="hgt-menu-item">Page heading</a>
+                
+              
+            </nav>
+          </div>
+        
+
+        <div class="hgt-column three-fourths">
+          <div class="hgt-content">
+<p class="styleguide">[Body text]: typography.html#Body text</p><p class="styleguide">[Message buble]: basic<em>elements.html#Message buble
+[Message editor]: basic</em>elements.html#Message editor
+[Page heading]: basic_elements.html#Page heading</p>
+<h1 id="Message buble" class="styleguide">Message bubble</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    
+<div class="message-bubble">
+<h5>Kaksoistutkinto <span>14:38 22.03.2016 </span></h5>
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+<p>Jussi (jussi@gmail.com)</p>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"message-bubble"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;h5&gt;</span>Kaksoistutkinto <span class="nt">&lt;span&gt;</span>14:38 22.03.2016 <span class="nt">&lt;/span&gt;&lt;/h5&gt;</span>
+<span class="nt">&lt;p&gt;</span>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Jussi (jussi@gmail.com)<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="Message editor" class="styleguide">Message editor</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    
+<form class="col-lg-12" action="">
+  <textarea class="message-editor form-control" rows="6" placeholder="Kirjoita vastauksesi tähän"></textarea>
+  <div class="form-group">
+    <button class="btn btn-default"type="button" name="button">
+      Tallenna
+    </button>
+    <button class="btn btn-primary" type="button" name="button">
+      Lähetä
+    </button>
+  </div>
+</form>
+
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"col-lg-12"</span> <span class="na">action=</span><span class="s">""</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"message-editor form-control"</span> <span class="na">rows=</span><span class="s">"6"</span> <span class="na">placeholder=</span><span class="s">"Kirjoita vastauksesi tähän"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="na">type=</span><span class="s">"button"</span> <span class="na">name=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+      Tallenna
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">name=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+      Lähetä
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="Page heading" class="styleguide">Page heading</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    
+<div class="page-header"><p><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Oma työlista</p>
+</div>
+
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-header"</span><span class="nt">&gt;&lt;p&gt;&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-arrow-left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span> Oma työlista<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="hgt-footer">
+      Built using <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/wearecube/hologram-github-theme">Hologram Github Theme</a>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="scripts/vendor/jquery.waypoints.min.js"></script>
+  <script src="scripts/vendor/sticky.min.js"></script>
+  <script src="scripts/vendor/infinite.min.js"></script>
+  <script src="scripts/hgt.js"></script>
+
+  
+
+  
+</body>
+</html>

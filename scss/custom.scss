@@ -1,0 +1,312 @@
+@font-face {
+  font-family: 'FFKarbidWebRegular';
+  src: url('../fonts/KarbidWeb.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/KarbidWeb.woff') format('woff'), /* Pretty Modern Browsers */
+}
+
+@font-face {
+  font-family: 'FFKarbidWebBold';
+  src: url('../fonts/KarbidWeb-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/KarbidWeb-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+}
+
+/*doc
+
+---
+title: Headings
+name: Headings
+category: Typography
+---
+
+```html_example
+
+<h1>Hello world</h1>
+<h2>Hello world</h2>
+<h3>Hello world</h3>
+<h4>Hello world</h4>
+<h5>Hello world</h5>
+
+```
+
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'FFKarbidWebBold', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+}
+
+/*doc
+
+---
+title: Body text
+name: Body text
+category: Typography
+---
+
+```html_example
+
+<p>Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+```
+
+*/
+
+body {
+  font-family: 'FFKarbidWebRegular', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+  margin-bottom: 40px;
+}
+
+/*doc
+
+---
+title: Colors
+name: Colors
+category: Colors
+---
+
+<div class="row">
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(0,51,128);"><br><br><br><br><br></div>
+    <pre class="text-center">$helsinki-blue-dark</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(0,114,198);"><br><br><br><br><br></div>
+    <pre class="text-center">$helsinki-blue-light</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(255,198,30);"><br><br><br><br><br></div>
+    <pre class="text-center">$helsinki-yellow</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(248,211,98);"><br><br><br><br><br></div>
+    <pre class="text-center">$helsinki-yellow-30</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(255,249,233);"><br><br><br><br><br></div>
+    <pre class="text-center">$helsinki-yellow-10</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(25,25,25);"><br><br><br><br><br></div>
+    <pre class="text-center">$black-90</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(128,128,128);"><br><br><br><br><br></div>
+    <pre class="text-center">$black-50</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(242,242,242);"><br><br><br><br><br></div>
+    <pre class="text-center">$black-5</pre>
+  </div>
+
+</div>
+
+```none_example
+
+```
+
+*/
+
+$helsinki-blue-dark: rgb(0,51,128);
+$helsinki-blue-light: rgb(0,114,198);
+$helsinki-yellow: rgb(255,198,30);
+$helsinki-yellow-30: rgb(248,211,98);
+$helsinki-yellow-10: rgb(255,249,233);
+$black-90: rgb(25,25,25);
+$black-50: rgb(128,128,128);
+$black-5: rgb(242,242,242);
+
+/*doc
+
+---
+title: Links
+name: Links
+category: Typography
+---
+
+```html_example
+<a href="#">Linkki</a>
+```
+
+*/
+
+a:link {
+  color: $helsinki-blue-light;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $helsinki-blue-light;
+  text-decoration: underline;
+}
+
+.yellow-bgr {
+  background-color: $helsinki-yellow;
+}
+
+.blue-bgr {
+  background-color: $helsinki-blue-light;
+}
+
+.grey-bgr {
+  background-color: $black-50;
+}
+
+/*doc
+
+---
+title: Page heading
+name: Page heading
+category: Basic elements
+---
+
+```html_example
+
+<div class="page-header"><p><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Oma työlista</p>
+</div>
+
+```
+
+*/
+
+
+.page-header {
+  @extend .blue-bgr;
+  height: 40px;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding:10px;
+  a:link, a:hover, a:visited, a:active {
+    color: #fff;
+  }
+}
+
+/*doc
+
+---
+title: Message bubble
+name: Message buble
+category: Basic elements
+---
+
+```html_example
+
+<div class="message-bubble">
+<h5>Kaksoistutkinto <span>14:38 22.03.2016 </span></h5>
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+<p>Jussi (jussi@gmail.com)</p>
+</div>
+```
+
+*/
+
+.message-bubble {
+	position: relative;
+	// background-color: lighten($helsinki-blue-light, 56);
+	border: 1px solid $helsinki-blue-light;
+  padding:10px;
+  margin: 20px 0 20px 0;
+  border-radius: 3px;
+}
+.message-bubble:after, .message-bubble:before {
+	bottom: 100%;
+	left: 50px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.message-bubble:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.message-bubble:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-bottom-color: $helsinki-blue-light;
+	border-width: 11px;
+	margin-left: -11px;
+}
+
+.palaute-actions {
+  background-color: $black-5;
+  padding: 10px;
+  margin: 1px;
+}
+
+/*doc
+
+---
+title: Message editor
+name: Message editor
+category: Basic elements
+---
+
+```html_example
+
+<form class="col-lg-12" action="">
+  <textarea class="message-editor form-control" rows="6" placeholder="Kirjoita vastauksesi tähän"></textarea>
+  <div class="form-group">
+    <button class="btn btn-default"type="button" name="button">
+      Tallenna
+    </button>
+    <button class="btn btn-primary" type="button" name="button">
+      Lähetä
+    </button>
+  </div>
+</form>
+
+```
+
+*/
+
+.message-editor {
+  margin: 20px 0 20px 0;
+  background-color: lighten($helsinki-blue-light, 58);
+  border: 1px solid $helsinki-blue-light;
+}
+
+
+.message-subject {
+  border-bottom: solid 1px lighten($helsinki-blue-light, 45);
+  // background-color: pink;
+  margin-top: 0;
+  vertical-align: middle;
+}
+
+.message-sender {
+  @extend .message-subject;
+}
+
+.message-content {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: solid 1px lighten($helsinki-blue-light, 45);
+}
+
+.contact-card {
+  @extend .palaute-actions;
+}
+
+.search-field-container {
+  padding: 10px;
+}
+
+.attachment-wrapper {
+  @extend .palaute-actions;
+  background-color: #fff;
+}
+
+.pink {
+  background-color: pink;
+}
