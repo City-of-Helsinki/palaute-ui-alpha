@@ -1,48 +1,76 @@
 
-# Readme
+# Palaute-ui-alpha
 
-## Riippuvuudet
+## Requirements
 
-* Ruby (sass kääntäjää varten) https://www.ruby-lang.org/en/
+* Ruby (for the sass compiling) https://www.ruby-lang.org/en/
 
-* node.js (npm paketinhallintaa varten) https://nodejs.org
+* Sass ruby gem http://sass-lang.com/install
 
-* Grunt ja Grunt CLI http://gruntjs.com
+* node.js (for npm package management) https://nodejs.org
 
-Kun kaikki edelläolevat on asennettu, aja komento `npm install`. Se asentaa `node_modules` hakemiston, joka tarvitaan kehitystyötä varten.
+* Grunt ja Grunt CLI (for running Grunt tasks) http://gruntjs.com
 
-Jos kehitystä ei tarvita tässä repossa olevat `.html` tiedostot sekä `js`, `css`, `fonts` ja `styleguide` hakemistot voi siirtää verkkopalvelimelle.
+## Basic usage
 
-Grunt.js konfiguraatio sisältää seuraavat tehtävät.
+Run command
+
+```
+npm install
+```
+
+It will download all needed npm packages to `node_modules` directory.
+
+If you are not developing, feel free to transfer the following files to a web server: `.html` files on the root, `js`, `css`, `fonts` and `styleguide` directories.
 
 ## Grunt
 
-Komento `grunt` ajaa kaikki edelläolevat tehtävät.
+Grunt.js configuration includes the following tasks.
 
 ### Watch
 
-Vahtii muuttuneita tiedostoja ja tekee määrätyt tehtävät kun havaitsee muutoksia. Esim. kun `.css` tiedosto tallennetaan tehdään `.sass` käännös.
+Watch task monitors changes in files or directories and runs assigned tasks when changes happen. E.g. when `.css` file is saved `sass` compilation task is executed.
 
 ### Sass
 
-* Watch `grunt sass`
+```
+grunt sass
+```
 
-Kääntää `.scss` tiedoston `.css` muotoon.  
+Compiles `.scss` files into `.css` files.
 
 ### Livereload
 
-* livereload `grunt livereload`
+```
+grunt livereload
+```
 
-Päivittää selaimen ikkunan, jolloin sitä ei tarvitse manuaalisesti päivittää. Vaatii selainen pluginin joka löytyy täältä: http://livereload.com.   
+Refreshes the browser window when watch task has found updated files. Requires browser plugin: http://livereload.com.   
 
 ### Hologram
 
-* Hologram `grunt hologram`
+```
+grunt hologram
+```
 
-Hologram tehtävä parsii `.scss` tiedostosta kommentit ja tuottaa niistä tyylioppaan hakemistoon `/styleguide`.  
+Hologram task parses comments and markup examples from the `.scss` file and creates a styleguide to directory `styleguide`.
 
 ### Bootlint
 
-* Bootlint `grunt bootlint`
+```
+grunt bootlint
+```
 
-Bootlint verifioi että html-markup on Bootstrapin hyvien konventioiden mukaista ja ilmoittaa virheistä jos sellaisia löytyy.
+Bootlint checks the html markup for errors that violate good Bootstrap coding conventions.
+
+Command `grunt` runs all tasks mentioned above.
+
+## Fonts
+
+Helsinki brand fonts are not committed to this repository, if you want to use them you have to install them manually to `fonts` directory.
+This prototype uses, but does not require following brand fonts:
+
+* KarbidWeb-Bold.eot
+* KarbidWeb-Bold.woff
+* KarbidWeb.eot
+* KarbidWeb.woff
