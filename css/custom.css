@@ -166,6 +166,15 @@ category: Basic elements
 .page-header a:link, .page-header a:hover, .page-header a:visited, .page-header a:active {
   color: #fff;
 }
+.page-header .badge {
+  background-color: #fff;
+  color: #0072c6;
+  padding: 3px 7px 1px 7px;
+}
+
+.label {
+  padding: .3em .6em .3em;
+}
 
 /*doc
 
@@ -256,16 +265,16 @@ category: Basic elements
 }
 
 .message-subject, .message-sender {
-  border-bottom: solid 1px #addcff;
   margin-top: 0;
   vertical-align: middle;
+  border-bottom: solid 1px #e6e6e6;
 }
 
 .message-content {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 10px;
-  border-bottom: solid 1px #addcff;
+  border-bottom: solid 1px #e6e6e6;
 }
 
 .search-field-container {
@@ -276,8 +285,28 @@ category: Basic elements
   background-color: #fff;
 }
 
+.avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.hr {
+  border-bottom: solid 1px #e6e6e6;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.panel-title p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
 .pink {
   background-color: pink;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=custom.css.map */
