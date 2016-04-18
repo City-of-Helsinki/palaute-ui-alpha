@@ -156,6 +156,21 @@ category: Basic elements
 ```
 
 */
+.navbar {
+  padding-top: 14px;
+  background-color: #0072c6;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+.navbar a:link, .navbar a:hover, .navbar a:visited, .navbar a:active {
+  color: #fff;
+}
+.navbar .badge {
+  background-color: #fff;
+  color: #0072c6;
+  padding: 3px 7px 1px 7px;
+}
+
 .page-header {
   height: 40px;
   color: #fff;
@@ -230,7 +245,7 @@ category: Basic elements
 .palaute-actions, .contact-card, .attachment-wrapper {
   background-color: #f2f2f2;
   padding: 10px;
-  margin: 1px;
+  border: solid 1px  #fff;
 }
 
 /*doc

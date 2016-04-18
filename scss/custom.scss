@@ -173,6 +173,20 @@ category: Basic elements
 
 */
 
+.navbar {
+  padding-top: 14px;
+  background-color: $helsinki-blue-light;
+  border-radius: 0;
+  margin-bottom: 0;
+  a:link, a:hover, a:visited, a:active {
+    color: #fff;
+  }
+  .badge {
+    background-color: #fff;
+    color: $helsinki-blue-light;
+    padding: 3px 7px 1px 7px;
+  }
+}
 
 .page-header {
   @extend .blue-bgr;
@@ -249,7 +263,7 @@ category: Basic elements
 .palaute-actions {
   background-color: $black-5;
   padding: 10px;
-  margin: 1px;
+  border: solid 1px  #fff;
 }
 
 /*doc

@@ -5,22 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Bootstrap 101 Template</title>
+  <title>Kommenttiketju</title>
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-12 page-header">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
         <a href="tyolista.html">
-        <p>
           <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Oma työlista <span class="badge">8</span>
-        </p>
         </a>
-      </div>
     </div>
+  </nav>
+  <div class="container">
     <!-- viestin tiedot -->
     <div class="row">
       <div class="col-lg-12 message-subject">
@@ -43,7 +41,7 @@
     <div class="row">
       <div class="col-lg-12 attachment-wrapper">
         <div class="col-xs-6">
-          <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Leiviskäntie 2</p>
+          <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Leiviskätie 2</p>
         </div>
         <div class="col-xs-6">
           <a href="#collapse-1" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample">
@@ -51,7 +49,7 @@
           </a>
         </div>
         <div class="collapse in" id="collapse-1">
-          <img src="http://placehold.it/345x250" alt="">
+          <img src="img/leiviskatie2.png" alt="">
         </div>
       </div>
     </div>
@@ -70,7 +68,12 @@
         </div>
       </div>
     </div>
-    <div class="row hr"></div>
+    <!-- <div class="row hr"></div> -->
+    <div class="row">
+      <div class="col-xs-12">
+        <h4>Kommentit</h4>
+      </div>
+    </div>
     <!-- Kommentti -->
     <div class="row">
       <div class="col-xs-12 margin-top-20">
@@ -123,7 +126,26 @@
         </div>
       </div>
     </div>
-
+    <div class="row">
+      <div class="col-lg-12">
+      <div class="palaute-actions">
+        <!-- a Linkkaa palautteen kirjoitussivulle  -->
+        <a href="vastaapalaute.html#palautteen_kirjoitus" ><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Vastaa palautteeseen</a>
+      </div>
+      <div class="palaute-actions">
+          <a href="pyydakommenttia.html"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+        Pyydä kommenttia</a>
+      </div>
+      <div class="palaute-actions">
+          <a href=""><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+        Siirrä toiselle vastattavaksi</a>
+      </div>
+      <div class="palaute-actions">
+          <a href=""><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+        Lähetä tiedoksi</a>
+      </div>
+      </div>
+    </div>
   </div>
   <!-- end container fluid -->
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
