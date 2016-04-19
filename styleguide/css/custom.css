@@ -4,7 +4,7 @@
   src: url("../fonts/KarbidWeb.eot?#iefix") format("embedded-opentype"), url("../fonts/KarbidWeb.woff") format("woff");
 }
 @font-face {
-  font-family: 'FF Karbid Web Bold';
+  font-family: 'FFKarbidWebBold';
   src: url("../fonts/KarbidWeb-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/KarbidWeb-Bold.woff") format("woff");
 }
 /*doc
@@ -27,7 +27,7 @@ category: Typography
 
 */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'FF Karbid Web Bold', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+  font-family: 'FFKarbidWebBold', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
 }
 
 /*doc
@@ -46,6 +46,7 @@ category: Typography
 */
 body {
   font-family: 'FFKarbidWebRegular', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+  margin-bottom: 40px;
 }
 
 /*doc
@@ -155,26 +156,56 @@ category: Basic elements
 ```
 
 */
+.navbar {
+  padding-top: 14px;
+  background-color: #0072c6;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+.navbar a:link, .navbar a:hover, .navbar a:visited, .navbar a:active {
+  color: #fff;
+}
+.navbar .badge {
+  background-color: #fff;
+  color: #0072c6;
+  padding: 3px 7px 1px 7px;
+}
+
 .page-header {
   height: 40px;
   color: #fff;
   margin-top: 0;
+  margin-bottom: 0;
   padding: 10px;
+}
+.page-header a:link, .page-header a:hover, .page-header a:visited, .page-header a:active {
+  color: #fff;
+}
+.page-header .badge {
+  background-color: #fff;
+  color: #0072c6;
+  padding: 3px 7px 1px 7px;
+}
+
+.label {
+  padding: .3em .6em .3em;
 }
 
 /*doc
 
 ---
-title: Message box
-name: Message box
+title: Message bubble
+name: Message buble
 category: Basic elements
 ---
 
 ```html_example
 
-<div class="page-header"><p><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Oma työlista</p>
+<div class="message-bubble">
+<h5>Kaksoistutkinto <span>14:38 22.03.2016 </span></h5>
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+<p>Jussi (jussi@gmail.com)</p>
 </div>
-
 ```
 
 */
@@ -211,10 +242,10 @@ category: Basic elements
   margin-left: -11px;
 }
 
-.palaute-actions {
+.palaute-actions, .contact-card, .attachment-wrapper {
   background-color: #f2f2f2;
   padding: 10px;
-  margin: 1px;
+  border: solid 1px  #fff;
 }
 
 /*doc
@@ -246,6 +277,61 @@ category: Basic elements
   margin: 20px 0 20px 0;
   background-color: #eff8ff;
   border: 1px solid #0072c6;
+}
+
+.message-subject, .message-sender {
+  margin-top: 0;
+  vertical-align: middle;
+  border-bottom: solid 1px #e6e6e6;
+}
+
+.message-content {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: solid 1px #e6e6e6;
+}
+
+.search-field-container {
+  padding: 10px;
+}
+
+.attachment-wrapper {
+  background-color: #fff;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.hr {
+  border-bottom: solid 1px #e6e6e6;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.panel-title p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.availability-online, .availability-offline {
+  background-color: green;
+  height: 16px;
+  width: 16px;
+}
+
+.availability-offline {
+  background-color: gray;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=custom.css.map */

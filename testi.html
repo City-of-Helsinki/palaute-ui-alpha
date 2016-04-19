@@ -37,6 +37,64 @@
       </div>
     </div>
   </div>
+  <!-- /input-group -->
+  <div class="col-md-3 search-field-container">
+      <div class="input-group">
+            <input id="searchinput" type="text" class="form-control" placeholder="Hae kommentoijaa nimellä">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Hae</button>
+            </span>
+      </div>
+      <!-- Item -->
+      <div id="searchlist" class="list-group col-md-3">
+          <a class="list-group-item" href="#">
+            <div class="media">
+              <div class="media-left">
+                  <img class="media-object" src="img/avatar.svg" alt="avatar">
+              </div>
+              <div class="media-body">
+                <h5 class="media-heading"><span>Holma, Antti</span></h5>
+                <p>Päällikkö</p>
+              </div>
+            </div>
+          </a>
+          <a class="list-group-item" href="#">
+            <div class="media">
+              <div class="media-left">
+                  <img class="media-object" src="img/avatar.svg" alt="avatar">
+              </div>
+              <div class="media-body">
+                <h5 class="media-heading"><span>Haapkylä, Minna</span></h5>
+                <p>Päällikkö</p>
+              </div>
+            </div>
+          </a>
+          <!-- Item -->
+          <a class="list-group-item" href="#">
+            <div class="media">
+              <div class="media-left">
+                  <img class="media-object" src="img/avatar.svg" alt="avatar">
+              </div>
+              <div class="media-body">
+                <h5 class="media-heading"><span>Aho, Eero</span></h5>
+                <p>Päällikkö</p>
+              </div>
+            </div>
+          </a>
+          <!-- Item -->
+          <a class="list-group-item" href="#">
+            <div class="media">
+              <div class="media-left">
+                  <img class="media-object" src="img/avatar.svg" alt="avatar">
+              </div>
+              <div class="media-body">
+                <h5 class="media-heading"><span>Chydenius, Jussi</span></h5>
+                <p>Päällikkö</p>
+              </div>
+            </div>
+          </a>
+        </div>
+  </div>
 </div>
 </div>
 <!-- end container fluid -->
@@ -44,5 +102,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-list-filter.min.js"></script>
+<script>
+
+$('#searchlist').btsListFilter('#searchinput', {itemChild: 'span'});
+
+</script>
 </body>
 </html>

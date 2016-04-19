@@ -345,6 +345,17 @@ category: Basic elements
   font-size: 14px;
 }
 
+.availability-online {
+  background-color: green;
+  height: 16px;
+  width: 16px;
+}
+
+.availability-offline {
+  @extend .availability-online;
+  background-color: gray;
+}
+
 // helper classes
 .pink {
   background-color: pink;

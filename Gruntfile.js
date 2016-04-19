@@ -52,7 +52,30 @@ module.exports = function(grunt) {
             stoponwarning: false
           },
           files: ['*.html']
-        }
+        },
+        // bake: {
+        //   includes: {
+        //     options: {
+        //         // Task-specific options go here.
+        //     },
+        //     files: [ {
+        //         expand: true,     // Enable dynamic expansion.
+        //         cwd: '',      // Src matches are relative to this path.
+        //         src: [ '*.html' ], // Actual pattern(s) to match.
+        //         dest: 'build/',   // Destination path prefix.
+        //         ext: '.html'   // Dest filepaths will have this extension.
+        //         } ]
+        //     },
+        //   },
+        //   // copy task copies files to build folder
+        //   //
+        //   copy: {
+        //       main: {
+        //         files: [
+        //           {expand: true, src: ['css/*', 'fonts/*', 'img/*'], dest: 'build/'},
+        //         ],
+        //       },
+        //     },
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
@@ -60,8 +83,17 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-hologram');
     grunt.loadNpmTasks('grunt-bootlint');
+    // grunt.loadNpmTasks('grunt-bake');
+    // grunt.loadNpmTasks('grunt-contrib-copy');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['watch', 'sass', 'hologram', 'bootlint']);
+    grunt.registerTask('default', [
+      'watch',
+      'sass',
+      'hologram',
+      'bootlint',
+      // 'bake',
+      // 'copy'
+    ]);
 
 };

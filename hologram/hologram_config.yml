@@ -29,6 +29,7 @@ code_example_renderers: ./code_example_renderers
 dependencies:
   - '../css'
   - '../fonts'
+  - '../img'
 
 # The CSS files to be included in the styleguide
 css_include:
@@ -51,3 +52,6 @@ nav_level: all
 # If you want Hologram to exit on these warnings, set the value to 'true'
 # (Default value is 'false')
 exit_on_warnings: false
+
+# The global title that is displayed at the top of the pages
+global_title: Styleguide

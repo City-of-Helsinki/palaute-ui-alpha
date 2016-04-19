@@ -316,6 +316,16 @@ category: Basic elements
   font-size: 14px;
 }
 
+.availability-online, .availability-offline {
+  background-color: green;
+  height: 16px;
+  width: 16px;
+}
+
+.availability-offline {
+  background-color: gray;
+}
+
 .pink {
   background-color: pink;
 }
