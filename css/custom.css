@@ -157,7 +157,7 @@ category: Basic elements
 
 */
 .navbar {
-  padding-top: 14px;
+  padding-top: 15px;
   background-color: #0072c6;
   border-radius: 0;
   margin-bottom: 0;
@@ -275,12 +275,11 @@ category: Basic elements
 */
 .message-editor {
   margin: 20px 0 20px 0;
-  background-color: #eff8ff;
-  border: 1px solid #0072c6;
 }
 
 .message-subject, .message-sender {
   margin-top: 0;
+  padding-top: 2px;
   vertical-align: middle;
   border-bottom: solid 1px #e6e6e6;
 }
@@ -290,10 +289,6 @@ category: Basic elements
   padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: solid 1px #e6e6e6;
-}
-
-.search-field-container {
-  padding: 10px;
 }
 
 .attachment-wrapper {
@@ -311,6 +306,11 @@ category: Basic elements
   margin-bottom: 20px;
 }
 
+.hr-nomargin {
+  border-bottom: solid 1px #e6e6e6;
+  margin: 0;
+}
+
 .panel-title p {
   margin-bottom: 0;
   font-size: 14px;
@@ -324,6 +324,26 @@ category: Basic elements
 
 .availability-offline {
   background-color: gray;
+}
+
+.date-separator {
+  color: #b3b3b3;
+}
+
+.comment-first {
+  padding-top: 14px;
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.comment {
+  background-color: #f2f2f2;
+  padding-top: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #fff;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .pink {

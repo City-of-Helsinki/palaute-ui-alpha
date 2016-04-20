@@ -118,6 +118,7 @@ $helsinki-yellow-30: rgb(248,211,98);
 $helsinki-yellow-10: rgb(255,249,233);
 $black-90: rgb(25,25,25);
 $black-50: rgb(128,128,128);
+$black-30: rgb(179,179,179);
 $black-5: rgb(242,242,242);
 
 /*doc
@@ -174,7 +175,7 @@ category: Basic elements
 */
 
 .navbar {
-  padding-top: 14px;
+  padding-top: 15px;
   background-color: $helsinki-blue-light;
   border-radius: 0;
   margin-bottom: 0;
@@ -294,13 +295,14 @@ category: Basic elements
 
 .message-editor {
   margin: 20px 0 20px 0;
-  background-color: lighten($helsinki-blue-light, 58);
-  border: 1px solid $helsinki-blue-light;
+  // background-color: lighten($helsinki-blue-light, 58);
+  // border: 1px solid $helsinki-blue-light;
 }
 
 
 .message-subject {
   margin-top: 0;
+  padding-top: 2px;
   vertical-align: middle;
   border-bottom: solid 1px lighten($black-50, 40);
 }
@@ -320,9 +322,9 @@ category: Basic elements
   @extend .palaute-actions;
 }
 
-.search-field-container {
-  padding: 10px;
-}
+// .search-field-container {
+//   padding: 10px;
+// }
 
 .attachment-wrapper {
   @extend .palaute-actions;
@@ -340,6 +342,11 @@ category: Basic elements
   margin-bottom: 20px;
 }
 
+.hr-nomargin {
+  border-bottom: solid 1px lighten($black-50, 40);
+  margin: 0;
+}
+
 .panel-title p {
   margin-bottom: 0;
   font-size: 14px;
@@ -354,6 +361,26 @@ category: Basic elements
 .availability-offline {
   @extend .availability-online;
   background-color: gray;
+}
+
+.date-separator {
+  color: $black-30;
+}
+
+.comment-first {
+  padding-top: 14px;
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.comment {
+  background-color: $black-5;
+  padding-top: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #fff;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 // helper classes
