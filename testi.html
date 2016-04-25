@@ -9,9 +9,15 @@
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
+  <style media="screen">
+    #button_block {
+      display: none;
+    }
+  </style>
 </head>
-<body>
+<body style="margin-bottom:200px; ">
   <div class="container-fluid">
+    <h1>Kartta ja liitteet</h1>
 <div class="row">
 <!-- collapsible panel for attachments and map -->
 <div class="col-md-12 panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -40,7 +46,7 @@
     </div>
   </div>
   </div>
-
+<h1>Filter list</h1>
   <!-- input-group group for searching -->
   <div class="row">
     <div class="col-md-12 search-field-container">
@@ -103,6 +109,52 @@
           </div>
     </div>
   </div>
+  <h1>Reveal editor</h1>
+  <p>Klikkaa "Vastaa palautteeseen" -linkkiä</p>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="palaute-actions col-md-3">
+        <a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample" >
+          <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Vastaa palautteeseen</a>
+      </div>
+      <div class="collapse" id="collapseExample">
+        <form action="">
+          <div class="form-group">
+            <textarea class="message-editor form-control scale" rows="6" placeholder="Kirjoita viestisi tähän"></textarea>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-default" disabled="disabled" type="button" name="button">
+              Tallenna
+            </button>
+            <button class="btn btn-primary" disabled="disabled" type="button" name="button">
+              Lähetä
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <h1>
+    Expand textarea
+  </h1>
+  <p>Klikkaa tekstikenttää</p>
+  <div class="row">
+    <div class="col-md-12">
+      <form action="">
+        <div class="form-group">
+          <textarea class="message-editor form-control scale" rows="1" placeholder="Klikkaa minua!"></textarea>
+        </div>
+        <div id="#button_block" class="form-group">
+          <button class="btn btn-default" type="button" name="button">
+            Ok
+          </button>
+          <button class="btn btn-primary" type="button" name="button">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
 </div>
 <!-- end container fluid -->
@@ -114,6 +166,28 @@
 <script>
 
 $('#searchlist').btsListFilter('#searchinput', {itemChild: 'span'});
+
+</script>
+<script>
+$(function()
+{
+
+$("#editor").focus(function()
+{
+$(this).animate();
+$("#button_block").slideDown("fast");
+return false;
+});
+
+$("#cancel").click(function()
+{
+$("#editor").animate({"height": "34px",}, "fast" );
+$("#button_block").slideUp("fast");
+return false;
+});
+
+});
+</script>
 
 </script>
 </body>

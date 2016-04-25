@@ -275,13 +275,27 @@ category: Basic elements
 */
 .message-editor {
   margin: 20px 0 20px 0;
+  height: 34px;
+}
+
+.message-editor:focus {
+  margin: 20px 0 20px 0;
+  height: 200px;
 }
 
 .message-subject, .message-sender {
   margin-top: 0;
   padding-top: 2px;
   vertical-align: middle;
+  background-color: #f2f2f2;
   border-bottom: solid 1px #e6e6e6;
+}
+.message-subject .badge, .message-sender .badge {
+  padding: 3px 7px 1px 7px;
+}
+
+.message-sender {
+  background-color: #fff;
 }
 
 .message-content {
@@ -338,12 +352,20 @@ category: Basic elements
 }
 
 .comment {
-  background-color: #f2f2f2;
+  background-color: #fff;
   padding-top: 14px;
   padding-bottom: 10px;
   border-bottom: 2px solid #fff;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.display-none {
+  display: none;
+}
+
+.message-actions {
+  padding-bottom: 20px;
 }
 
 .pink {
