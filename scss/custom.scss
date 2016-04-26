@@ -425,10 +425,11 @@ category: Basic elements
   padding-bottom: 20px;
 }
 
-// removes padding from div to make it full width
+// removes padding from message div to make it full width
 .message-collapse {
   padding-left: 0;
   padding-right: 0;
+  border: 0;
 }
 
 // media query to fix action buttons to bottom of screen @ <768px
@@ -444,6 +445,24 @@ category: Basic elements
 .fixed-buttons-bg {
   background-color: $black-5;
   border: solid 1px  #fff;
+}
+
+// Animation that fires when the tiedoksi section is updatet on the page
+.anim-tiedoksi {
+  animation-name: anim-tiedoksi;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  // animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  // animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+// keyframes for the animation
+@keyframes anim-tiedoksi {
+  0% { background-color: #fff; }
+  20%   { background-color: $helsinki-yellow-30; }
+  100% { background-color: #fff; }
 }
 
 // helper classes

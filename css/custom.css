@@ -389,6 +389,7 @@ category: Basic elements
 .message-collapse {
   padding-left: 0;
   padding-right: 0;
+  border: 0;
 }
 
 @media (max-width: 768px) {
@@ -403,6 +404,25 @@ category: Basic elements
   border: solid 1px  #fff;
 }
 
+.anim-tiedoksi {
+  animation-name: anim-tiedoksi;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+}
+
+@keyframes anim-tiedoksi {
+  0% {
+    background-color: #fff;
+  }
+  20% {
+    background-color: #f8d362;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
 .pink {
   background-color: pink;
 }
