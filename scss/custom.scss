@@ -51,7 +51,8 @@ category: Typography
 
 body {
   font-family: 'FFKarbidWebRegular', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
-  margin-bottom: 40px;
+  padding-bottom: 60px; // add padding to bottom of the page to leave room for fixed location buttons
+  padding-top: 50px;
 }
 
 /*doc
@@ -174,9 +175,17 @@ category: Basic elements
 
 */
 
-.navbar {
-  padding-top: 15px;
+.navbar-header {
   background-color: $helsinki-blue-light;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar {
+  // padding-top: 15px;
+  // background-color: $helsinki-blue-light;
   border-radius: 0;
   margin-bottom: 0;
   a:link, a:hover, a:visited, a:active {
@@ -264,7 +273,7 @@ category: Basic elements
 .palaute-actions {
   background-color: $black-5;
   padding: 10px;
-  border: solid 1px  #fff;
+  // border: solid 1px  #fff;
 }
 
 /*doc
@@ -293,20 +302,19 @@ category: Basic elements
 
 */
 
+
+// controls the message editor expand on focus
 .message-editor {
   margin: 20px 0 20px 0;
   height: 34px;
-  // background-color: lighten($helsinki-blue-light, 58);
-  // border: 1px solid $helsinki-blue-light;
+  transition: all 0.5s ease;
+  resize: none;
 }
 
 .message-editor:focus {
   margin: 20px 0 20px 0;
   height: 200px;
-  // background-color: lighten($helsinki-blue-light, 58);
-  // border: 1px solid $helsinki-blue-light;
 }
-
 
 .message-subject {
   margin-top: 0;
@@ -360,10 +368,23 @@ category: Basic elements
   margin: 0;
 }
 
-.panel-title p {
+
+// sets panel title and paragraph size and margin
+.panel-title, p {
   margin-bottom: 0;
   font-size: 14px;
+  a {
+    color: #333;
+  }
 }
+
+.panel-group .panel {
+  border-radius: 0px;
+  .message-sender {
+    padding-bottom: 0;
+  }
+}
+
 
 .availability-online {
   background-color: green;
@@ -402,6 +423,27 @@ category: Basic elements
 
 .message-actions {
   padding-bottom: 20px;
+}
+
+// removes padding from div to make it full width
+.message-collapse {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// media query to fix action buttons to bottom of screen @ <768px
+@media (max-width: 768px) {
+  #fixed-button {
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+  }
+}
+
+// backgroud div for fixed action buttons
+.fixed-buttons-bg {
+  background-color: $black-5;
+  border: solid 1px  #fff;
 }
 
 // helper classes
