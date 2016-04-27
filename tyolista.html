@@ -11,48 +11,73 @@
   <link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container-fluid">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">HeKaPa</a>
+        <p class="navbar-text">Työlista</p>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Kirjaudu ulos</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+              Oma työlista <span class="caret"></span></a>
+              <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Keskeneräiset</a></li>
+              <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Tähdelliset</a></li>
+              <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Käsitellyt</a></li>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
+  <div class="container">
     <div class="row">
-      <div class="col-lg-12 page-header">
-        <p>Oma työlista</p>
+      <div class="col-md-12">
+        <h1>Keskeneräiset</h1>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12">
-        <h1>Työlista</h1>
-        <div class="panel panel-default panel-info">
-          <div class="panel-heading">Perusduuni</div>
+      <div class="col-md-12 message-collapse">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+          <h5 class="panel-title">
+            Odottaa vastausta
+          </h5>
+          </div>
           <div class="panel-body">
             Duuni yksi
           </div>
         </div>
-        <div class="panel panel-default panel-warning">
-          <div class="panel-heading">Muu duuni</div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5 class="panel-title">
+              Odottaa kommenttia
+            </h5>
+          </div>
           <div class="panel-body">
             Duuni kaksi
           </div>
         </div>
-        <div class="panel panel-default panel-danger">
-          <div class="panel-heading">Tärkeä duuni</div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5 class="panel-title">
+              Tiedoksi
+            </h5>
+          </div>
           <div class="panel-body">
             Duuni kolme
           </div>
         </div>
-        <div class="panel panel-default">
-          <div class="panel-body">
-            Duuni neljä
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-body">
-            Duuni viisi
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-body">
-            Duuni kuusi
-          </div>
-        </div>
+
       </div>
     </div>
   </div>

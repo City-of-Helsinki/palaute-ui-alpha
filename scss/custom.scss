@@ -465,6 +465,18 @@ category: Basic elements
   100% { background-color: #fff; }
 }
 
+.navbar-default .navbar-text {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+    .navbar-text {
+    display: none;
+  }
+}
+
+
+
 // helper classes
 .pink {
   background-color: pink;
