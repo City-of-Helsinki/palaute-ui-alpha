@@ -341,11 +341,22 @@ category: Basic elements
   color: #333;
 }
 
-.panel-group .panel {
+.panel .panel-group .panel-default {
   border-radius: 0px;
 }
-.panel-group .panel .message-sender {
+.panel .panel-group .panel-default .message-sender {
   padding-bottom: 0;
+}
+
+.panel-group .panel {
+  border-radius: 0px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.panel-heading {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .availability-online, .availability-offline {
@@ -390,6 +401,7 @@ category: Basic elements
   padding-left: 0;
   padding-right: 0;
   border: 0;
+  border-radius: 0;
 }
 
 @media (max-width: 768px) {
@@ -402,6 +414,17 @@ category: Basic elements
 .fixed-buttons-bg {
   background-color: #f2f2f2;
   border: solid 1px  #fff;
+}
+
+.btn-fixed {
+  background-color: #f2f2f2;
+  border-radius: 0;
+}
+.btn-fixed:hover {
+  background-color: #d9d9d9;
+}
+.btn-fixed:active {
+  background-color: #cccccc;
 }
 
 .anim-tiedoksi {

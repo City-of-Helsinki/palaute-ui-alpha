@@ -378,13 +378,24 @@ category: Basic elements
   }
 }
 
-.panel-group .panel {
+.panel .panel-group .panel-default {
   border-radius: 0px;
   .message-sender {
     padding-bottom: 0;
   }
 }
 
+.panel-group .panel{
+  border-radius: 0px;
+  border-left: 0;
+  border-right: 0;
+}
+
+
+.panel-heading {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
 
 .availability-online {
   background-color: green;
@@ -430,6 +441,7 @@ category: Basic elements
   padding-left: 0;
   padding-right: 0;
   border: 0;
+  border-radius: 0;
 }
 
 // media query to fix action buttons to bottom of screen @ <768px
@@ -445,6 +457,25 @@ category: Basic elements
 .fixed-buttons-bg {
   background-color: $black-5;
   border: solid 1px  #fff;
+}
+
+.btn-fixed {
+    background-color: $black-5;
+    border-radius: 0;
+    &:hover {
+      background-color: darken($black-5, 10);
+    }
+    &:active {
+      background-color: darken($black-5, 15);
+    }
+    // .disabled {
+    //   background-color: red;
+    //   color: red;
+    // }
+    // [disabled="disabled"] {
+    //   background-color: red;
+    //   color: red;
+    // }
 }
 
 // Animation that fires when the tiedoksi section is updatet on the page
