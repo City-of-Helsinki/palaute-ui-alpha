@@ -52,7 +52,7 @@
                   </button>
                 </span>
           </div>
-          <div id="searchlist" class="list-group">
+          <div style="display: none;" id="searchlist" class="list-group">
             <!-- Item -->
               <a class="list-group-item" href="pyydakommenttia-3.html">
                 <div class="media">
@@ -144,16 +144,24 @@
         </form>
       </div>
     </div>
-          </div>
-          <!-- end container fluid -->
-          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-          <!-- Include all compiled plugins (below), or include individual files as needed -->
-          <script src="js/bootstrap.min.js"></script>
-          <!-- script for filtering the searchlist https://github.com/stefanocudini/bootstrap-list-filter -->
-          <script src="js/bootstrap-list-filter.min.js"></script>
-          <script>
-            $('#searchlist').btsListFilter('#searchinput', {itemChild: 'span'});
-          </script>
-        </body>
-        </html>
+    </div>
+    <!-- end container fluid -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- script for filtering the searchlist https://github.com/stefanocudini/bootstrap-list-filter -->
+    <script src="js/bootstrap-list-filter.min.js"></script>
+    <script>
+      $('#searchlist').btsListFilter('#searchinput', {itemChild: 'span'});
+    </script>
+    <!-- shows list of contants on searchfield focus -->
+    <script>
+    $("#searchinput").focus(function() {
+      $("#searchlist").show();
+    }).blur(function() {
+      $("#searchlist").fadeOut('fast');
+    });
+    </script>
+</body>
+</html>

@@ -57,7 +57,7 @@
               </span>
         </div>
         <!-- Item -->
-        <div id="searchlist" class="list-group">
+        <div style="display: none;" id="searchlist" class="list-group">
           <!-- Item -->
             <a class="list-group-item" href="#">
               <div class="media">
@@ -164,9 +164,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-list-filter.min.js"></script>
 <script>
-
 $('#searchlist').btsListFilter('#searchinput', {itemChild: 'span'});
-
 </script>
 <script>
 $(function()
@@ -185,10 +183,21 @@ $("#editor").animate({"height": "34px",}, "fast" );
 $("#button_block").slideUp("fast");
 return false;
 });
-
 });
 </script>
+<!-- shows list of contants on searchfield focus -->
+<script>
+$("#searchinput").focus(function() {
+  $("#searchlist").show();
+}).blur(function() {
+  $("#searchlist").fadeOut('fast');
+});
 
+// $("#searchinput").focusin(function() {
+//     $("#tool-tip").show();
+// }).focusout(function () {
+//     $("#tool-tip").hide();
+// });
 </script>
 </body>
 </html>
