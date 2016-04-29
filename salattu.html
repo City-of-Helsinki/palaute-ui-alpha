@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Vastaa</title>
+  <title>Salattu</title>
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
@@ -21,49 +21,42 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="tyolista.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
-        <p class="navbar-text">Vastaa</p>
+        <a class="navbar-brand" href="tyolista-kasitellyt.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+        <p class="navbar-text"></p>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="tyolista.html"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Oma työlista</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Kirjaudu ulos</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Oma työlista</a></li>
           <li><a href="tyolista-kasitellyt.html"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Käsitellyt palautteet</a></li>
-          <li><a href="index.html"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Kirjaudu ulos</a></li>
         </ul>
-      </div><!-- /.navbar-collapse -->
+        </div><!-- /.navbar-collapse -->
       </div>
     </nav>
     <div class="container">
       <div class="row">
         <div class="col-lg-12 message-subject">
-          <h5>{Asian nimi} <span class="label label-warning">Käsittely myöhässä</span></h5>
+          <h5>Salattu sisältö<span class="label label-warning">TILA?</span></h5>
         </div>
       </div>
-      <!-- text editor -->
       <div class="row">
         <div class="col-md-12">
-        <form action="">
-          <textarea class="message-editor form-control scale" rows="6" placeholder="Kirjoita vastauksesi tähän"></textarea>
+          <h4>OTSIKKO?</h4>
+          <p>Olet aikeissa katsoa salattua sisältöä. Varmista, että olet paikassa, jossa ulkopuoliset
+            eivät näe palautteen sisältöä.</p>
           <div class="form-group pull-right">
-            <button class="btn btn-default"type="button" name="button">
-              Tallenna luonnoksena
-            </button>
-            <button class="btn btn-default" type="button" name="button">
-              Hylkää luonnos
-            </button>
-            <button onclick="window.location.href='vastaa-2.html'" class="btn btn-primary" type="button" name="button">
-              Jatka
+            <button onclick="window.location.href='luepalaute.html'" class="btn btn-primary" type="button" name="button">
+              Avaa palaute
             </button>
           </div>
-        </form>
         </div>
       </div>
-        </div>
-        <!-- end container fluid -->
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-      </body>
-      </html>
+    </div>
+    <!-- end container fluid -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+  </html>

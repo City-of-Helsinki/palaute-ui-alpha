@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Tiedoksi 3</title>
+  <title>Siirra 2</title>
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
@@ -20,7 +20,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">HeKaPa</a>
+        <a class="navbar-brand" href="luepalaute.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -36,19 +36,29 @@
     <!-- input-group group for searching -->
     <div class="row">
       <div class="col-md-12">
-        <h3>Lähetä tiedoksi</h3>
+        <h3>Siirrä toiselle</h3>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <p>Vastaanottaja: Hanna Salminen (KSV) <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
       <!-- Search field -->
           <div class="input-group">
                 <input id="searchinput" type="text" class="form-control" placeholder="Kirjoita suku- tai etunimi">
                 <span class="input-group-btn">
-                  <button onclick="window.location.href='tiedoksi-3.html'" class="btn btn-primary" type="button">
+                  <button onclick="window.location.href='siirra-3-4.html'" class="btn btn-primary" type="button">
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                   </button>
                 </span>
           </div>
+
           <div style="display: none;" id="searchlist" class="list-group">
             <!-- Item -->
-              <a class="list-group-item" href="pyydakommenttia-3.html">
+              <a class="list-group-item" href="siirra-3.html">
                 <div class="media">
                   <!-- <div class="media-left">
                       <img class="media-object" src="" alt="avatar">
@@ -59,7 +69,7 @@
                 </div>
               </a>
               <!-- Item -->
-                <a class="list-group-item" href="tiedoksi-4.html">
+                <a class="list-group-item" href="siirra-3.html">
                   <div class="media">
                     <!-- <div class="media-left">
                         <img class="media-object" src="" alt="avatar">
@@ -70,7 +80,7 @@
                   </div>
                 </a>
             <!-- Item -->
-              <a class="list-group-item" href="tiedoksi-4.html">
+              <a class="list-group-item" href="siirra-3.html">
                 <div class="media">
                   <div class="media-left">
                       <img class="media-object" src="img/avatar.svg" alt="avatar">
@@ -82,7 +92,7 @@
                 </div>
               </a>
               <!-- Item -->
-              <a class="list-group-item" href="tiedoksi-4.html">
+              <a class="list-group-item" href="siirra-3.html">
                 <div class="media">
                   <div class="media-left">
                       <img class="media-object" src="img/avatar.svg" alt="avatar">
@@ -94,7 +104,7 @@
                 </div>
               </a>
               <!-- Item -->
-              <a class="list-group-item" href="tiedoksi-4.html">
+              <a class="list-group-item" href="siirra-3.html">
                 <div class="media">
                   <div class="media-left">
                       <img class="media-object" src="img/avatar.svg" alt="avatar">
@@ -106,7 +116,7 @@
                 </div>
               </a>
               <!-- Item -->
-              <a class="list-group-item" href="tiedoksi-4.html">
+              <a class="list-group-item" href="siirra-3.html">
                 <div class="media">
                   <div class="media-left">
                       <img class="media-object" src="img/avatar.svg" alt="avatar">
@@ -118,8 +128,8 @@
                 </div>
               </a>
             </div>
+          <!-- text field -->
       </div>
-
     </div>
     <div class="row">
       <div class="col-lg-12">
@@ -128,34 +138,29 @@
             <textarea class="message-editor form-control scale" rows="6" placeholder="Saateviesti"></textarea>
           </div>
           <div class="form-group pull-right">
-            <button class="btn btn-default" disabled="disabled" type="button" name="button">
+            <button class="btn btn-default" type="button" name="button">
               Peruuta
             </button>
-            <button class="btn btn-primary" disabled="disabled" type="button" name="button">
+            <button onclick="window.location.href='siirra-3.html#siirra-target'" class="btn btn-primary" type="button" name="button">
               Lähetä
             </button>
           </div>
         </form>
       </div>
     </div>
-    </div>
-    <!-- end container fluid -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- script for filtering the searchlist https://github.com/stefanocudini/bootstrap-list-filter -->
-    <script src="js/bootstrap-list-filter.min.js"></script>
-    <script>
-      $('#searchlist').btsListFilter('#searchinput', {itemChild: 'span'});
-    </script>
-    <!-- shows list of contants on searchfield focus -->
-    <script>
-    $("#searchinput").focus(function() {
-      $("#searchlist").show();
-    }).blur(function() {
-      $("#searchlist").fadeOut('fast');
-    });
-    </script>
-</body>
-</html>
+          </div>
+          <!-- end container fluid -->
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+          <!-- Include all compiled plugins (below), or include individual files as needed -->
+          <script src="js/bootstrap.min.js"></script>
+          <script>
+          $("#searchinput").focus(function() {
+            $("#searchlist").show();
+          }).blur(function() {
+            $("#searchlist").fadeOut('fast');
+          });
+          </script>
+
+        </body>
+        </html>
