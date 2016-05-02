@@ -516,3 +516,27 @@ category: Basic elements
 .margin-top-20 {
   margin-top: 20px;
 }
+
+// .panel-heading [data-toggle="collapse"]:after
+// {
+// 	font-family: 'Glyphicons Halflings';
+// 	content: "\e250";
+// 	float: right;
+// 	color: #333;
+// 	font-size: 14px;
+// 	// line-height: 18px;
+//
+// 	-webkit-transform: rotate(-90deg);
+// 	-moz-transform:    rotate(-90deg);
+// 	-ms-transform:     rotate(-90deg);
+// 	-o-transform:      rotate(-90deg);
+// 	transform:         rotate(-90deg);
+// }
+// .panel-heading [data-toggle="collapse"].collapsed:after
+// {
+// 	-webkit-transform: rotate(90deg);
+// 	-moz-transform:    rotate(90deg);
+// 	-ms-transform:     rotate(90deg);
+// 	-o-transform:      rotate(90deg);
+// 	transform:         rotate(90deg);
+// }
