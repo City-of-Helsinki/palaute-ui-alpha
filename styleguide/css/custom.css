@@ -46,7 +46,8 @@ category: Typography
 */
 body {
   font-family: 'FFKarbidWebRegular', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
-  margin-bottom: 40px;
+  padding-bottom: 60px;
+  padding-top: 50px;
 }
 
 /*doc
@@ -156,9 +157,15 @@ category: Basic elements
 ```
 
 */
-.navbar {
-  padding-top: 14px;
+.navbar-header {
   background-color: #0072c6;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar {
   border-radius: 0;
   margin-bottom: 0;
 }
@@ -245,7 +252,6 @@ category: Basic elements
 .palaute-actions, .contact-card, .attachment-wrapper {
   background-color: #f2f2f2;
   padding: 10px;
-  border: solid 1px  #fff;
 }
 
 /*doc
@@ -275,14 +281,29 @@ category: Basic elements
 */
 .message-editor {
   margin: 20px 0 20px 0;
-  background-color: #eff8ff;
-  border: 1px solid #0072c6;
+  height: 34px;
+  transition: all 0.5s ease;
+  resize: none;
+}
+
+.message-editor:focus {
+  margin: 20px 0 20px 0;
+  height: 200px;
 }
 
 .message-subject, .message-sender {
   margin-top: 0;
+  padding-top: 2px;
   vertical-align: middle;
+  background-color: #f2f2f2;
   border-bottom: solid 1px #e6e6e6;
+}
+.message-subject .badge, .message-sender .badge {
+  padding: 3px 7px 1px 7px;
+}
+
+.message-sender {
+  background-color: #fff;
 }
 
 .message-content {
@@ -290,10 +311,6 @@ category: Basic elements
   padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: solid 1px #e6e6e6;
-}
-
-.search-field-container {
-  padding: 10px;
 }
 
 .attachment-wrapper {
@@ -311,9 +328,35 @@ category: Basic elements
   margin-bottom: 20px;
 }
 
-.panel-title p {
+.hr-nomargin {
+  border-bottom: solid 1px #e6e6e6;
+  margin: 0;
+}
+
+.panel-title, p {
   margin-bottom: 0;
   font-size: 14px;
+}
+.panel-title a, p a {
+  color: #333;
+}
+
+.panel .panel-group .panel-default {
+  border-radius: 0px;
+}
+.panel .panel-group .panel-default .message-sender {
+  padding-bottom: 0;
+}
+
+.panel-group .panel {
+  border-radius: 0px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.panel-heading {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .availability-online, .availability-offline {
@@ -326,6 +369,109 @@ category: Basic elements
   background-color: gray;
 }
 
+.date-separator {
+  color: #b3b3b3;
+}
+
+.comment-first {
+  padding-top: 14px;
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.comment {
+  background-color: #fff;
+  padding-top: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #fff;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.display-none {
+  display: none;
+}
+
+.message-actions {
+  padding-bottom: 20px;
+}
+
+.message-collapse {
+  padding-left: 0;
+  padding-right: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+@media (max-width: 768px) {
+  #fixed-button {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+  }
+}
+.fixed-buttons-bg {
+  background-color: #f2f2f2;
+  border: solid 1px  #fff;
+}
+
+.btn-fixed {
+  background-color: #f2f2f2;
+  border-radius: 0;
+}
+.btn-fixed:hover {
+  background-color: #d9d9d9;
+}
+.btn-fixed:active {
+  background-color: #cccccc;
+}
+
+.anim-tiedoksi {
+  -webkit-animation-name: anim-tiedoksi;
+          animation-name: anim-tiedoksi;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes anim-tiedoksi {
+  0% {
+    background-color: #fff;
+  }
+  20% {
+    background-color: #f8d362;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+
+@keyframes anim-tiedoksi {
+  0% {
+    background-color: #fff;
+  }
+  20% {
+    background-color: #f8d362;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+.navbar-default .navbar-text {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .navbar-text {
+    display: none;
+  }
+}
 .pink {
   background-color: pink;
 }
@@ -333,5 +479,3 @@ category: Basic elements
 .margin-top-20 {
   margin-top: 20px;
 }
-
-/*# sourceMappingURL=custom.css.map */

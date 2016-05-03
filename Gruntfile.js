@@ -53,6 +53,16 @@ module.exports = function(grunt) {
           },
           files: ['*.html']
         },
+        autoprefixer: {
+            options: {
+            // Task-specific options go here.
+            browsers: ['last 2 versions', 'ie 9']
+            },
+            css: {
+            // Target-specific file lists and/or options go here.
+              src: ['css/custom.css'],
+            }
+          }
         // bake: {
         //   includes: {
         //     options: {
@@ -83,15 +93,17 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-hologram');
     grunt.loadNpmTasks('grunt-bootlint');
+    grunt.loadNpmTasks('grunt-autoprefixer');
     // grunt.loadNpmTasks('grunt-bake');
     // grunt.loadNpmTasks('grunt-contrib-copy');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', [
-      'watch',
       'sass',
+      'autoprefixer',
       'hologram',
       'bootlint',
+      'watch'
       // 'bake',
       // 'copy'
     ]);
