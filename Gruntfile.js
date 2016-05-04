@@ -21,18 +21,6 @@ module.exports = function(grunt) {
             files: ['*.html'],
           },
         },
-        // compile sass to css
-        // https://github.com/gruntjs/grunt-contrib-sass
-        sass: {
-            dist: {
-                options: {
-                    style: 'expanded'
-                },
-                files: {
-                    'css/custom.css': 'scss/custom.scss'
-                }
-            }
-        },
         // hologram syleguide generation with Grunt
         // https://github.com/trulia/hologram/
         hologram: {
@@ -62,50 +50,40 @@ module.exports = function(grunt) {
             // Target-specific file lists and/or options go here.
               src: ['css/custom.css'],
             }
+          },
+          // compile sass to css with libsass
+          // https://github.com/sindresorhus/grunt-sass
+          sass: {
+            options: {
+              sourceMap: true,
+              outputStyle: 'expanded',
+            },
+            dist: {
+              files: {
+                'css/custom.css': 'scss/custom.scss'
+              }
+            }
           }
-        // bake: {
-        //   includes: {
-        //     options: {
-        //         // Task-specific options go here.
-        //     },
-        //     files: [ {
-        //         expand: true,     // Enable dynamic expansion.
-        //         cwd: '',      // Src matches are relative to this path.
-        //         src: [ '*.html' ], // Actual pattern(s) to match.
-        //         dest: 'build/',   // Destination path prefix.
-        //         ext: '.html'   // Dest filepaths will have this extension.
-        //         } ]
-        //     },
-        //   },
-        //   // copy task copies files to build folder
-        //   //
-        //   copy: {
-        //       main: {
-        //         files: [
-        //           {expand: true, src: ['css/*', 'fonts/*', 'img/*'], dest: 'build/'},
-        //         ],
-        //       },
-        //     },
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-hologram');
     grunt.loadNpmTasks('grunt-bootlint');
     grunt.loadNpmTasks('grunt-autoprefixer');
-    // grunt.loadNpmTasks('grunt-bake');
-    // grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-sass');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', [
       'sass',
       'autoprefixer',
       'hologram',
-      'bootlint',
+      // 'bootlint',
       'watch'
-      // 'bake',
-      // 'copy'
     ]);
+    grunt.registerTask('lint', [
+      'bootlint',
+    ]);
+
 
 };

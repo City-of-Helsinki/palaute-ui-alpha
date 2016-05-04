@@ -1,3 +1,5 @@
+
+// Fonts
 @font-face {
   font-family: 'FFKarbidWebRegular';
   src: url('../fonts/KarbidWeb.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -5,54 +7,49 @@
 }
 
 @font-face {
+  font-family: 'FFKarbidWebItalic';
+  src: url('../fonts/KarbidWeb-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/KarbidWeb-Italic.woff') format('woff'), /* Pretty Modern Browsers */
+}
+
+
+@font-face {
   font-family: 'FFKarbidWebBold';
   src: url('../fonts/KarbidWeb-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
     url('../fonts/KarbidWeb-Bold.woff') format('woff'), /* Pretty Modern Browsers */
 }
 
-/*doc
+@font-face {
+  font-family: 'FFKarbidWebBoldItalic';
+  src: url('../fonts/KarbidWeb-BoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/KarbidWeb-BoldItalic.woff') format('woff'), /* Pretty Modern Browsers */
+}
 
----
-title: Headings
-name: Headings
-category: Typography
----
+$helsinki-blue-dark: rgb(0,51,128);
+$helsinki-blue-light: rgb(0,114,198);
+$helsinki-blue-extra-light: rgb(4,161,212);
+$helsinki-yellow: rgb(255,198,30);
+$helsinki-yellow-30: rgb(248,211,98);
+$helsinki-yellow-10: rgb(255,249,233);
+$black-90: rgb(25,25,25);
+$black-50: rgb(128,128,128);
+$black-30: rgb(179,179,179);
+$black-5: rgb(242,242,242);
+$panel-gray: rgb(235,235,235);
+$helsinki-danger: rgb(206,0,87);
+$helsinki-warning: rgb(246,153,48);
 
-```html_example
-
-<h1>Hello world</h1>
-<h2>Hello world</h2>
-<h3>Hello world</h3>
-<h4>Hello world</h4>
-<h5>Hello world</h5>
-
-```
-
-*/
-
+// Typography
 h1, h2, h3, h4, h5, h6 {
   font-family: 'FFKarbidWebBold', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
 }
 
-/*doc
-
----
-title: Body text
-name: Body text
-category: Typography
----
-
-```html_example
-
-<p>Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-```
-
-*/
-
 body {
   font-family: 'FFKarbidWebRegular', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
   padding-bottom: 60px; // add padding to bottom of the page to leave room for fixed location buttons
-  padding-top: 50px;
+  padding-top: 80px;
+  font-size: 16px;
+  background-color: $panel-gray;
 }
 
 /*doc
@@ -112,30 +109,6 @@ category: Colors
 
 */
 
-$helsinki-blue-dark: rgb(0,51,128);
-$helsinki-blue-light: rgb(0,114,198);
-$helsinki-yellow: rgb(255,198,30);
-$helsinki-yellow-30: rgb(248,211,98);
-$helsinki-yellow-10: rgb(255,249,233);
-$black-90: rgb(25,25,25);
-$black-50: rgb(128,128,128);
-$black-30: rgb(179,179,179);
-$black-5: rgb(242,242,242);
-
-/*doc
-
----
-title: Links
-name: Links
-category: Typography
----
-
-```html_example
-<a href="#">Linkki</a>
-```
-
-*/
-
 a:link {
   color: $helsinki-blue-light;
   text-decoration: none;
@@ -143,104 +116,130 @@ a:link {
 
 a:hover {
   color: $helsinki-blue-light;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
-.yellow-bgr {
-  background-color: $helsinki-yellow;
-}
 
-.blue-bgr {
+// overrides for default navbar styling
+.navbar-default {
   background-color: $helsinki-blue-light;
-}
-
-.grey-bgr {
-  background-color: $black-50;
-}
-
-/*doc
-
----
-title: Page heading
-name: Page heading
-category: Basic elements
----
-
-```html_example
-
-<div class="page-header"><p><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Oma työlista</p>
-</div>
-
-```
-
-*/
-
-.navbar-header {
-  background-color: $helsinki-blue-light;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #fff;
-}
-
-.navbar {
-  // padding-top: 15px;
-  // background-color: $helsinki-blue-light;
-  border-radius: 0;
-  margin-bottom: 0;
-  a:link, a:hover, a:visited, a:active {
+  min-height: 80px;
+  padding-top: 15px;
+  .navbar-brand {
     color: #fff;
   }
-  .badge {
-    background-color: #fff;
-    color: $helsinki-blue-light;
-    padding: 3px 7px 1px 7px;
+  h3 {
+    margin-top: auto;
+    margin-bottom: auto;
   }
+  .navbar-text {
+    font-size: 20px;
+  }
+  .navbar-toggle {
+    border-style: none;
+    &:focus, &:hover{
+      background-color: $helsinki-blue-light;
+    }
+    .icon-bar {
+      background-color: #fff;
+      border-radius: 0px;
+      width: 24px;
+      height: 3px;
+    }
+  }
+  .navbar-collapse {
+    border-style: none;
+  }
+  .navbar-nav > li >a {
+    color: #fff;
+  }
+
 }
 
-.page-header {
-  @extend .blue-bgr;
-  height: 40px;
+.navbar-nav > li > a {
+  font-size: 20px;
+}
+
+.navbar-default .navbar-nav > .active > a {
+  background-color: $helsinki-blue-dark;
   color: #fff;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding:10px;
-  a:link, a:hover, a:visited, a:active {
-    color: #fff;
-  }
-  .badge {
-    background-color: #fff;
-    color: $helsinki-blue-light;
-    padding: 3px 7px 1px 7px;
+}
+
+// separator element for the navbar texts
+.he-separator {
+  color: $helsinki-blue-extra-light;
+  font-size: 20px;
+}
+
+// Overrides for the default panel styles
+.panel {
+  border-style: none;
+  border-radius: 0px;
+  background-color: rgb(235,235,235);
+  padding-bottom: 2px;
+}
+
+.panel-group {
+  margin-bottom: 0px;
+}
+
+.panel-group .panel {
+  border-radius: 0px;
+}
+
+.panel-default > .panel-heading {
+  border-radius: 0px;
+  background-color: $helsinki-blue-extra-light;
+  border-style: none;
+}
+
+.panel-body {
+  background-color: #fff;
+  border-style: none;
+  margin: 10px;
+  box-shadow: 0px 1px 3px 0px rgba(128,128,128,0.5);
+}
+
+.he-datestamp {
+  color: $helsinki-blue-extra-light;
+}
+
+.he-message-status {
+  font-family: FFKarbidWebBoldItalic, 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  .late {
+  color: $helsinki-danger;
   }
 }
+
+.panel-title a {
+  color: #fff;
+}
+
+.panel-heading {
+  background-color: $helsinki-blue-extra-light;
+  color: #fff;
+  padding: 15px 15px;
+  border-radius: 0px;
+  a:link, a:hover, a:active, a:visited, a:focus {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.panel .panel-default > a {
+  display: block;
+}
+
+// end panel styles
 
 .label {
   padding: .3em .6em .3em;
 }
 
-/*doc
-
----
-title: Message bubble
-name: Message buble
-category: Basic elements
----
-
-```html_example
-
-<div class="message-bubble">
-<h5>Kaksoistutkinto <span>14:38 22.03.2016 </span></h5>
-<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-<p>Jussi (jussi@gmail.com)</p>
-</div>
-```
-
-*/
-
 .message-bubble {
 	position: relative;
-	// background-color: lighten($helsinki-blue-light, 56);
 	border: 1px solid $helsinki-blue-light;
   padding:10px;
   margin: 20px 0 20px 0;
@@ -275,33 +274,6 @@ category: Basic elements
   padding: 10px;
   // border: solid 1px  #fff;
 }
-
-/*doc
-
----
-title: Message editor
-name: Message editor
-category: Basic elements
----
-
-```html_example
-
-<form class="col-lg-12" action="">
-  <textarea class="message-editor form-control" rows="6" placeholder="Kirjoita vastauksesi tähän"></textarea>
-  <div class="form-group">
-    <button class="btn btn-default"type="button" name="button">
-      Tallenna
-    </button>
-    <button class="btn btn-primary" type="button" name="button">
-      Lähetä
-    </button>
-  </div>
-</form>
-
-```
-
-*/
-
 
 // controls the message editor expand on focus
 .message-editor {
@@ -368,34 +340,33 @@ category: Basic elements
   margin: 0;
 }
 
-
 // sets panel title and paragraph size and margin
-.panel-title, p {
-  margin-bottom: 0;
-  font-size: 14px;
-  a {
-    color: #333;
-  }
-}
+// .panel-title, p {
+//   margin-bottom: 0;
+//   font-size: 14px;
+//   a {
+//     color: #333;
+//   }
+// }
 
-.panel .panel-group .panel-default {
-  border-radius: 0px;
-  .message-sender {
-    padding-bottom: 0;
-  }
-}
+// .panel .panel-group .panel-default {
+//   border-radius: 0px;
+//   .message-sender {
+//     padding-bottom: 0;
+//   }
+// }
 
-.panel-group .panel{
-  border-radius: 0px;
-  border-left: 0;
-  border-right: 0;
-}
+// .panel-group .panel{
+//   border-radius: 0px;
+//   border-left: 0;
+//   border-right: 0;
+// }
 
 
-.panel-heading {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
+// .panel-heading {
+//   border-top-left-radius: 0;
+//   border-top-right-radius: 0;
+// }
 
 .availability-online {
   background-color: green;
@@ -440,8 +411,8 @@ category: Basic elements
 .message-collapse {
   padding-left: 0;
   padding-right: 0;
-  border: 0;
-  border-radius: 0;
+  border: 0px;
+  border-radius: 0px;
 }
 
 // media query to fix action buttons to bottom of screen @ <768px
@@ -461,7 +432,7 @@ category: Basic elements
 
 .btn-fixed {
     background-color: $black-5;
-    border-radius: 0;
+    border-radius: 0px;
     &:hover {
       background-color: darken($black-5, 10);
     }
@@ -506,8 +477,6 @@ category: Basic elements
   }
 }
 
-
-
 // helper classes
 .pink {
   background-color: pink;
@@ -517,26 +486,24 @@ category: Basic elements
   margin-top: 20px;
 }
 
-// .panel-heading [data-toggle="collapse"]:after
-// {
-// 	font-family: 'Glyphicons Halflings';
-// 	content: "\e250";
-// 	float: right;
-// 	color: #333;
-// 	font-size: 14px;
-// 	// line-height: 18px;
-//
-// 	-webkit-transform: rotate(-90deg);
-// 	-moz-transform:    rotate(-90deg);
-// 	-ms-transform:     rotate(-90deg);
-// 	-o-transform:      rotate(-90deg);
-// 	transform:         rotate(-90deg);
-// }
-// .panel-heading [data-toggle="collapse"].collapsed:after
-// {
-// 	-webkit-transform: rotate(90deg);
-// 	-moz-transform:    rotate(90deg);
-// 	-ms-transform:     rotate(90deg);
-// 	-o-transform:      rotate(90deg);
-// 	transform:         rotate(90deg);
-// }
+.panel-heading [data-toggle="collapse"]:after {
+	font-family: 'Glyphicons Halflings';
+	content: "\e114";
+	float: right;
+	color: #333;
+	font-size: 14px;
+	// line-height: 18px;
+
+	-webkit-transform: rotate(-90deg);
+	-moz-transform:    rotate(-90deg);
+	-ms-transform:     rotate(-90deg);
+	-o-transform:      rotate(-90deg);
+	transform:         rotate(-90deg);
+}
+.panel-heading [data-toggle="collapse"].collapsed:after {
+	-webkit-transform: rotate(90deg);
+	-moz-transform:    rotate(90deg);
+	-ms-transform:     rotate(90deg);
+	-o-transform:      rotate(90deg);
+	transform:         rotate(90deg);
+}

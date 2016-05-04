@@ -3,10 +3,12 @@
   font-family: 'FFKarbidWebRegular';
   src: url("../fonts/KarbidWeb.eot?#iefix") format("embedded-opentype"), url("../fonts/KarbidWeb.woff") format("woff");
 }
+
 @font-face {
   font-family: 'FFKarbidWebBold';
   src: url("../fonts/KarbidWeb-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/KarbidWeb-Bold.woff") format("woff");
 }
+
 /*doc
 
 ---
@@ -47,7 +49,7 @@ category: Typography
 body {
   font-family: 'FFKarbidWebRegular', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
   padding-bottom: 60px;
-  padding-top: 50px;
+  padding-top: 80px;
 }
 
 /*doc
@@ -157,25 +159,28 @@ category: Basic elements
 ```
 
 */
-.navbar-header {
+.navbar-default {
   background-color: #0072c6;
+  border-color: none;
+  min-height: 80px;
+  padding-top: 15px;
 }
 
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #fff;
-}
-
-.navbar {
-  border-radius: 0;
-  margin-bottom: 0;
-}
-.navbar a:link, .navbar a:hover, .navbar a:visited, .navbar a:active {
+.navbar-default .navbar-brand {
   color: #fff;
 }
-.navbar .badge {
-  background-color: #fff;
-  color: #0072c6;
-  padding: 3px 7px 1px 7px;
+
+.navbar-default h3 {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.navbar-default .navbar-text {
+  font-size: 18px;
+}
+
+.navbar-default button .navbar-toggle {
+  border: none;
 }
 
 .page-header {
@@ -185,9 +190,11 @@ category: Basic elements
   margin-bottom: 0;
   padding: 10px;
 }
+
 .page-header a:link, .page-header a:hover, .page-header a:visited, .page-header a:active {
   color: #fff;
 }
+
 .page-header .badge {
   background-color: #fff;
   color: #0072c6;
@@ -298,6 +305,7 @@ category: Basic elements
   background-color: #f2f2f2;
   border-bottom: solid 1px #e6e6e6;
 }
+
 .message-subject .badge, .message-sender .badge {
   padding: 3px 7px 1px 7px;
 }
@@ -337,6 +345,7 @@ category: Basic elements
   margin-bottom: 0;
   font-size: 14px;
 }
+
 .panel-title a, p a {
   color: #333;
 }
@@ -344,6 +353,7 @@ category: Basic elements
 .panel .panel-group .panel-default {
   border-radius: 0px;
 }
+
 .panel .panel-group .panel-default .message-sender {
   padding-bottom: 0;
 }
@@ -411,6 +421,7 @@ category: Basic elements
     right: 0px;
   }
 }
+
 .fixed-buttons-bg {
   background-color: #f2f2f2;
   border: solid 1px  #fff;
@@ -420,9 +431,11 @@ category: Basic elements
   background-color: #f2f2f2;
   border-radius: 0;
 }
+
 .btn-fixed:hover {
   background-color: #d9d9d9;
 }
+
 .btn-fixed:active {
   background-color: #cccccc;
 }
@@ -463,6 +476,7 @@ category: Basic elements
     background-color: #fff;
   }
 }
+
 .navbar-default .navbar-text {
   color: #fff;
 }
@@ -472,6 +486,7 @@ category: Basic elements
     display: none;
   }
 }
+
 .pink {
   background-color: pink;
 }

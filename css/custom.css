@@ -1,53 +1,33 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'FFKarbidWebRegular';
   src: url("../fonts/KarbidWeb.eot?#iefix") format("embedded-opentype"), url("../fonts/KarbidWeb.woff") format("woff");
 }
+
+@font-face {
+  font-family: 'FFKarbidWebItalic';
+  src: url("../fonts/KarbidWeb-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/KarbidWeb-Italic.woff") format("woff");
+}
+
 @font-face {
   font-family: 'FFKarbidWebBold';
   src: url("../fonts/KarbidWeb-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/KarbidWeb-Bold.woff") format("woff");
 }
-/*doc
 
----
-title: Headings
-name: Headings
-category: Typography
----
+@font-face {
+  font-family: 'FFKarbidWebBoldItalic';
+  src: url("../fonts/KarbidWeb-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/KarbidWeb-BoldItalic.woff") format("woff");
+}
 
-```html_example
-
-<h1>Hello world</h1>
-<h2>Hello world</h2>
-<h3>Hello world</h3>
-<h4>Hello world</h4>
-<h5>Hello world</h5>
-
-```
-
-*/
 h1, h2, h3, h4, h5, h6 {
   font-family: 'FFKarbidWebBold', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
 }
 
-/*doc
-
----
-title: Body text
-name: Body text
-category: Typography
----
-
-```html_example
-
-<p>Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-```
-
-*/
 body {
   font-family: 'FFKarbidWebRegular', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
   padding-bottom: 60px;
-  padding-top: 50px;
+  padding-top: 80px;
+  font-size: 16px;
+  background-color: #ebebeb;
 }
 
 /*doc
@@ -106,19 +86,6 @@ category: Colors
 ```
 
 */
-/*doc
-
----
-title: Links
-name: Links
-category: Typography
----
-
-```html_example
-<a href="#">Linkki</a>
-```
-
-*/
 a:link {
   color: #0072c6;
   text-decoration: none;
@@ -126,96 +93,131 @@ a:link {
 
 a:hover {
   color: #0072c6;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
-.yellow-bgr {
-  background-color: #ffc61e;
-}
-
-.blue-bgr, .page-header {
+.navbar-default {
   background-color: #0072c6;
+  min-height: 80px;
+  padding-top: 15px;
 }
 
-.grey-bgr {
-  background-color: gray;
+.navbar-default .navbar-brand {
+  color: #fff;
 }
 
-/*doc
+.navbar-default h3 {
+  margin-top: auto;
+  margin-bottom: auto;
+}
 
----
-title: Page heading
-name: Page heading
-category: Basic elements
----
+.navbar-default .navbar-text {
+  font-size: 20px;
+}
 
-```html_example
+.navbar-default .navbar-toggle {
+  border-style: none;
+}
 
-<div class="page-header"><p><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Oma työlista</p>
-</div>
-
-```
-
-*/
-.navbar-header {
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
   background-color: #0072c6;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #fff;
+  border-radius: 0px;
+  width: 24px;
+  height: 3px;
 }
 
-.navbar {
-  border-radius: 0;
-  margin-bottom: 0;
-}
-.navbar a:link, .navbar a:hover, .navbar a:visited, .navbar a:active {
-  color: #fff;
-}
-.navbar .badge {
-  background-color: #fff;
-  color: #0072c6;
-  padding: 3px 7px 1px 7px;
+.navbar-default .navbar-collapse {
+  border-style: none;
 }
 
-.page-header {
-  height: 40px;
-  color: #fff;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 10px;
-}
-.page-header a:link, .page-header a:hover, .page-header a:visited, .page-header a:active {
+.navbar-default .navbar-nav > li > a {
   color: #fff;
 }
-.page-header .badge {
+
+.navbar-nav > li > a {
+  font-size: 20px;
+}
+
+.navbar-default .navbar-nav > .active > a {
+  background-color: #003380;
+  color: #fff;
+}
+
+.he-separator {
+  color: #04a1d4;
+  font-size: 20px;
+}
+
+.panel {
+  border-style: none;
+  border-radius: 0px;
+  background-color: #ebebeb;
+  padding-bottom: 2px;
+}
+
+.panel-group {
+  margin-bottom: 0px;
+}
+
+.panel-group .panel {
+  border-radius: 0px;
+}
+
+.panel-default > .panel-heading {
+  border-radius: 0px;
+  background-color: #04a1d4;
+  border-style: none;
+}
+
+.panel-body {
   background-color: #fff;
-  color: #0072c6;
-  padding: 3px 7px 1px 7px;
+  border-style: none;
+  margin: 10px;
+  box-shadow: 0px 1px 3px 0px rgba(128, 128, 128, 0.5);
+}
+
+.he-datestamp {
+  color: #04a1d4;
+}
+
+.he-message-status {
+  font-family: FFKarbidWebBoldItalic, 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.he-message-status .late {
+  color: #ce0057;
+}
+
+.panel-title a {
+  color: #fff;
+}
+
+.panel-heading {
+  background-color: #04a1d4;
+  color: #fff;
+  padding: 15px 15px;
+  border-radius: 0px;
+}
+
+.panel-heading a:link, .panel-heading a:hover, .panel-heading a:active, .panel-heading a:visited, .panel-heading a:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.panel .panel-default > a {
+  display: block;
 }
 
 .label {
   padding: .3em .6em .3em;
 }
 
-/*doc
-
----
-title: Message bubble
-name: Message buble
-category: Basic elements
----
-
-```html_example
-
-<div class="message-bubble">
-<h5>Kaksoistutkinto <span>14:38 22.03.2016 </span></h5>
-<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-<p>Jussi (jussi@gmail.com)</p>
-</div>
-```
-
-*/
 .message-bubble {
   position: relative;
   border: 1px solid #0072c6;
@@ -254,31 +256,6 @@ category: Basic elements
   padding: 10px;
 }
 
-/*doc
-
----
-title: Message editor
-name: Message editor
-category: Basic elements
----
-
-```html_example
-
-<form class="col-lg-12" action="">
-  <textarea class="message-editor form-control" rows="6" placeholder="Kirjoita vastauksesi tähän"></textarea>
-  <div class="form-group">
-    <button class="btn btn-default"type="button" name="button">
-      Tallenna
-    </button>
-    <button class="btn btn-primary" type="button" name="button">
-      Lähetä
-    </button>
-  </div>
-</form>
-
-```
-
-*/
 .message-editor {
   margin: 20px 0 20px 0;
   height: 34px;
@@ -298,6 +275,7 @@ category: Basic elements
   background-color: #f2f2f2;
   border-bottom: solid 1px #e6e6e6;
 }
+
 .message-subject .badge, .message-sender .badge {
   padding: 3px 7px 1px 7px;
 }
@@ -331,32 +309,6 @@ category: Basic elements
 .hr-nomargin {
   border-bottom: solid 1px #e6e6e6;
   margin: 0;
-}
-
-.panel-title, p {
-  margin-bottom: 0;
-  font-size: 14px;
-}
-.panel-title a, p a {
-  color: #333;
-}
-
-.panel .panel-group .panel-default {
-  border-radius: 0px;
-}
-.panel .panel-group .panel-default .message-sender {
-  padding-bottom: 0;
-}
-
-.panel-group .panel {
-  border-radius: 0px;
-  border-left: 0;
-  border-right: 0;
-}
-
-.panel-heading {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 
 .availability-online, .availability-offline {
@@ -400,8 +352,8 @@ category: Basic elements
 .message-collapse {
   padding-left: 0;
   padding-right: 0;
-  border: 0;
-  border-radius: 0;
+  border: 0px;
+  border-radius: 0px;
 }
 
 @media (max-width: 768px) {
@@ -411,6 +363,7 @@ category: Basic elements
     right: 0px;
   }
 }
+
 .fixed-buttons-bg {
   background-color: #f2f2f2;
   border: solid 1px  #fff;
@@ -418,38 +371,23 @@ category: Basic elements
 
 .btn-fixed {
   background-color: #f2f2f2;
-  border-radius: 0;
+  border-radius: 0px;
 }
+
 .btn-fixed:hover {
   background-color: #d9d9d9;
 }
+
 .btn-fixed:active {
   background-color: #cccccc;
 }
 
 .anim-tiedoksi {
-  -webkit-animation-name: anim-tiedoksi;
-          animation-name: anim-tiedoksi;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-@-webkit-keyframes anim-tiedoksi {
-  0% {
-    background-color: #fff;
-  }
-  20% {
-    background-color: #f8d362;
-  }
-  100% {
-    background-color: #fff;
-  }
+  animation-name: anim-tiedoksi;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
 }
 
 @keyframes anim-tiedoksi {
@@ -463,6 +401,7 @@ category: Basic elements
     background-color: #fff;
   }
 }
+
 .navbar-default .navbar-text {
   color: #fff;
 }
@@ -472,6 +411,7 @@ category: Basic elements
     display: none;
   }
 }
+
 .pink {
   background-color: pink;
 }
@@ -479,3 +419,26 @@ category: Basic elements
 .margin-top-20 {
   margin-top: 20px;
 }
+
+.panel-heading [data-toggle="collapse"]:after {
+  font-family: 'Glyphicons Halflings';
+  content: "\e114";
+  float: right;
+  color: #333;
+  font-size: 14px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.panel-heading [data-toggle="collapse"].collapsed:after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/*# sourceMappingURL=custom.css.map */
