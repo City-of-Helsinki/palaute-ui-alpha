@@ -10,16 +10,13 @@ module.exports = function(grunt) {
               files: ['scss/*.scss'],
               tasks: ['sass'],
               options: {
-                livereload: true
+                // livereload: true
               },
           },
-          // livereload html pages, use liverealod.com browser plugin
-          livereload: {
-            options: {
-              livereload: true
-            },
-            files: ['*.html'],
-          },
+          cssmin: {
+            files: ['css/custom.css'],
+            tasks: ['cssmin']
+          }
         },
         // hologram syleguide generation with Grunt
         // https://github.com/trulia/hologram/
@@ -41,17 +38,17 @@ module.exports = function(grunt) {
           },
           files: ['*.html']
         },
+        // prefix task
+        // https://github.com/nDmitry/grunt-autoprefixer
         autoprefixer: {
             options: {
-            // Task-specific options go here.
             browsers: ['last 2 versions', 'ie 9']
             },
             css: {
-            // Target-specific file lists and/or options go here.
               src: ['css/custom.css'],
             }
           },
-          // compile sass to css with libsass
+          // compile sass to css with grunt-sass
           // https://github.com/sindresorhus/grunt-sass
           sass: {
             options: {
@@ -63,6 +60,36 @@ module.exports = function(grunt) {
                 'css/custom.css': 'scss/custom.scss'
               }
             }
+          },
+          browserSync: {
+              dev: {
+                  bsFiles: {
+                      src : [
+                          'css/*.css',
+                          '*.html'
+                      ]
+                  },
+                  options: {
+                      watchTask: true,
+                      server: './',
+                      browser: "google chrome"
+                  }
+              }
+          },
+          cssmin: {
+            options: {
+              report: 'min',
+              sourceMap: true,
+            },
+            target: {
+              files: [{
+                expand: true,
+                cwd: 'css',
+                src: ['custom.css'],
+                dest: 'css',
+                ext: '.min.css'
+              }]
+            }
           }
     });
 
@@ -72,13 +99,16 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-bootlint');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-browser-sync');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', [
       'sass',
       'autoprefixer',
-      'hologram',
-      // 'bootlint',
+      // 'cssmin',
+      // 'hologram',
+      'browserSync',
       'watch'
     ]);
     grunt.registerTask('lint', [
