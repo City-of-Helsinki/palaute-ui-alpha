@@ -34,18 +34,23 @@
   </nav>  <div class="container">
     <!-- viestin tiedot -->
     <div class="row">
-      <div class="col-lg-12 message-subject">
-        <h5>Pysäköintipaikkoja <span class="label label-warning pull-right">Käsittely myöhässä</span></h5>
+      <div class="col-md-12 he-message-subject">
+        <h4>Pysäköintipaikkoja</h4>
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-12 message-sender text-muted">
-        <h6>Lähettäjä: Jussi (jussi@gmail.com) <span>14:38 22.03.16</span></h6>
+      <div class="col-md-12 he-message-sender">
+        <h5>Lähettäjä: Jussi (jussi@gmail.com) <span>14:38 22.03.16</span></h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 he-message-status late">
+        <h5>Käsittely myöhässä</h5>
       </div>
     </div>
     <!-- message container -->
     <div class="row">
-      <div class="col-lg-12 message-content">
+      <div class="col-md-12 he-message-content">
         <p>Leiviskätien, Kaupintien ja Laurinniityntien kulmaan rakennettavan talon työmaan takia Lassilassa on tällä hetkellä aivan liian vähän pysäköintipaikkoja katujen varsilla. Asukkaat eivät saa autojaan pysäköityä.</p>
         <p>Tarvitaan tilapäisiä paikkoja lisää tai nykyisistä paikoista esim. Leiviskätiellä pitää poistaa parkkikiekkovaatimukset työmaan ajaksi. Tällä hetkellä rakennustyömaan parakit ovat esimerkiksi AS Oy Leiviskätie 2:n vieraspaikkojen päällä eikä korvaavia pysäköintipaikkoja ole tarjottu mistään.</p>
         <p>Jussi</p>
@@ -53,18 +58,16 @@
     </div>
     <div class="row">
       <!-- collapsible panel for attachments and map -->
-      <div class="col-md-12 panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="col-md-12 panel-group he-message-collapse" id="accordion" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
-            <div class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <p>
-                  Lisätiedot: Kartta, Kuva (1)
-                  <span class="glyphicon glyphicon-triangle-bottom pull-right" aria-hidden="true"></span>
-                </p>
-              </a>
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h5 class="panel-title">
+                Lisätiedot: Kartta, Kuva (1)
+                <span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
+              </h5>
             </div>
-          </div>
+          </a>
           <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">
               <figure>
@@ -80,302 +83,346 @@
         </div>
       </div>
       <!-- <div class="row">
-        <div class="col-md-12 message-actions">
-          <ul class="nav nav-pills">
-            <li><a href=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Vastaa</a></li>
-            <li><a href=""><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Siirrä</a></li>
-            <li><a href=""><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Tiedoksi</a></li>
-          </ul>
-        </div>
-      </div> -->
-      <!-- Comment section header -->
-      <div class="row">
-        <div class="col-xs-12 message-subject">
-          <h5>Välivastaus <small>Eilen klo 12.24</small></h5>
-        </div>
-      </div>
-      <!-- Comment section header -->
-      <div class="row">
-        <div class="col-lg-12 message-sender text-muted">
-          <h6>Vastaaja: Kirsi Hänninen (HKR)</h6>
-        </div>
-      </div>
-      <!-- message container -->
-      <div class="row">
-        <div class="col-lg-12 message-content">
-          <p>Hei, kiitos palautteestanne ja harmillinen tilanne tällä hetkellä Lassilan alueella.</p>
-          <p>Asukkaiden pysäköintipaikat alueella on kuitenkin suunniteltu muutoin kuin kadun varteen pysäköimällä. Kadun varrella olevat kiekkopaikat ovat tarkoitettu vain väliaikaiseen...</p>
-          <p>Palaamme asiaan saatuamme lisätietoja aiheesta.</p>
-          <p>Terveisin</p>
-          <p>Rakennusviraston asiakaspalvelu</p>
-        </div>
-      </div>
-      <!-- Sisäiset kommentit header-->
-      <div class="row">
-        <div class="col-xs-12 message-subject">
-          <h4>
-            <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
-             Sisäiset kommentit
-             <span class="badge">3</span>
-             <button id="click" type="button" class="btn btn-link pull-right">
-               <span  class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></button>
-           </h4>
-        </div>
-      </div>
-      <!-- Sisäiset kommentit -->
-      <!-- Comment section starts -->
-      <!-- Kommentti 1 -->
-      <!-- collapse contents -->
-      <div id="collapse-content" class="display-none">
-      <div class="row">
-        <div class="col-md-12 comment-first">
-          <div class="media">
-            <div class="media-left">
-              <a href="#">
-                <img class="avatar media-object" src="img/avatar.svg" alt="avatar">
-              </a>
-            </div>
-            <div class="media-body">
-              <h5 class="media-heading">Matti Meikäläinen <span class="text-muted text-right"><span class="date-separator"> – </span>26 min sitten</span></h5>
-              <p class="text-muted"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Raatikainen, Hanna (KSV)</p>
-            </div>
-            <p>Moi, mitä mieltä olet tuosta parkk Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod.</p>
+      <div class="col-md-12 message-actions">
+      <ul class="nav nav-pills">
+      <li><a href=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Vastaa</a></li>
+      <li><a href=""><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Siirrä</a></li>
+      <li><a href=""><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Tiedoksi</a></li>
+    </ul>
+  </div>
+</div> -->
+<!-- Comment section header -->
+<div class="row">
+  <div class="col-md-12 he-message-subject">
+    <h4>Välivastaus <small>Eilen klo 12.24</small></h4>
+  </div>
+</div>
+<!-- Comment section header -->
+<div class="row">
+  <div class="col-md-12 he-message-sender text-muted">
+    <h5>Vastaaja: Kirsi Hänninen (HKR)</h5>
+  </div>
+</div>
+<!-- message container -->
+<div class="row">
+  <div class="col-md-12 he-message-content">
+    <p>Hei, kiitos palautteestanne ja harmillinen tilanne tällä hetkellä Lassilan alueella.</p>
+    <p>Asukkaiden pysäköintipaikat alueella on kuitenkin suunniteltu muutoin kuin kadun varteen pysäköimällä. Kadun varrella olevat kiekkopaikat ovat tarkoitettu vain väliaikaiseen...</p>
+    <p>Palaamme asiaan saatuamme lisätietoja aiheesta.</p>
+    <p>Terveisin</p>
+    <p>Rakennusviraston asiakaspalvelu</p>
+  </div>
+</div>
+<!-- Sisäiset kommentit -->
+<div class="row">
+  <div class="col-md-12 he-message-collapse">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h5 class="panel-title">
+              Sisäiset kommentit (6)
+              <span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
+            </h5>
           </div>
-        </div>
-      </div>
-      <!-- Reply -->
-      <div class="row">
-        <div class="col-md-12 comment">
-          <div class="media">
-            <div class="media-left">
-              <a href="#">
-                <img class="avatar media-object" src="img/avatar.svg" alt="avatar">
-              </a>
-            </div>
-            <div class="media-body">
-              <h5 class="media-heading">Hanna Raatikainen <span class="text-muted text-right"><span class="date-separator"> – </span>42 min sitten</span></h5>
-            </div>
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Reply -->
-      <div class="row">
-        <div class="col-md-12 comment">
-          <div class="media">
-            <div class="media-left">
-              <a href="#">
-                <img class="avatar media-object" src="img/avatar.svg" alt="avatar">
-              </a>
-            </div>
-            <div class="media-body">
-              <h5 class="media-heading">Hannu Pietilä <span class="text-muted text-right"><span class="date-separator"> – </span>45 min sitten</span></h5>
-            </div>
-            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Kommentti 2 -->
-      <div class="row">
-        <div class="col-md-12 comment-first">
-          <div class="media">
-            <div class="media-left">
-              <a href="#">
-                <img class="avatar media-object" src="img/avatar.svg" alt="avatar">
-              </a>
-            </div>
-            <div class="media-body">
-              <h5 class="media-heading">Matti Meikäläinen <span class="text-muted text-right"><span class="date-separator"> – </span>26 min sitten</span></h5>
-              <p class="text-muted"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Aho, Eero (KSV)</p>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Reply -->
-      <div class="row">
-        <div class="col-md-12 comment">
-          <div class="media">
-            <div class="media-left">
-              <a href="#">
-                <img class="avatar media-object" src="img/avatar.svg" alt="avatar">
-              </a>
-            </div>
-            <div class="media-body">
-              <h5 class="media-heading">Eero Aho <span class="text-muted text-right"><span class="date-separator"> – </span>45 min sitten</span></h5>
-            </div>
-            <p>Nyt kiire, vastaan kohta paremmin.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Reply -->
-      <div class="row">
-        <div class="col-md-12 comment">
-          <div class="media">
-            <div class="media-left">
-              <a href="#">
-                <img class="avatar media-object" src="img/avatar.svg" alt="avatar">
-              </a>
-            </div>
-            <div class="media-body">
-              <h5 class="media-heading">Eero Aho <span class="text-muted text-right"><span class="date-separator"> – </span>49 min sitten</span></h5>
-            </div>
-            <p>Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Kommentti 3 -->
-      <div class="row">
-        <div class="col-md-12 comment-first">
-          <div class="media">
-            <div class="media-left">
-              <a href="#">
-                <img class="avatar media-object" src="img/avatar.svg" alt="avatar">
-              </a>
-            </div>
-            <div class="media-body">
-              <h5 class="media-heading">Matti Meikäläinen <span class="text-muted text-right"><span class="date-separator"> – </span>13 min sitten</span></h5>
-              <p class="text-muted"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Chydenius, Jussi (KSV)</p>
-            </div>
-            <p>Moi, mitä mieltä olet tuosta parkk Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Reply -->
-      <div class="row">
-        <div class="col-md-12 comment">
-          <div class="media">
-            <div class="media-left">
-              <a href="#">
-                <img class="avatar media-object" src="img/avatar.svg" alt="avatar">
-              </a>
-            </div>
-            <div class="media-body">
-              <h5 class="media-heading">Jussi Chydenius <span class="text-muted text-right"><span class="date-separator"> – </span>10 min sitten</span></h5>
-            </div>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-          </div>
-        </div>
-      </div>
-      </div>
-      <!-- comment section ends -->
-      <!-- collapse content ends -->
-      <!-- Comment section header -->
-      <div class="row">
-        <div class="col-xs-12 message-subject">
-          <h5>Vastaus <small>Eilen klo 16.20</small></h5>
-        </div>
-      </div>
-      <!-- Message sender -->
-      <div class="row">
-        <div class="col-lg-12 message-sender text-muted">
-          <h6>Vastaaja: Kirsi Hänninen (HKR)</h6>
-        </div>
-      </div>
-      <!-- Message sender -->
-      <div class="row">
-        <div class="col-lg-12 message-sender text-muted">
-          <h6>Lähetetty tiedoksi: Samuli Poutanen (KSV), Heikki Pitkänen (KSV), Hannele Mend (HKR)</h6>
-        </div>
-      </div>
-      <!-- message container -->
-      <div class="row">
-        <div class="col-lg-12 message-content">
-          <p>Hei, Leiviskätien pysäköintipaikat aiheuttivat teille päänvaivaa.</p>
-          <p>Olemme tehneet selvityksen alueen tilanteesta, ja asiantuntijamme on sitä mieltä, että kiekkopaikat
-          tiellä ovat...</p>
-          <p>Terveisin</p>
-          <p>Rakennusviraston asiakaspalvelu</p>
-        </div>
-      </div>
-      <!-- Comment section header -->
-      <div class="row">
-        <div class="col-xs-12 message-subject">
-          <h5>Pysäköintipaikkoja <span class="label label-warning pull-right">Käsittely myöhässä</span></h5>
-        </div>
-      </div>
-      <!-- Message sender -->
-      <div class="row">
-        <div class="col-lg-12 message-sender text-muted">
-          <h6>Lähettäjä: Jussi (jussi@gmail.com) <span>Eilen klo 23.03</span></h6>
-        </div>
-      </div>
-      <!-- message container -->
-      <div class="row">
-        <div class="col-lg-12 message-content">
-          <p>Kiitos tähänastisista vastauksistanne. Jäin kuitenkin miettimään, miten pysäköinti järjestettiin laajan rakentamisen yhtedessä muutaman korttelin päässä Vaakatiellä. Järjestely oli toimiva, vaikka…</p>
-          <p>Terveisin, Jussi</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-        <form action="">
-          <textarea class="message-editor form-control scale" rows="1" placeholder="Kirjoita kommenttisi tähän"></textarea>
-          <div class="form-group pull-right">
-            <button class="btn btn-default"type="button" name="button">
-              Tallenna
-            </button>
-            <button class="btn btn-primary" type="button" name="button">
-              Lähetä
-            </button>
-          </div>
-        </form>
-        </div>
-      </div>
-      <!-- sticky buttons -->
-      <div class="row">
-        <nav id="fixed-button">
-          <div id="container">
-            <a class="" role="button" href="#"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Siirrä</a>
-            <a class="" role="button" href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Vastaa</a>
-            <a class="" role="button" href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Tiedoksi</a>
-          </div>
-        </nav>
-      </div>
-      <!-- action buttons -->
-      <!-- <div class="row">
-        <div id="fixed-button" class="col-xs-12 fixed-buttons-bg">
-        <div class="col-xs-4">
-          <div class="palaute-actions">
-            <a href=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-              Vastaa</a>
-            </div>
-          </div>
-          <div class="col-xs-4">
-            <div class="palaute-actions">
-              <a href=""><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
-                Siirrä</a>
+        </a>
+        <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body he-comment">
+            <div class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img class="avatar media-object" src="img/avatar.svg" alt="avatar">
+                </a>
               </div>
+              <div class="media-body">
+                <h5 class="media-heading">Matti Meikäläinen <span class="text-muted text-right"><span class="date-separator"> – </span>26 min sitten</span></h5>
+              </div>
+              <p>Moi, mitä mieltä olet tuosta parkk Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod.</p>
             </div>
-            <div class="col-xs-4">
-              <div class="palaute-actions">
-                <a href=""><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-                  Tiedoksi</a>
-                </div>
+          </div>
+          <div class="panel-body he-comment">
+            <div class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img class="avatar media-object" src="img/avatar.svg" alt="avatar">
+                </a>
               </div>
+              <div class="media-body">
+                <h5 class="media-heading">Hanna Raatikainen <span class="text-muted text-right"><span class="date-separator"> – </span>42 min sitten</span></h5>
+              </div>
+              <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
             </div>
-            </div> -->
-      <!-- <div class="row hr"></div> -->
-      <!-- <div class="row">
-        <div class="col-lg-12">
-          <div class="palaute-actions">
-            <a href="vastaapalaute.html#palautteen_kirjoitus"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Vastaa palautteeseen</a>
           </div>
-            <div class="palaute-actions">
-              <a href=""><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
-                Siirrä toiselle vastattavaksi</a>
+          <div class="panel-body he-comment">
+            <div class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img class="avatar media-object" src="img/avatar.svg" alt="avatar">
+                </a>
               </div>
-              <div class="palaute-actions">
-                <a href=""><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-                  Lähetä tiedoksi</a>
-                </div>
+              <div class="media-body">
+                <h5 class="media-heading">Hannu Pietilä <span class="text-muted text-right"><span class="date-separator"> – </span>45 min sitten</span></h5>
               </div>
-            </div> -->
+              <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui.</p>
+            </div>
           </div>
-          <!-- end container fluid -->
-          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-          <!-- Include all compiled plugins (below), or include individual files as needed -->
-          <script src="js/bootstrap.min.js"></script>
-        </body>
-        </html>
+          <div class="panel-body he-comment">
+            <div class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img class="avatar media-object" src="img/avatar.svg" alt="avatar">
+                </a>
+              </div>
+              <div class="media-body">
+                <h5 class="media-heading">Eero Aho <span class="text-muted text-right"><span class="date-separator"> – </span>45 min sitten</span></h5>
+              </div>
+              <p>Nyt kiire, vastaan kohta paremmin.</p>
+            </div>
+          </div>
+          <div class="panel-body he-comment">
+            <div class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img class="avatar media-object" src="img/avatar.svg" alt="avatar">
+                </a>
+              </div>
+              <div class="media-body">
+                <h5 class="media-heading">Eero Aho <span class="text-muted text-right"><span class="date-separator"> – </span>49 min sitten</span></h5>
+              </div>
+              <p>Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            </div>
+          </div>
+          <div class="panel-body he-comment">
+            <div class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img class="avatar media-object" src="img/avatar.svg" alt="avatar">
+                </a>
+              </div>
+              <div class="media-body">
+                <h5 class="media-heading">Matti Meikäläinen <span class="text-muted text-right"><span class="date-separator"> – </span>13 min sitten</span></h5>
+              </div>
+              <p>Moi, mitä mieltä olet tuosta parkk Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- sisäiset kommentit ends -->
+
+<!-- <div id="collapse-content" class="display-none">
+<div class="row">
+<div class="col-md-12 comment-first">
+<div class="media">
+<div class="media-left">
+<a href="#">
+<img class="avatar media-object" src="img/avatar.svg" alt="avatar">
+</a>
+</div>
+<div class="media-body">
+<h5 class="media-heading">Matti Meikäläinen <span class="text-muted text-right"><span class="date-separator"> – </span>26 min sitten</span></h5>
+<p class="text-muted"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Raatikainen, Hanna (KSV)</p>
+</div>
+<p>Moi, mitä mieltä olet tuosta parkk Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod.</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 comment">
+<div class="media">
+<div class="media-left">
+<a href="#">
+<img class="avatar media-object" src="img/avatar.svg" alt="avatar">
+</a>
+</div>
+<div class="media-body">
+<h5 class="media-heading">Hanna Raatikainen <span class="text-muted text-right"><span class="date-separator"> – </span>42 min sitten</span></h5>
+</div>
+<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 comment">
+<div class="media">
+<div class="media-left">
+<a href="#">
+<img class="avatar media-object" src="img/avatar.svg" alt="avatar">
+</a>
+</div>
+<div class="media-body">
+<h5 class="media-heading">Hannu Pietilä <span class="text-muted text-right"><span class="date-separator"> – </span>45 min sitten</span></h5>
+</div>
+<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui.</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 comment-first">
+<div class="media">
+<div class="media-left">
+<a href="#">
+<img class="avatar media-object" src="img/avatar.svg" alt="avatar">
+</a>
+</div>
+<div class="media-body">
+<h5 class="media-heading">Matti Meikäläinen <span class="text-muted text-right"><span class="date-separator"> – </span>26 min sitten</span></h5>
+<p class="text-muted"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Aho, Eero (KSV)</p>
+</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 comment">
+<div class="media">
+<div class="media-left">
+<a href="#">
+<img class="avatar media-object" src="img/avatar.svg" alt="avatar">
+</a>
+</div>
+<div class="media-body">
+<h5 class="media-heading">Eero Aho <span class="text-muted text-right"><span class="date-separator"> – </span>45 min sitten</span></h5>
+</div>
+<p>Nyt kiire, vastaan kohta paremmin.</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 comment">
+<div class="media">
+<div class="media-left">
+<a href="#">
+<img class="avatar media-object" src="img/avatar.svg" alt="avatar">
+</a>
+</div>
+<div class="media-body">
+<h5 class="media-heading">Eero Aho <span class="text-muted text-right"><span class="date-separator"> – </span>49 min sitten</span></h5>
+</div>
+<p>Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 comment-first">
+<div class="media">
+<div class="media-left">
+<a href="#">
+<img class="avatar media-object" src="img/avatar.svg" alt="avatar">
+</a>
+</div>
+<div class="media-body">
+<h5 class="media-heading">Matti Meikäläinen <span class="text-muted text-right"><span class="date-separator"> – </span>13 min sitten</span></h5>
+<p class="text-muted"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Chydenius, Jussi (KSV)</p>
+</div>
+<p>Moi, mitä mieltä olet tuosta parkk Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod.</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 comment">
+<div class="media">
+<div class="media-left">
+<a href="#">
+<img class="avatar media-object" src="img/avatar.svg" alt="avatar">
+</a>
+</div>
+<div class="media-body">
+<h5 class="media-heading">Jussi Chydenius <span class="text-muted text-right"><span class="date-separator"> – </span>10 min sitten</span></h5>
+</div>
+<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+</div>
+</div>
+</div>
+</div> -->
+<!-- comment section ends -->
+<!-- collapse content ends -->
+<!-- Comment section header -->
+<div class="row">
+  <div class="col-md-12 he-message-subject">
+    <h4>Vastaus <small>Eilen klo 16.20</small></h4>
+  </div>
+</div>
+<!-- Message sender -->
+<div class="row">
+  <div class="col-md-12 he-message-sender">
+    <h5>Vastaaja: Kirsi Hänninen (HKR)</h5>
+  </div>
+</div>
+<!-- Message sender -->
+<div class="row">
+  <div class="col-md-12 he-message-sender">
+    <h5>Lähetetty tiedoksi: Samuli Poutanen (KSV), Heikki Pitkänen (KSV), Hannele Mend (HKR)</h5>
+  </div>
+</div>
+<!-- message container -->
+<div class="row">
+  <div class="col-md-12 he-message-content">
+    <p>Hei, Leiviskätien pysäköintipaikat aiheuttivat teille päänvaivaa.</p>
+    <p>Olemme tehneet selvityksen alueen tilanteesta, ja asiantuntijamme on sitä mieltä, että kiekkopaikat
+      tiellä ovat...</p>
+      <p>Terveisin</p>
+      <p>Rakennusviraston asiakaspalvelu</p>
+    </div>
+  </div>
+  <!-- Comment section header -->
+  <div class="row">
+    <div class="col-md-12 he-message-subject">
+      <h4>Pysäköintipaikkoja</h4>
+    </div>
+  </div>
+  <!-- Message sender -->
+  <div class="row">
+    <div class="col-md-12 he-message-sender">
+      <h5>Lähettäjä: Jussi (jussi@gmail.com) <span>Eilen klo 23.03</span></h5>
+    </div>
+  </div>
+  <!-- Message status -->
+  <div class="row">
+    <div class="col-md-12 he-message-status late">
+      <h5>Käsittely myöhässä</h5>
+    </div>
+  </div>
+  <!-- message container -->
+  <div class="row">
+    <div class="col-lg-12 he-message-content">
+      <p>Kiitos tähänastisista vastauksistanne. Jäin kuitenkin miettimään, miten pysäköinti järjestettiin laajan rakentamisen yhtedessä muutaman korttelin päässä Vaakatiellä. Järjestely oli toimiva, vaikka…</p>
+      <p>Terveisin, Jussi</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <form action="">
+        <textarea class="message-editor form-control scale" rows="1" placeholder="Kirjoita kommenttisi tähän"></textarea>
+        <div class="form-group pull-right">
+          <button class="btn btn-default"type="button" name="button">
+            Tallenna
+          </button>
+          <button class="btn btn-primary" type="button" name="button">
+            Lähetä
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- sticky buttons -->
+  <div class="row">
+    <nav id="fixed-button">
+      <div id="container">
+        <a class="" role="button" href="#"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Siirrä</a>
+        <a class="" role="button" href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Vastaa</a>
+        <a class="" role="button" href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Tiedoksi</a>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- end container fluid -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+ 

@@ -305,14 +305,6 @@ category: Components
   color: #04a1d4;
 }
 
-.can-publish {
-  color: #60b659;
-}
-
-.late {
-  color: #ce0057;
-}
-
 .panel-title a {
   color: #fff;
 }
@@ -403,17 +395,37 @@ category: Components
   color: #04a1d4;
 }
 
-.he-message-status, .can-publish, .late {
+.he-message-status, .he-positive, .he-negative, .he-danger, .can-publish, .late {
   font-family: FFKarbidWebBoldItalic, 'Helvetica Neue', Helvetica, Arial, Sans-serif;
   font-style: italic;
   font-weight: bold;
+  color: gray;
+}
+
+.he-positive {
+  color: #60b659;
+}
+
+.he-negative {
+  color: #f69930;
+}
+
+.he-danger {
+  color: #ce0057;
+}
+
+.can-publish {
+  color: #60b659;
+}
+
+.late {
+  color: #ce0057;
 }
 
 .he-message-content {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 10px;
-  border-bottom: solid 1px #e6e6e6;
 }
 
 .avatar {
@@ -440,6 +452,11 @@ category: Components
   padding-right: 0;
   border: 0px;
   border-radius: 0px;
+}
+
+.he-comment {
+  border-left: solid 2px #04a1d4;
+  margin: 15px;
 }
 
 @media (max-width: 768px) {
