@@ -129,9 +129,32 @@ category: Basics
 title: Navbar
 category: Components
 ---
+
+Navbar should be wrapped in `<nav class="navbar navbar-default navbar-fixed-top"></nav>` tag.
+
 ```html_example
 
-<nav> ... </nav>
+<div class="container-fluid">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+      <h3>HeKaPa</h3></a>
+      <p class="navbar-text"><span class="he-separator"> | </span>Oma työlista (5)</p>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="tyolista.html"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Oma työlista</a></li>
+        <li><a href="tyolista-kasitellyt.html"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Käsitellyt palautteet</a></li>
+        <li><a href="index.html"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Kirjaudu ulos</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div>
 
 ```
 
@@ -192,6 +215,16 @@ category: Components
   font-size: 20px;
 }
 
+.navbar-default .navbar-text {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .navbar-text {
+    display: none;
+  }
+}
+
 /*doc
 
 ---
@@ -201,7 +234,59 @@ category: Components
 
 ```html_example
 
-<nav> ... </nav>
+<div class="col-md-12 he-message-collapse">
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default he-card-bg">
+      <!-- div wrapped in <a> tag to make it clickable -->
+      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOdottaaKommenttia" aria-expanded="true" aria-controls="collapseTwo">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h5 class="panel-title">
+            Odottaa kommenttia (2)
+            <span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
+          </h5>
+        </div>
+      </a>
+      <div id="collapseOdottaaKommenttia" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <a href="luepalaute3.html">
+          <div class="panel-body he-card">
+            <div class="media">
+              <div class="media-body">
+                <p class="he-datestamp">12.04.2016</p>
+                <h4>Heippa, Ullanlinnan Komp... </h4>
+                <p>Heippa, Ullanlinnan Kompassitorille on ilmestynyt k...</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="luepalaute4.html">
+          <div class="panel-body he-card">
+            <div class="media">
+              <div class="media-body">
+                <p class="he-datestamp">19.04.2016</p>
+                <h4>Miksi Rautatientorin luistinradan pur.</h4>
+                <p>Hei! Kuinkahan kauan Rautatientorin luistinradan pu...</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+```
+
+*/
+/*doc
+
+---
+title: Panel non-collapsible
+category: Components
+---
+
+```html_example
+
+<div>...</div>
 
 ```
 
@@ -228,20 +313,6 @@ category: Components
 
 .he-datestamp {
   color: #04a1d4;
-}
-
-.he-message-status, .can-publish, .late {
-  font-family: FFKarbidWebBoldItalic, 'Helvetica Neue', Helvetica, Arial, Sans-serif;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.can-publish {
-  color: #60b659;
-}
-
-.late {
-  color: #ce0057;
 }
 
 .panel-title a {
@@ -334,11 +405,37 @@ category: Components
   color: #04a1d4;
 }
 
+.he-message-status, .he-positive, .he-negative, .he-danger, .can-publish, .late {
+  font-family: FFKarbidWebBoldItalic, 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  color: gray;
+}
+
+.he-positive {
+  color: #60b659;
+}
+
+.he-negative {
+  color: #f69930;
+}
+
+.he-danger {
+  color: #ce0057;
+}
+
+.can-publish {
+  color: #60b659;
+}
+
+.late {
+  color: #ce0057;
+}
+
 .he-message-content {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 10px;
-  border-bottom: solid 1px #e6e6e6;
 }
 
 .avatar {
@@ -346,45 +443,10 @@ category: Components
   height: 40px;
 }
 
-.hr {
-  border-bottom: solid 1px #e6e6e6;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.hr-nomargin {
-  border-bottom: solid 1px #e6e6e6;
-  margin: 0;
-}
-
-.availability-online, .availability-offline {
+.availability-online {
   background-color: green;
   height: 16px;
   width: 16px;
-}
-
-.availability-offline {
-  background-color: gray;
-}
-
-.date-separator {
-  color: #b3b3b3;
-}
-
-.comment-first {
-  padding-top: 14px;
-  padding-bottom: 10px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.comment {
-  background-color: #fff;
-  padding-top: 14px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #fff;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .display-none {
@@ -402,6 +464,11 @@ category: Components
   border-radius: 0px;
 }
 
+.he-comment {
+  border-left: solid 2px #04a1d4;
+  margin: 15px;
+}
+
 @media (max-width: 768px) {
   #fixed-button {
     position: fixed;
@@ -414,7 +481,7 @@ category: Components
 #container {
   min-widht: 320px;
   font-size: 14px;
-  line-height: 40px;
+  line-height: 42px;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -422,7 +489,7 @@ category: Components
 
 #container a {
   width: 33.333%;
-  height: 40px;
+  height: 42px;
   color: #fff;
   text-decoration: none;
   display: inline-block;
@@ -471,14 +538,15 @@ category: Components
   }
 }
 
-.navbar-default .navbar-text {
-  color: #fff;
+.hr {
+  border-bottom: solid 1px #e6e6e6;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-@media (min-width: 768px) {
-  .navbar-text {
-    display: none;
-  }
+.hr-nomargin {
+  border-bottom: solid 1px #e6e6e6;
+  margin: 0;
 }
 
 .pink {
@@ -487,6 +555,29 @@ category: Components
 
 .margin-top-20 {
   margin-top: 20px;
+}
+
+.ui-widget-content {
+  background: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.ui-widget-content.ui-widget {
+  font-family: "FFKarbidWebRegular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 10px;
+  color: #333;
+}
+
+.ui-widget-content .ui-state-focus {
+  color: red;
+  border: none;
+  background: none;
+  background-color: #f8d362;
 }
 
 .accordion-toggle:after {

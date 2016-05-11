@@ -215,6 +215,16 @@ Navbar should be wrapped in `<nav class="navbar navbar-default navbar-fixed-top"
   font-size: 20px;
 }
 
+.navbar-default .navbar-text {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .navbar-text {
+    display: none;
+  }
+}
+
 /*doc
 
 ---
@@ -528,16 +538,6 @@ category: Components
   }
 }
 
-.navbar-default .navbar-text {
-  color: #fff;
-}
-
-@media (min-width: 768px) {
-  .navbar-text {
-    display: none;
-  }
-}
-
 .hr {
   border-bottom: solid 1px #e6e6e6;
   margin-top: 20px;
@@ -555,6 +555,30 @@ category: Components
 
 .margin-top-20 {
   margin-top: 20px;
+}
+
+.ui-widget-content {
+  background: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.ui-widget-content .ui-state-focus {
+  color: #fff;
+  border: none;
+  background: none;
+  background-color: #f2f2f2;
+}
+
+.ui-widget-content .ui-menu-item {
+  font-family: "FFKarbidWebRegular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-weight: normal;
+  color: #333;
+  color: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px;
 }
 
 .accordion-toggle:after {

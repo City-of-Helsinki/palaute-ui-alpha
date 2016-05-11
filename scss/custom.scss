@@ -1,4 +1,3 @@
-
 // FONTS
 @font-face {
   font-family: 'FFKarbidWebRegular';
@@ -41,6 +40,9 @@ $panel-gray: rgb(235,235,235);
 $helsinki-danger: rgb(206,0,87);
 $helsinki-warning: rgb(246,153,48);
 $helsinki-positive: rgb(96,182,89);
+$font-family-regular: 'FFKarbidWebRegular', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+$font-family-bold: 'FFKarbidWebBold', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+
 
 // TYPOGRAPHY
 h1, h2, h3, h4, h5, h6 {
@@ -190,7 +192,7 @@ Navbar should be wrapped in `<nav class="navbar navbar-default navbar-fixed-top"
 
 */
 
-// NAVBAR
+// NAVBAR styles
 // overrides for default navbar styles
 .navbar-default {
   background-color: $helsinki-blue-light;
@@ -239,7 +241,17 @@ Navbar should be wrapped in `<nav class="navbar navbar-default navbar-fixed-top"
   color: $helsinki-blue-extra-light;
   font-size: 20px;
 }
-// end navbar styles
+
+.navbar-default .navbar-text {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+    .navbar-text {
+    display: none;
+  }
+}
+// end NAVBAR styles
 
 
 /*doc
@@ -310,7 +322,7 @@ category: Components
 
 */
 
-// PANEL STYLES
+// PANEL styles
 .panel {
   border-style: none;
   border-radius: 0px;
@@ -371,6 +383,7 @@ category: Components
 }
 // end PANEL styles
 
+// MESSAGE EDITOR
 // controls the message editor expand on focus
 .message-editor {
   margin: 20px 0 20px 0;
@@ -383,8 +396,6 @@ category: Components
   margin: 20px 0 20px 0;
   height: 200px;
 }
-
-// MESSAGE STYLES
 
 /*doc
 
@@ -421,6 +432,7 @@ category: Components
 
 */
 
+// MESSAGES & COMMENTS
 // Styles for the message subject
 .he-message-subject {
   padding-top: 15px;
@@ -455,11 +467,13 @@ category: Components
   color: $helsinki-danger;
 }
 
+// To be removed
 .can-publish {
   @extend .he-message-status;
   color: $helsinki-positive;
 }
 
+// To be removed
 .late {
   @extend .he-message-status;
   color: $helsinki-danger;
@@ -485,31 +499,6 @@ category: Components
   width: 16px;
 }
 
-// .availability-offline {
-//   @extend .availability-online;
-//   background-color: gray;
-// }
-
-// .date-separator {
-//   color: $black-30;
-// }
-
-// .comment-first {
-//   padding-top: 14px;
-//   padding-bottom: 10px;
-//   margin-top: 0;
-//   margin-bottom: 0;
-// }
-
-// .comment {
-//   background-color: #fff;
-//   padding-top: 14px;
-//   padding-bottom: 10px;
-//   border-bottom: 2px solid #fff;
-//   margin-top: 0;
-//   margin-bottom: 0;
-// }
-
 .display-none {
   display: none;
 }
@@ -532,7 +521,9 @@ category: Components
   border-left: solid 2px $helsinki-blue-extra-light;
   margin: 15px;
 }
+// END MESSAGES & COMMENTS
 
+// STICKY BUTTONS
 // media query to fix action buttons to bottom of screen @ <768px
 @media (max-width: 768px) {
   #fixed-button {
@@ -543,7 +534,6 @@ category: Components
   }
 }
 
-// STICKY BUTTONS
 // Styles for fixed location action buttons
 // styling the container of the buttons
 #container {
@@ -587,26 +577,7 @@ category: Components
   border-right: solid 2px $helsinki-blue-extra-light;
 }
 
-
-
-// .he-fixed-buttons-bg {
-//   background-color: $helsinki-blue-light;
-//   border: solid 1px  #fff;
-// }
-
-// styles for buttons
-// .he-btn-fixed {
-//     background-color: $black-5;
-//     border-radius: 0px;
-//     &:hover {
-//       background-color: darken($black-5, 10);
-//     }
-//     &:active {
-//       background-color: darken($black-5, 15);
-//     }
-// }
-
-// Animation that fires when the tiedoksi section is updatet on the page
+// Animation that fires when a section is updated on the page
 .anim-tiedoksi {
   animation-name: anim-tiedoksi;
   animation-duration: 5s;
@@ -621,18 +592,6 @@ category: Components
   20%   { background-color: $helsinki-yellow-30; }
   100% { background-color: #fff; }
 }
-
-.navbar-default .navbar-text {
-  color: #fff;
-}
-
-@media (min-width: 768px) {
-    .navbar-text {
-    display: none;
-  }
-}
-
-
 
 // helper classes
 .hr {
@@ -653,6 +612,36 @@ category: Components
 .margin-top-20 {
   margin-top: 20px;
 }
+
+// TAGS & AUTOCOMPLETE
+
+
+.ui-widget-content {
+  background: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  .ui-state-focus {
+    color: #fff;
+    border: none;
+    background: none;
+    background-color: $black-5;
+  }
+  .ui-menu-item {
+    font-family: $font-family-regular;
+    font-weight: normal;
+    color: #333;
+    color: inherit;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px;
+  }
+}
+
+
+
+
+
 
 // make div a link
 // .he-div-link {

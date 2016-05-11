@@ -115,5 +115,10 @@ module.exports = function(grunt) {
       'bootlint',
     ]);
 
+    grunt.registerTask('docs', [
+      'watch:sass',
+      'hologram'
+    ]);
+
 
 };
