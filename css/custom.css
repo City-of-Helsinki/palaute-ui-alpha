@@ -19,14 +19,61 @@
   src: url("../fonts/KarbidWeb-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/KarbidWeb-BoldItalic.woff") format("woff");
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'FFKarbidWebBold', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
-}
+/*doc
 
+---
+title: Typography
+category: Basics
+---
+
+```html_example
+
+<h1>Lupa väliaitojen uusimiseen</h1>
+<h2>Lupa väliaitojen uusimiseen</h2>
+<h3>Lupa väliaitojen uusimiseen</h3>
+<h4>Lupa väliaitojen uusimiseen</h4>
+<h5>Lupa väliaitojen uusimiseen</h5>
+<h6>Lupa väliaitojen uusimiseen</h6>
+<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+```
+
+*/
 body {
-  font-family: 'FFKarbidWebRegular', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+  font-family: "FFKarbidWebRegular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   padding-bottom: 60px;
   padding-top: 80px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "FFKarbidWebBold", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+}
+
+h1 {
+  font-size: 41px;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+p {
   font-size: 16px;
 }
 
@@ -382,7 +429,7 @@ category: Components
 </div>
 <div class="row">
   <div class="col-md-12 he-message-status">
-    <h5 class="can-publish">- Palautteelle on annettu julkaisulupa.</h5>
+    <h5 class="he-positive">Palautteelle on annettu julkaisulupa.</h5>
   </div>
 </div>
 <div class="row">
@@ -405,6 +452,23 @@ category: Components
   color: #04a1d4;
 }
 
+/*doc
+
+---
+title: Message status indicators
+category: Components
+---
+
+```html_example
+
+<h5 class="he-message-status">Neutral</h5>
+<h5 class="he-message-status he-positive">Positive</h5>
+<h5 class="he-message-status he-negative">Negative</h5>
+<h5 class="he-message-status he-danger">Danger</h5>
+
+```
+
+*/
 .he-message-status, .he-positive, .he-negative, .he-danger, .can-publish, .late {
   font-family: FFKarbidWebBoldItalic, 'Helvetica Neue', Helvetica, Arial, Sans-serif;
   font-style: italic;
@@ -443,12 +507,6 @@ category: Components
   height: 40px;
 }
 
-.availability-online {
-  background-color: green;
-  height: 16px;
-  width: 16px;
-}
-
 .display-none {
   display: none;
 }
@@ -464,11 +522,39 @@ category: Components
   border-radius: 0px;
 }
 
+/*doc
+
+---
+title: Comment block
+category: Components
+---
+
+```html_example
+
+<div> ...  </div>
+
+```
+
+*/
 .he-comment {
   border-left: solid 2px #04a1d4;
   margin: 15px;
 }
 
+/*doc
+
+---
+title: Sticky buttons
+category: Components
+---
+
+```html_example
+
+<div> ...  </div>
+
+```
+
+*/
 @media (max-width: 768px) {
   #fixed-button {
     position: fixed;
@@ -579,24 +665,6 @@ category: Components
   font-size: 14px;
   line-height: 20px;
   padding: 10px;
-}
-
-.accordion-toggle:after {
-  /* symbol for "opening" panels */
-  font-family: 'Glyphicons Halflings';
-  /* essential for enabling glyphicon */
-  content: "\e114";
-  /* adjust as needed, taken from bootstrap.css */
-  float: right;
-  /* adjust as needed */
-  color: grey;
-  /* adjust as needed */
-}
-
-.accordion-toggle.collapsed:after {
-  /* symbol for "collapsed" panels */
-  content: "\e080";
-  /* adjust as needed, taken from bootstrap.css */
 }
 
 /*# sourceMappingURL=custom.css.map */

@@ -43,18 +43,76 @@ $helsinki-positive: rgb(96,182,89);
 $font-family-regular: 'FFKarbidWebRegular', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
 $font-family-bold: 'FFKarbidWebBold', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
 
+$font-size-base:          16px;
+$font-size-large:         ceil(($font-size-base * 1.25));
+$font-size-small:         ceil(($font-size-base * 0.85));
+
+$font-size-h1:            floor(($font-size-base * 2.6));
+$font-size-h2:            floor(($font-size-base * 2.15));
+$font-size-h3:            ceil(($font-size-base * 1.7));
+$font-size-h4:            ceil(($font-size-base * 1.25));
+$font-size-h5:            $font-size-base;
+$font-size-h6:            ceil(($font-size-base * 0.85));
+
+/*doc
+
+---
+title: Typography
+category: Basics
+---
+
+```html_example
+
+<h1>Lupa väliaitojen uusimiseen</h1>
+<h2>Lupa väliaitojen uusimiseen</h2>
+<h3>Lupa väliaitojen uusimiseen</h3>
+<h4>Lupa väliaitojen uusimiseen</h4>
+<h5>Lupa väliaitojen uusimiseen</h5>
+<h6>Lupa väliaitojen uusimiseen</h6>
+<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+```
+
+*/
 
 // TYPOGRAPHY
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'FFKarbidWebBold', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
-}
-
 body {
-  font-family: 'FFKarbidWebRegular', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+  font-family: $font-family-regular;
   padding-bottom: 60px; // add padding to bottom of the page to leave room for fixed location buttons
   padding-top: 80px;
-  font-size: 16px;
   // background-color: pink;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-bold;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+h4 {
+  font-size: $font-size-h4;
+}
+
+h5 {
+  font-size: $font-size-h5;
+}
+
+h6 {
+  font-size: $font-size-h6;
+}
+
+p {
+  font-size: $font-size-base;
 }
 
 /*doc
@@ -362,6 +420,7 @@ category: Components
   }
 }
 
+// class for panel heading for internal comments
 .panel-heading-int-comments {
   background-color: $helsinki-orange;
 }
@@ -417,7 +476,7 @@ category: Components
 </div>
 <div class="row">
   <div class="col-md-12 he-message-status">
-    <h5 class="can-publish">- Palautteelle on annettu julkaisulupa.</h5>
+    <h5 class="he-positive">Palautteelle on annettu julkaisulupa.</h5>
   </div>
 </div>
 <div class="row">
@@ -443,6 +502,24 @@ category: Components
 .he-message-sender {
   color: $helsinki-blue-extra-light;
 }
+
+/*doc
+
+---
+title: Message status indicators
+category: Components
+---
+
+```html_example
+
+<h5 class="he-message-status">Neutral</h5>
+<h5 class="he-message-status he-positive">Positive</h5>
+<h5 class="he-message-status he-negative">Negative</h5>
+<h5 class="he-message-status he-danger">Danger</h5>
+
+```
+
+*/
 
 // Styles for the message status
 .he-message-status {
@@ -493,11 +570,12 @@ category: Components
   height: 40px;
 }
 
-.availability-online {
-  background-color: green;
-  height: 16px;
-  width: 16px;
-}
+// To be removed
+// .availability-online {
+//   background-color: green;
+//   height: 16px;
+//   width: 16px;
+// }
 
 .display-none {
   display: none;
@@ -516,12 +594,42 @@ category: Components
   border-radius: 0px;
 }
 
+/*doc
+
+---
+title: Comment block
+category: Components
+---
+
+```html_example
+
+<div> ...  </div>
+
+```
+
+*/
+
 // styles for the comment blocks
 .he-comment {
   border-left: solid 2px $helsinki-blue-extra-light;
   margin: 15px;
 }
 // END MESSAGES & COMMENTS
+
+/*doc
+
+---
+title: Sticky buttons
+category: Components
+---
+
+```html_example
+
+<div> ...  </div>
+
+```
+
+*/
 
 // STICKY BUTTONS
 // media query to fix action buttons to bottom of screen @ <768px
@@ -614,8 +722,8 @@ category: Components
 }
 
 // TAGS & AUTOCOMPLETE
-
-
+// Overrides for the jQuery css that
+// styles the autocomplete
 .ui-widget-content {
   background: none;
   background-color: #fff;
@@ -636,46 +744,4 @@ category: Components
     line-height: 20px;
     padding: 10px;
   }
-}
-
-
-
-
-
-
-// make div a link
-// .he-div-link {
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   top: 0;
-//   left: 0;
-//   text-decoration: none;
-//   // z-index: 10;
-//   padding: 15px 15px;
-// }
-
-// .panel-heading [data-toggle="collapse"]:after {
-// 	font-family: 'Glyphicons Halflings';
-// 	content: "\e079";
-// 	float: right;
-// 	color: #333;
-// 	font-size: 14px;
-// 	line-height: 18px;
-// 	transform: rotate(-90deg);
-// }
-// .panel-heading [data-toggle="collapse"].collapsed:after {
-// 	transform: rotate(90deg);
-// }
-
-.accordion-toggle:after {
-    /* symbol for "opening" panels */
-    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
-    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
-    float: right;        /* adjust as needed */
-    color: grey;         /* adjust as needed */
-}
-.accordion-toggle.collapsed:after {
-    /* symbol for "collapsed" panels */
-    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
 }
