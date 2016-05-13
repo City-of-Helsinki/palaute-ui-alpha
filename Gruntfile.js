@@ -10,28 +10,13 @@ module.exports = function(grunt) {
               files: ['scss/*.scss'],
               tasks: ['sass'],
               options: {
-                livereload: true
+                // livereload: true
               },
           },
-          // livereload html pages, use liverealod.com browser plugin
-          livereload: {
-            options: {
-              livereload: true
-            },
-            files: ['*.html'],
-          },
-        },
-        // compile sass to css
-        // https://github.com/gruntjs/grunt-contrib-sass
-        sass: {
-            dist: {
-                options: {
-                    style: 'expanded'
-                },
-                files: {
-                    'css/custom.css': 'scss/custom.scss'
-                }
-            }
+          cssmin: {
+            files: ['css/custom.css'],
+            tasks: ['cssmin']
+          }
         },
         // hologram syleguide generation with Grunt
         // https://github.com/trulia/hologram/
@@ -53,59 +38,87 @@ module.exports = function(grunt) {
           },
           files: ['*.html']
         },
+        // prefix task
+        // https://github.com/nDmitry/grunt-autoprefixer
         autoprefixer: {
             options: {
-            // Task-specific options go here.
             browsers: ['last 2 versions', 'ie 9']
             },
             css: {
-            // Target-specific file lists and/or options go here.
               src: ['css/custom.css'],
             }
+          },
+          // compile sass to css with grunt-sass
+          // https://github.com/sindresorhus/grunt-sass
+          sass: {
+            options: {
+              sourceMap: true,
+              outputStyle: 'expanded',
+            },
+            dist: {
+              files: {
+                'css/custom.css': 'scss/custom.scss'
+              }
+            }
+          },
+          browserSync: {
+              dev: {
+                  bsFiles: {
+                      src : [
+                          'css/*.css',
+                          '*.html'
+                      ]
+                  },
+                  options: {
+                      watchTask: true,
+                      server: './',
+                      browser: "google chrome"
+                  }
+              }
+          },
+          cssmin: {
+            options: {
+              report: 'min',
+              sourceMap: true,
+            },
+            target: {
+              files: [{
+                expand: true,
+                cwd: 'css',
+                src: ['custom.css'],
+                dest: 'css',
+                ext: '.min.css'
+              }]
+            }
           }
-        // bake: {
-        //   includes: {
-        //     options: {
-        //         // Task-specific options go here.
-        //     },
-        //     files: [ {
-        //         expand: true,     // Enable dynamic expansion.
-        //         cwd: '',      // Src matches are relative to this path.
-        //         src: [ '*.html' ], // Actual pattern(s) to match.
-        //         dest: 'build/',   // Destination path prefix.
-        //         ext: '.html'   // Dest filepaths will have this extension.
-        //         } ]
-        //     },
-        //   },
-        //   // copy task copies files to build folder
-        //   //
-        //   copy: {
-        //       main: {
-        //         files: [
-        //           {expand: true, src: ['css/*', 'fonts/*', 'img/*'], dest: 'build/'},
-        //         ],
-        //       },
-        //     },
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-hologram');
     grunt.loadNpmTasks('grunt-bootlint');
     grunt.loadNpmTasks('grunt-autoprefixer');
-    // grunt.loadNpmTasks('grunt-bake');
-    // grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-browser-sync');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', [
       'sass',
       'autoprefixer',
-      'hologram',
-      'bootlint',
+      // 'cssmin',
+      // 'hologram',
+      'browserSync',
       'watch'
-      // 'bake',
-      // 'copy'
     ]);
+    grunt.registerTask('lint', [
+      'bootlint',
+    ]);
+
+    grunt.registerTask('docs', [
+      'watch:sass',
+      'hologram'
+    ]);
+
 
 };
