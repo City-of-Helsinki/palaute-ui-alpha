@@ -196,9 +196,19 @@
     </div>
   </div>
 </div>
+<a name="tiedoksi-target"></a>
 <div class="row">
   <div class="col-md-12 he-message-subject">
     <h4>Vastaus <small>Eilen klo 15.24</small></h4>
+  </div>
+</div>
+<!-- alert for message sending, dismissed automatically after 2.5 sec, see jQuery below -->
+<div class="row">
+  <div class="col-md-12">
+    <div class="alert alert-success" id="success-alert">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>Palautteen sisältö ja vastaus lähetetty tiedoksi.</strong>
+    </div>
   </div>
 </div>
 <!-- Comment section header -->
@@ -208,7 +218,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-md-12 he-message-sender anim-tiedoksi">
+  <div class="col-md-12 he-message-sender">
     <h5>Lähetetty tiedoksi:</h5>
     <h5>Hanna Salminen (KSV)</h5>
   </div>
@@ -260,5 +270,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
+  <!-- jQuery for dismissing alert automatically -->
+  <script>
+  $("#success-alert").fadeTo(2500, 500).slideUp(400, function(){
+    $("#success-alert").alert('close');
+  });
+  </script>
 </body>
 </html>

@@ -20,7 +20,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="tyolista.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+        <a class="navbar-brand" href="tyolista.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Oma työlista (5)</a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -126,5 +126,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+    $("#success-alert").fadeTo(2500, 500).slideUp(400, function(){
+      $("#success-alert").alert('close');
+    });
+    </script>
   </body>
   </html>
