@@ -53,6 +53,21 @@
     <div class="row">
       <div class="col-md-12 he-message-status">
           <h5>Palautteelle on annettu julkaisulupa.</h5>
+          <!-- New row inside the column element to make collapsible content-->
+          <div class="row collapse" id="collapseMore">
+            <div class="col-md-12">
+              <h5>Meta data 1</h5>
+              <h5>Meta data 2</h5>
+              <h5>Meta data 3</h5>
+            </div>
+          </div> <!-- End row -->
+          <!-- Another row to make control for collapse button -->
+          <div class="row">
+            <div class="col-md-12">
+              <hr>
+              <button class="btn btn-default btn-xs center-block he-expand-button" data-toggle="collapse" data-target="#collapseMore" aria-expanded="false" aria-controls="collapseMOre">Näytä lisää</button>
+            </div>
+          </div> <!-- End row -->
       </div>
     </div>
     <div class="row">
@@ -75,24 +90,23 @@
     <div class="row">
       <div class="col-md-12 he-message-collapse">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-          <div class="panel panel-default">
+          <div class="panel panel-default he-card-bg">
           <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
             <div class="panel-heading panel-heading-int-comments" role="tab" id="headingTwo">
               <h5 class="panel-title">
                   Sisäiset kommentit (1)
-                  <span class="glyphicon glyphicon-plus pull-right" aria-hidden="true"></span>
               </h5>
             </div>
             </a>
             <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-              <div class="panel-body he-message-status">
+              <div class="panel-body he-message-status he-card">
                 <div class="media">
                   <div class="media-body">
                     <p>Joanna Alho (HKR) kutsuttiin keskusteluun.</p>
                   </div>
                 </div>
               </div>
-              <div class="panel-body he-comment">
+              <div class="panel-body he-comment he-card">
                 <div class="media">
                   <div class="media-left">
                     <a href="#">

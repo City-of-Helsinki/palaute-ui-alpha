@@ -688,4 +688,11 @@ a[aria-expanded="true"] > div > h5:after {
   transition: all 200ms ease;
 }
 
+.he-expand-button {
+  font-family: "FFKarbidWebRegular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-style: normal;
+  position: relative;
+  top: -32px;
+}
+
 /*# sourceMappingURL=custom.css.map */
