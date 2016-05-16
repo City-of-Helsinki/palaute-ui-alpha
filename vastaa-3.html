@@ -205,20 +205,28 @@
         </div>
       </div>
       <a name="vastaus-target"></a>
-      <!-- Comment section header -->
+
       <div class="row">
         <div class="col-md-12 he-message-subject">
           <h4>Vastaus <small>Eilen klo 12.24</small></h4>
         </div>
       </div>
-      <!-- Comment section header -->
+      <!-- alert for message sending, dismissed automatically after 2.5 sec, see jQuery below -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="alert alert-success" id="success-alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Palaute lähetetty.</strong>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="col-md-12 he-message-sender">
           <h5>Vastaaja: Kirsi Hänninen (HKR)</h5>
         </div>
       </div>
       <!-- message container -->
-      <div class="row anim-tiedoksi">
+      <div class="row">
         <div class="col-lg-12 he-message-content">
           <p>Hei, kiitos palautteestanne ja harmillinen tilanne tällä hetkellä Lassilan alueella.</p>
           <p>Asukkaiden pysäköintipaikat alueella on kuitenkin suunniteltu muutoin kuin kadun varteen pysäköimällä. Kadun varrella olevat kiekkopaikat ovat tarkoitettu vain väliaikaiseen...</p>
@@ -285,5 +293,11 @@
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
           <!-- Include all compiled plugins (below), or include individual files as needed -->
           <script src="js/bootstrap.min.js"></script>
+          <!-- jQuery for dismissing alert automatically -->
+          <script>
+          $("#success-alert").fadeTo(2500, 500).slideUp(400, function(){
+            $("#success-alert").alert('close');
+          });
+          </script>
         </body>
         </html>

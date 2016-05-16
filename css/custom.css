@@ -605,11 +605,28 @@ category: Components
 }
 
 .anim-tiedoksi {
-  animation-name: anim-tiedoksi;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
-  animation-delay: 1s;
+  -webkit-animation-name: anim-tiedoksi;
+          animation-name: anim-tiedoksi;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes anim-tiedoksi {
+  0% {
+    background-color: #fff;
+  }
+  20% {
+    background-color: #f8d362;
+  }
+  100% {
+    background-color: #fff;
+  }
 }
 
 @keyframes anim-tiedoksi {
@@ -643,7 +660,6 @@ category: Components
   margin-top: 20px;
 }
 
-<<<<<<< Updated upstream
 .ui-widget-content {
   background: none;
   background-color: #fff;
@@ -667,8 +683,3 @@ category: Components
   line-height: 20px;
   padding: 10px;
 }
-
-/*# sourceMappingURL=custom.css.map */
-=======
-/*# sourceMappingURL=custom.css.map */
->>>>>>> Stashed changes
