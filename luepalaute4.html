@@ -36,23 +36,36 @@
   <div class="container">
     <!-- viestin tiedot -->
     <div class="row">
+
       <div class="col-md-12 he-message-subject">
-        <h4>Miksi Rautatientorin luistinradan purkamisessa kestää</h4>
+        <div class="media-body">
+          <p class="he-datestamp">12.04.2016 klo 14.21 <span class="he-positive he-message-status pull-right"></span></p>
+          <h4>Miksi Rautatientorin luistinradan purkamisessa kestää </h4>
+        </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12 he-message-sender">
-          <h5>Lähettäjä: Stadin kundi (jasulainen@gmail.com) <span>14:38 22.03.16</span></h5>
+          <h5>Lähettäjä: Stadin kundi (jasulainen@gmail.com)</h5>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12 he-message-status">
-          <h5>Palautteelle on annettu julkaisulupa.</h5>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 he-message-status late">
-          <h5>Käsittely myöhässä</h5>
+          <!-- New row inside the column element to make collapsible content-->
+          <div class="row collapse" id="collapseMore">
+            <div class="col-md-12">
+              <h5>Palautteen id: 5743250E3</h5>
+              <h5>Vastauksen määräaika: 19.04.2016</h5>
+              <h5>Palautteelle on annettu julkaisulupa.</h5>
+            </div>
+          </div> <!-- End row -->
+          <!-- Another row to make control for collapse button -->
+          <div class="row">
+            <div class="col-md-12">
+              <hr>
+              <button class="btn btn-default btn-xs center-block he-expand-button" data-toggle="collapse" data-target="#collapseMore" aria-expanded="false" aria-controls="collapseMOre">Näytä lisää</button>
+            </div>
+          </div> <!-- End row -->
       </div>
     </div>
     <!-- message container -->
