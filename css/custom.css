@@ -410,6 +410,9 @@ category: Components
   height: 200px;
 }
 
+.media-heading span.glyphicon-user {
+    font-size: 30px;
+}
 /*doc
 
 ---
