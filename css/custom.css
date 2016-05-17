@@ -413,6 +413,10 @@ category: Components
 .media-heading span.glyphicon-user {
     font-size: 30px;
 }
+
+.comments .media-body p{
+  padding-top: 9px;
+}
 /*doc
 
 ---
