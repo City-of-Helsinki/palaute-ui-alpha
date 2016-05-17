@@ -36,7 +36,39 @@
     <!-- Message subject -->
     <div class="row">
       <div class="col-md-12 he-message-subject">
-        <h4>Pysäköintipaikkoja</h4>
+        <div class="media-body">
+          <p class="he-datestamp">22.03.2016 klo 14.38 <span class="he-positive he-message-status pull-right">Siirretty</span></p>
+          <h4>Pysäköintipaikkoja </h4>
+        </div>
+      </div>
+    </div>
+
+    <a name="siirra-target" href="#"></a>
+    <div class="row">
+      <div class="col-md-12 he-message-sender">
+        <h5>Lähettäjä: Jussi (jussi@gmail.com)</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 he-message-status">
+
+          <!-- New row inside the column element to make collapsible content-->
+          <div class="row collapse" id="collapseMore">
+            <div class="col-md-12">
+              <h5>Palautteen id: 2E99g221</h5>
+              <h5>Vastauksen määräaika: 01.04.2016</h5>
+              <h5>Palautteelle on annettu julkaisulupa.</h5>
+              <h5>Siirretty: Sampsa Lappinen (KSV) 0 min sitten</h5>
+            </div>
+          </div> <!-- End row -->
+          <!-- Another row to make control for collapse button -->
+          <div class="row">
+            <div class="col-md-12">
+              <hr>
+              <button class="btn btn-default btn-xs center-block he-expand-button" data-toggle="collapse" data-target="#collapseMore" aria-expanded="false" aria-controls="collapseMOre">Näytä lisää</button>
+            </div>
+          </div> <!-- End row -->
       </div>
     </div>
     <!-- alert for message sending, dismissed automatically after 2.5 sec, see jQuery below -->
@@ -48,26 +80,10 @@
         </div>
       </div>
     </div>
-    <!-- Message sender -->
-    <div class="row">
-      <div class="col-md-12 he-message-sender">
-        <h5>Lähettäjä: jussi (jussi@gmail.com) <span>15.04.16 12:09</span></h5>
-      </div>
-    </div>
-    <!-- Message status -->
-    <div class="row">
-      <div class="col-md-12 he-message-status he-positive">
-        <h5>Vastattu</h5>
-      </div>
-    </div>
-    <a name="siirra-target" href="#"></a>
-    <div class="row">
-      <div class="col-md-12 he-message-sender">
-        <h5>Siirretty:</h5>
-        <small>Eilen klo 12.31</small>
-        <h5>Sampsa Lappinen (KSV)</h5>
-      </div>
-    </div>
+
+
+
+
     <!-- Message content -->
     <div class="row">
       <div class="col-md-12 he-message-content">
@@ -98,26 +114,43 @@
               </figure>
               <figure>
                 <figcaption>työmaa.jpg</figcaption>
-                <img class="img-responsive" src="http://placehold.it/345x250" alt=""></div>
+                <img class="img-responsive" src="img/tyomaa.jpg" alt=""></div>
               </figure>
             </div>
           </div>
         </div>
       </div>
-      <!-- textarea plus buttons-->
+      <!-- Sisäiset kommentit -->
       <div class="row">
-        <div class="col-md-12">
-          <form action="">
-            <textarea class="message-editor form-control scale" rows="1" placeholder="Kirjoita kommenttisi tähän"></textarea>
-            <div class="form-group pull-right">
-              <button class="btn btn-default"type="button" name="button">
-                Tallenna
-              </button>
-              <button class="btn btn-primary" type="button" name="button">
-                Lähetä
-              </button>
+        <div class="col-md-12 panel-group he-message-collapse" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default ">
+            <a href="">
+              <div class="panel-heading panel-heading-int-comments" role="tab" id="headingOne">
+                <h5 class="panel-title ">
+                  Sisäiset kommentit
+                </h5>
+              </div>
+            </a>
+            <div id="collapseComments" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body">
+                <span class="text-muted">Ei kommentteja! </span>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <form action="">
+                      <textarea class="message-editor form-control scale" rows="1" placeholder="Kirjoita sisäinen kommenttisi tähän"></textarea>
+                      <div class="form-group pull-right">
+                        <button class="btn btn-primary" type="button" name="button">
+                          Lähetä kommentti
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
