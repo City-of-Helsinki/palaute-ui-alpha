@@ -43,6 +43,7 @@ body {
   font-family: "FFKarbidWebRegular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   padding-bottom: 60px;
   padding-top: 80px;
+  color: #333333;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -694,3 +695,5 @@ a[aria-expanded="true"] > div > h5:after {
   position: relative;
   top: -32px;
 }
+
+/*# sourceMappingURL=custom.css.map */
