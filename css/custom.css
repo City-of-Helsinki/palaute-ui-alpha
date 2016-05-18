@@ -415,6 +415,15 @@ category: Components
   height: 200px;
 }
 
+.media-heading span.glyphicon-user {
+    font-size: 30px;
+}
+
+.comments .media-body p{
+  padding-top: 9px;
+  padding-left: 3px;
+}
+
 /*doc
 
 ---
