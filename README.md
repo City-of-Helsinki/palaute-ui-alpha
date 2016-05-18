@@ -8,7 +8,7 @@
 
 * Grunt ja Grunt CLI (for running Grunt tasks) http://gruntjs.com
 
-* Java SDK for Html linting.
+* Java SDK for Html linting. See details: https://www.npmjs.com/package/grunt-html
 
 ## Basic usage
 
@@ -38,13 +38,13 @@ grunt sass
 
 Compiles `.scss` files into `.css` files.
 
-### Livereload
+### Browsersync
 
 ```
-grunt livereload
+grunt browsersync
 ```
 
-Refreshes the browser window when watch task has found updated files. Requires browser plugin: http://livereload.com.   
+Refreshes the browser window when watch task has found updated files. https://browsersync.io
 
 ### Hologram
 
