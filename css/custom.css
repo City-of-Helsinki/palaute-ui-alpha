@@ -398,6 +398,11 @@ category: Components
   box-shadow: 0px 1px 3px 0px rgba(128, 128, 128, 0.5);
 }
 
+.he-panel-spacer {
+  content: '&nbsp;';
+  height: 5px;
+}
+
 .message-editor {
   margin: 20px 0 20px 0;
   height: 34px;
@@ -606,28 +611,11 @@ category: Components
 }
 
 .anim-tiedoksi {
-  -webkit-animation-name: anim-tiedoksi;
-          animation-name: anim-tiedoksi;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-@-webkit-keyframes anim-tiedoksi {
-  0% {
-    background-color: #fff;
-  }
-  20% {
-    background-color: #f8d362;
-  }
-  100% {
-    background-color: #fff;
-  }
+  animation-name: anim-tiedoksi;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
 }
 
 @keyframes anim-tiedoksi {
@@ -702,9 +690,7 @@ a[aria-expanded="true"] > div > h5:after {
   height: 10px;
   margin: 4px;
   content: '';
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
   transition: all 200ms ease;
 }
 
@@ -714,3 +700,5 @@ a[aria-expanded="true"] > div > h5:after {
   position: relative;
   top: -32px;
 }
+
+/*# sourceMappingURL=custom.css.map */

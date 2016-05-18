@@ -452,6 +452,15 @@ category: Components
 //     }
 // }
 
+// This class acts as a workaround for panels
+// without a .panel-heading. Without this the
+// .he-card-bg class would not paint the background
+// of the panel gray, but leaving a 10px white gap at the top.
+.he-panel-spacer {
+  content: '&nbsp;';
+  height: 5px;
+}
+
 // end PANEL styles
 
 // MESSAGE EDITOR
