@@ -29,7 +29,6 @@
         <ul class="nav navbar-nav">
           <li class="active"><a href="tyolista.html"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Oma työlista</a></li>
           <li><a href="tyolista-kasitellyt.html"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Käsitellyt palautteet</a></li>
-
           <li><a href="index.html"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Kirjaudu ulos</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
@@ -77,6 +76,11 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- tokenfield -->
     <script src="js/bootstrap-tokenfield.min.js"></script>
+    <script src="js/jquery.bootstrap-autohidingnavbar.min.js"></script>
+    <script>
+      $("nav.navbar-fixed-top").autoHidingNavbar({
+      });
+    </script>
     <script>
     $( document ).ready(function() {
       $('#tokenfield').tokenfield({

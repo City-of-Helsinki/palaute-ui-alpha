@@ -180,11 +180,10 @@ a {
     text-decoration: none;
   }
   &:visited {
-    color: lighten($helsinki-blue-light, 5);
+    color: $helsinki-blue-light;
     text-decoration: none;
   }
   &:hover {
-
     color: darken($helsinki-blue-light, 5);
     text-decoration: none;
   }
