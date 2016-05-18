@@ -3,13 +3,12 @@
 
 ## Requirements
 
-* Ruby (for the sass compiling) https://www.ruby-lang.org/en/
 
-* Sass ruby gem http://sass-lang.com/install
-
-* node.js (for npm package management) https://nodejs.org
+* node.js (for npm package management and node-sass) https://nodejs.org
 
 * Grunt ja Grunt CLI (for running Grunt tasks) http://gruntjs.com
+
+* Java SDK for Html linting.
 
 ## Basic usage
 
@@ -63,7 +62,35 @@ grunt bootlint
 
 Bootlint checks the html markup for errors that violate good Bootstrap coding conventions.
 
-Command `grunt` runs all tasks mentioned above.
+### Autoprefixer
+
+```
+grunt autoprefixer
+```
+
+Prefixes css code.
+
+### Cssmin
+
+```
+grunt cssmin
+```
+
+Minifies css code.
+
+### Html lint
+
+```
+grunt htmllint
+```
+
+Lints html code.
+
+Command `grunt` runs all Sass, Autoprefixer, BrowswerSync and starts Watch.
+
+Command `Lint` runs Bootlint and Htmllint.
+
+Commend `docs` watches for edits in sass file and builds styleguide.
 
 ## Fonts
 

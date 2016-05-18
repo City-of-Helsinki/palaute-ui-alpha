@@ -1,4 +1,4 @@
 
-#Hello Style
+#Styleguide
 
-Donec ullamcorper nulla non metus auctor fringilla. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+This styleguide contains the UI components for the Palaute-system. Only components that differ from the Bootstrap version 3.3.6 are documented here. Native Bootstrap documentation can be found from here: [Bootstrap](http://getbootstrap.com).

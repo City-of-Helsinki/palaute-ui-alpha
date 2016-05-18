@@ -74,10 +74,6 @@
                 
               
                 
-                  <a href="#Panel_non-collapsible" class="hgt-menu-item">Panel non-collapsible</a>
-                
-              
-                
                   <a href="#Sticky_buttons" class="hgt-menu-item">Sticky buttons</a>
                 
               
@@ -88,16 +84,80 @@
         <div class="hgt-column three-fourths">
           <div class="hgt-content">
 <h1 id="Comment_block" class="styleguide">Comment block</h1>
-<div class="codeExample">
+<p class="styleguide">Comments are contained under a comment header &quot;Sisäiset kommentit&quot; or other.</p><div class="codeExample">
   <div class="exampleOutput">
     
-<div> ...  </div>
+<div class="row">
+  <div class="col-md-12 he-message-collapse">
+    <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default he-card-bg">
+        <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <div class="panel-heading panel-heading-int-comments" role="tab" id="headingTwo">
+          <h5 class="panel-title">
+              Sisäiset kommentit (2)
+          </h5>
+        </div>
+        </a>
+        <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel">
+          <div class="panel-body he-comment he-card">
+            <div class="media">
+              <div class="media-body">
+                <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Matti Meikäläinen <span class="text-muted text-right"><span class="date-separator"> – </span>26 min sitten</span></h5>
+              </div>
+              <p>Moi, mitä mieltä olet tuosta parkk Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod.</p>
+            </div>
+          </div>
+          <div class="panel-body he-comment he-card">
+            <div class="media">
+              <div class="media-body">
+                <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Hanna Raatikainen <span class="text-muted text-right"><span class="date-separator"> – </span>42 min sitten</span></h5>
+              </div>
+              <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;div&gt;</span> ...  <span class="nt">&lt;/div&gt;</span></pre>
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-12 he-message-collapse"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-group"</span> <span class="na">id=</span><span class="s">"accordion2"</span> <span class="na">role=</span><span class="s">"tablist"</span> <span class="na">aria-multiselectable=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-default he-card-bg"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-parent=</span><span class="s">"#accordion2"</span> <span class="na">href=</span><span class="s">"#collapseTwo"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapseTwo"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading panel-heading-int-comments"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">id=</span><span class="s">"headingTwo"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"panel-title"</span><span class="nt">&gt;</span>
+              Sisäiset kommentit (2)
+          <span class="nt">&lt;/h5&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseTwo"</span> <span class="na">class=</span><span class="s">"panel-collapse collapse in"</span> <span class="na">role=</span><span class="s">"tabpanel"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body he-comment he-card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-body"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"media-heading"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-user"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span> Matti Meikäläinen <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-muted text-right"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"date-separator"</span><span class="nt">&gt;</span> – <span class="nt">&lt;/span&gt;</span>26 min sitten<span class="nt">&lt;/span&gt;&lt;/h5&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;p&gt;</span>Moi, mitä mieltä olet tuosta parkk Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod.<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body he-comment he-card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-body"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"media-heading"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-user"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span> Hanna Raatikainen <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-muted text-right"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"date-separator"</span><span class="nt">&gt;</span> – <span class="nt">&lt;/span&gt;</span>42 min sitten<span class="nt">&lt;/span&gt;&lt;/h5&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;p&gt;</span>Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
     </div>
   </div>
 </div>
@@ -108,17 +168,34 @@
     
 <div class="row">
   <div class="col-md-12 he-message-subject">
-    <h4>Pysäköintipaikkoja</h4>
+    <div class="media-body">
+      <p class="he-datestamp">22.03.2016 klo 14.38 <span class="he-negative pull-right">Käsittely myöhässä</span></p>
+      <h4>Pysäköintipaikkoja </h4>
+    </div>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12 he-message-sender">
-    <h5>Lähettäjä: Jussi (jussi@gmail.com) <span>14:38 22.03.16</span></h5>
+    <h5>Lähettäjä: Jussi (jussi@gmail.com)</h5>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12 he-message-status">
-    <h5 class="he-positive">Palautteelle on annettu julkaisulupa.</h5>
+      <!-- New row inside the column element to make collapsible content-->
+      <div class="row collapse" id="collapseMore">
+        <div class="col-md-12">
+          <h5>Palautteen id: 2E99g221</h5>
+          <h5>Vastauksen määräaika: 01.04.2016</h5>
+          <h5>Palautteelle on annettu julkaisulupa.</h5>
+        </div>
+      </div> <!-- End row -->
+      <!-- Another row to make control for collapse button -->
+      <div class="row">
+        <div class="col-md-12">
+          <hr>
+          <button type="button" class="btn btn-default btn-xs btn-link pull-right" data-toggle="collapse" data-target="#collapseMore" aria-expanded="false" aria-controls="collapseMore"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
+        </div>
+      </div> <!-- End row -->
   </div>
 </div>
 <div class="row">
@@ -135,17 +212,34 @@
     <div class="highlight">
       <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-12 he-message-subject"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h4&gt;</span>Pysäköintipaikkoja<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-body"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"he-datestamp"</span><span class="nt">&gt;</span>22.03.2016 klo 14.38 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"he-negative pull-right"</span><span class="nt">&gt;</span>Käsittely myöhässä<span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;h4&gt;</span>Pysäköintipaikkoja <span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-12 he-message-sender"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h5&gt;</span>Lähettäjä: Jussi (jussi@gmail.com) <span class="nt">&lt;span&gt;</span>14:38 22.03.16<span class="nt">&lt;/span&gt;&lt;/h5&gt;</span>
+    <span class="nt">&lt;h5&gt;</span>Lähettäjä: Jussi (jussi@gmail.com)<span class="nt">&lt;/h5&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-12 he-message-status"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"he-positive"</span><span class="nt">&gt;</span>Palautteelle on annettu julkaisulupa.<span class="nt">&lt;/h5&gt;</span>
+      <span class="c">&lt;!-- New row inside the column element to make collapsible content--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row collapse"</span> <span class="na">id=</span><span class="s">"collapseMore"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-12"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h5&gt;</span>Palautteen id: 2E99g221<span class="nt">&lt;/h5&gt;</span>
+          <span class="nt">&lt;h5&gt;</span>Vastauksen määräaika: 01.04.2016<span class="nt">&lt;/h5&gt;</span>
+          <span class="nt">&lt;h5&gt;</span>Palautteelle on annettu julkaisulupa.<span class="nt">&lt;/h5&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span> <span class="c">&lt;!-- End row --&gt;</span>
+      <span class="c">&lt;!-- Another row to make control for collapse button --&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-12"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;hr&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-xs btn-link pull-right"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapseMore"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseMore"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-chevron-down"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span> <span class="c">&lt;!-- End row --&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
@@ -181,7 +275,7 @@
 </div>
 
 <h1 id="Navbar" class="styleguide">Navbar</h1>
-<p class="styleguide">Navbar should be wrapped in <code class="styleguide">&lt;nav class=&quot;navbar navbar-default navbar-fixed-top&quot;&gt;&lt;/nav&gt;</code> tag.</p><div class="codeExample">
+<p class="styleguide">Navbar should be wrapped in <code class="styleguide">&lt;nav class=&quot;navbar navbar-default navbar-fixed-top&quot;&gt;&lt;/nav&gt;</code> tag. Because of the special nature of the navbar it does not render correctly in this example.</p><div class="codeExample">
   <div class="exampleOutput">
     
 <div class="container-fluid">
@@ -192,19 +286,19 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#">
-      <h3>HeKaPa</h3></a>
-      <p class="navbar-text"><span class="he-separator"> | </span>Oma työlista (5)</p>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="tyolista.html"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Oma työlista</a></li>
-        <li><a href="tyolista-kasitellyt.html"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Käsitellyt palautteet</a></li>
-        <li><a href="index.html"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Kirjaudu ulos</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
+    <a class="navbar-brand" href="tyolista.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Oma työlista (5)</a>
   </div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li><a href="tyolista.html"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Oma työlista</a></li>
+      <li><a href="tyolista-kasitellyt.html"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Käsitellyt palautteet</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="index.html"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Kirjaudu ulos</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</div>
 
 
   </div>
@@ -218,19 +312,19 @@
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
     <span class="nt">&lt;/button&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h3&gt;</span>HeKaPa<span class="nt">&lt;/h3&gt;&lt;/a&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"navbar-text"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"he-separator"</span><span class="nt">&gt;</span> | <span class="nt">&lt;/span&gt;</span>Oma työlista (5)<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse navbar-collapse"</span> <span class="na">id=</span><span class="s">"bs-example-navbar-collapse-1"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav navbar-nav"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"tyolista.html"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-list"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span> Oma työlista<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"tyolista-kasitellyt.html"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-check"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span> Käsitellyt palautteet<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"index.html"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-log-out"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span> Kirjaudu ulos<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-      <span class="nt">&lt;/ul&gt;</span>
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.navbar-collapse --&gt;</span>
-  <span class="nt">&lt;/div&gt;</span></pre>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"tyolista.html"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-chevron-left"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>Oma työlista (5)<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="c">&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse navbar-collapse"</span> <span class="na">id=</span><span class="s">"bs-example-navbar-collapse-1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav navbar-nav"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"tyolista.html"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-list"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span> Oma työlista<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"tyolista-kasitellyt.html"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-check"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span> Käsitellyt palautteet<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav navbar-nav navbar-right"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"index.html"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-log-out"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span> Kirjaudu ulos<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.navbar-collapse --&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
     </div>
   </div>
 </div>
@@ -239,41 +333,32 @@
 <div class="codeExample">
   <div class="exampleOutput">
     
-<div class="col-md-12 he-message-collapse">
-  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-    <div class="panel panel-default he-card-bg">
-      <!-- div wrapped in <a> tag to make it clickable -->
-      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOdottaaKommenttia" aria-expanded="true" aria-controls="collapseTwo">
-        <div class="panel-heading" role="tab" id="headingTwo">
-          <h5 class="panel-title">
-            Odottaa kommenttia (2)
-            <span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
-          </h5>
+<div class="row">
+  <div class="col-md-12 he-message-collapse">
+    <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default he-card-bg">
+        <!-- div wrapped in <a> tag to make it clickable -->
+        <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOdottaaKommenttia" aria-expanded="true" aria-controls="collapseOdottaaKommenttia">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h5 class="panel-title">
+              <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+              Odottaa kommenttia (1)
+            </h5>
+          </div>
+        </a>
+        <div id="collapseOdottaaKommenttia" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+          <a href="luepalaute3.html">
+            <div class="panel-body he-card">
+              <div class="media">
+                <div class="media-body">
+                  <p class="he-datestamp"><b>19.04.2016</b> <span class="he-positive he-message-status pull-right">Uusia kommentteja</span></p>
+                  <h4>Heippa, Ullanlinnan Komp... </h4>
+                  <p><b>Heippa, Ullanlinnan Kompassitorille on ilmestynyt k...</b></p>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
-      </a>
-      <div id="collapseOdottaaKommenttia" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-        <a href="luepalaute3.html">
-          <div class="panel-body he-card">
-            <div class="media">
-              <div class="media-body">
-                <p class="he-datestamp">12.04.2016</p>
-                <h4>Heippa, Ullanlinnan Komp... </h4>
-                <p>Heippa, Ullanlinnan Kompassitorille on ilmestynyt k...</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="luepalaute4.html">
-          <div class="panel-body he-card">
-            <div class="media">
-              <div class="media-body">
-                <p class="he-datestamp">19.04.2016</p>
-                <h4>Miksi Rautatientorin luistinradan pur.</h4>
-                <p>Hei! Kuinkahan kauan Rautatientorin luistinradan pu...</p>
-              </div>
-            </div>
-          </div>
-        </a>
       </div>
     </div>
   </div>
@@ -283,41 +368,32 @@
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-12 he-message-collapse"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-group"</span> <span class="na">id=</span><span class="s">"accordion"</span> <span class="na">role=</span><span class="s">"tablist"</span> <span class="na">aria-multiselectable=</span><span class="s">"true"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-default he-card-bg"</span><span class="nt">&gt;</span>
-      <span class="c">&lt;!-- div wrapped in &lt;a&gt; tag to make it clickable --&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-parent=</span><span class="s">"#accordion"</span> <span class="na">href=</span><span class="s">"#collapseOdottaaKommenttia"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapseTwo"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">id=</span><span class="s">"headingTwo"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"panel-title"</span><span class="nt">&gt;</span>
-            Odottaa kommenttia (2)
-            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-chevron-down pull-right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
-          <span class="nt">&lt;/h5&gt;</span>
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-12 he-message-collapse"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-group"</span> <span class="na">id=</span><span class="s">"accordion2"</span> <span class="na">role=</span><span class="s">"tablist"</span> <span class="na">aria-multiselectable=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-default he-card-bg"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- div wrapped in &lt;a&gt; tag to make it clickable --&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-parent=</span><span class="s">"#accordion2"</span> <span class="na">href=</span><span class="s">"#collapseOdottaaKommenttia"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapseOdottaaKommenttia"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">id=</span><span class="s">"headingTwo"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"panel-title"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-comment"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
+              Odottaa kommenttia (1)
+            <span class="nt">&lt;/h5&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseOdottaaKommenttia"</span> <span class="na">class=</span><span class="s">"panel-collapse collapse in"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"headingTwo"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"luepalaute3.html"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body he-card"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-body"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"he-datestamp"</span><span class="nt">&gt;&lt;b&gt;</span>19.04.2016<span class="nt">&lt;/b&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"he-positive he-message-status pull-right"</span><span class="nt">&gt;</span>Uusia kommentteja<span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
+                  <span class="nt">&lt;h4&gt;</span>Heippa, Ullanlinnan Komp... <span class="nt">&lt;/h4&gt;</span>
+                  <span class="nt">&lt;p&gt;&lt;b&gt;</span>Heippa, Ullanlinnan Kompassitorille on ilmestynyt k...<span class="nt">&lt;/b&gt;&lt;/p&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseOdottaaKommenttia"</span> <span class="na">class=</span><span class="s">"panel-collapse collapse in"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"headingOne"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"luepalaute3.html"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body he-card"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-body"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"he-datestamp"</span><span class="nt">&gt;</span>12.04.2016<span class="nt">&lt;/p&gt;</span>
-                <span class="nt">&lt;h4&gt;</span>Heippa, Ullanlinnan Komp... <span class="nt">&lt;/h4&gt;</span>
-                <span class="nt">&lt;p&gt;</span>Heippa, Ullanlinnan Kompassitorille on ilmestynyt k...<span class="nt">&lt;/p&gt;</span>
-              <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-          <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"luepalaute4.html"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body he-card"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-body"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"he-datestamp"</span><span class="nt">&gt;</span>19.04.2016<span class="nt">&lt;/p&gt;</span>
-                <span class="nt">&lt;h4&gt;</span>Miksi Rautatientorin luistinradan pur.<span class="nt">&lt;/h4&gt;</span>
-                <span class="nt">&lt;p&gt;</span>Hei! Kuinkahan kauan Rautatientorin luistinradan pu...<span class="nt">&lt;/p&gt;</span>
-              <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-          <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -326,32 +402,33 @@
   </div>
 </div>
 
-<h1 id="Panel_non-collapsible" class="styleguide">Panel non-collapsible</h1>
-<div class="codeExample">
-  <div class="exampleOutput">
-    
-<div>...</div>
-
-
-  </div>
-  <div class="codeBlock">
-    <div class="highlight">
-      <pre><span class="nt">&lt;div&gt;</span>...<span class="nt">&lt;/div&gt;</span></pre>
-    </div>
-  </div>
-</div>
-
 <h1 id="Sticky_buttons" class="styleguide">Sticky buttons</h1>
 <div class="codeExample">
   <div class="exampleOutput">
     
-<div> ...  </div>
+<div class="row">
+  <nav id="fixed-button">
+    <div id="container">
+      <a class="" role="button" href="siirra-1.html"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Siirrä</a>
+      <a class="" role="button" href="vastaa-1.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Vastaa</a>
+      <a class="" role="button" href="tiedoksi-1.html"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Tiedoksi</a>
+    </div>
+  </nav>
+</div>
 
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;div&gt;</span> ...  <span class="nt">&lt;/div&gt;</span></pre>
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">id=</span><span class="s">"fixed-button"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">""</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">href=</span><span class="s">"siirra-1.html"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-share-alt"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span> Siirrä<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">""</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">href=</span><span class="s">"vastaa-1.html"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-pencil"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span> Vastaa<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">""</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">href=</span><span class="s">"tiedoksi-1.html"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-info-sign"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span> Tiedoksi<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
     </div>
   </div>
 </div>

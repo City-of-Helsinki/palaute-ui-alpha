@@ -19,10 +19,10 @@
   src: url("../fonts/KarbidWeb-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/KarbidWeb-BoldItalic.woff") format("woff");
 }
 
-/*
+/*doc
 
 ---
-title: typography
+title: Typography
 category: Basics
 ---
 
@@ -43,6 +43,7 @@ body {
   font-family: "FFKarbidWebRegular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   padding-bottom: 60px;
   padding-top: 80px;
+  color: #333333;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -138,7 +139,7 @@ a:link {
 }
 
 a:visited {
-  color: #0081e0;
+  color: #0072c6;
   text-decoration: none;
 }
 
@@ -177,7 +178,7 @@ title: Navbar
 category: Components
 ---
 
-Navbar should be wrapped in `<nav class="navbar navbar-default navbar-fixed-top"></nav>` tag.
+Navbar should be wrapped in `<nav class="navbar navbar-default navbar-fixed-top"></nav>` tag. Because of the special nature of the navbar it does not render correctly in this example.
 
 ```html_example
 
@@ -189,19 +190,19 @@ Navbar should be wrapped in `<nav class="navbar navbar-default navbar-fixed-top"
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#">
-      <h3>HeKaPa</h3></a>
-      <p class="navbar-text"><span class="he-separator"> | </span>Oma työlista (5)</p>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="tyolista.html"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Oma työlista</a></li>
-        <li><a href="tyolista-kasitellyt.html"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Käsitellyt palautteet</a></li>
-        <li><a href="index.html"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Kirjaudu ulos</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
+    <a class="navbar-brand" href="tyolista.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Oma työlista (5)</a>
   </div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li><a href="tyolista.html"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Oma työlista</a></li>
+      <li><a href="tyolista-kasitellyt.html"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Käsitellyt palautteet</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="index.html"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Kirjaudu ulos</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</div>
 
 ```
 
@@ -281,59 +282,36 @@ category: Components
 
 ```html_example
 
-<div class="col-md-12 he-message-collapse">
-  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-    <div class="panel panel-default he-card-bg">
-      <!-- div wrapped in <a> tag to make it clickable -->
-      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOdottaaKommenttia" aria-expanded="true" aria-controls="collapseTwo">
-        <div class="panel-heading" role="tab" id="headingTwo">
-          <h5 class="panel-title">
-            Odottaa kommenttia (2)
-            <span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
-          </h5>
+<div class="row">
+  <div class="col-md-12 he-message-collapse">
+    <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default he-card-bg">
+        <!-- div wrapped in <a> tag to make it clickable -->
+        <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOdottaaKommenttia" aria-expanded="true" aria-controls="collapseOdottaaKommenttia">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h5 class="panel-title">
+              <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+              Odottaa kommenttia (1)
+            </h5>
+          </div>
+        </a>
+        <div id="collapseOdottaaKommenttia" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+          <a href="luepalaute3.html">
+            <div class="panel-body he-card">
+              <div class="media">
+                <div class="media-body">
+                  <p class="he-datestamp"><b>19.04.2016</b> <span class="he-positive he-message-status pull-right">Uusia kommentteja</span></p>
+                  <h4>Heippa, Ullanlinnan Komp... </h4>
+                  <p><b>Heippa, Ullanlinnan Kompassitorille on ilmestynyt k...</b></p>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
-      </a>
-      <div id="collapseOdottaaKommenttia" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-        <a href="luepalaute3.html">
-          <div class="panel-body he-card">
-            <div class="media">
-              <div class="media-body">
-                <p class="he-datestamp">12.04.2016</p>
-                <h4>Heippa, Ullanlinnan Komp... </h4>
-                <p>Heippa, Ullanlinnan Kompassitorille on ilmestynyt k...</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="luepalaute4.html">
-          <div class="panel-body he-card">
-            <div class="media">
-              <div class="media-body">
-                <p class="he-datestamp">19.04.2016</p>
-                <h4>Miksi Rautatientorin luistinradan pur.</h4>
-                <p>Hei! Kuinkahan kauan Rautatientorin luistinradan pu...</p>
-              </div>
-            </div>
-          </div>
-        </a>
       </div>
     </div>
   </div>
 </div>
-
-```
-
-*/
-/*doc
-
----
-title: Panel non-collapsible
-category: Components
----
-
-```html_example
-
-<div>...</div>
 
 ```
 
@@ -397,6 +375,11 @@ category: Components
   box-shadow: 0px 1px 3px 0px rgba(128, 128, 128, 0.5);
 }
 
+.he-panel-spacer {
+  content: '&nbsp;';
+  height: 5px;
+}
+
 .message-editor {
   margin: 20px 0 20px 0;
   height: 34px;
@@ -419,17 +402,34 @@ category: Components
 
 <div class="row">
   <div class="col-md-12 he-message-subject">
-    <h4>Pysäköintipaikkoja</h4>
+    <div class="media-body">
+      <p class="he-datestamp">22.03.2016 klo 14.38 <span class="late he-message-status pull-right">Käsittely myöhässä</span></p>
+      <h4>Pysäköintipaikkoja </h4>
+    </div>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12 he-message-sender">
-    <h5>Lähettäjä: Jussi (jussi@gmail.com) <span>14:38 22.03.16</span></h5>
+    <h5>Lähettäjä: Jussi (jussi@gmail.com)</h5>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12 he-message-status">
-    <h5 class="can-publish">- Palautteelle on annettu julkaisulupa.</h5>
+      <!-- New row inside the column element to make collapsible content-->
+      <div class="row collapse" id="collapseMore">
+        <div class="col-md-12">
+          <h5>Palautteen id: 2E99g221</h5>
+          <h5>Vastauksen määräaika: 01.04.2016</h5>
+          <h5>Palautteelle on annettu julkaisulupa.</h5>
+        </div>
+      </div> <!-- End row -->
+      <!-- Another row to make control for collapse button -->
+      <div class="row">
+        <div class="col-md-12">
+          <hr>
+          <button type="button" class="btn btn-default btn-xs btn-link pull-right" data-toggle="collapse" data-target="#collapseMore" aria-expanded="false" aria-controls="collapseMore"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
+        </div>
+      </div> <!-- End row -->
   </div>
 </div>
 <div class="row">
@@ -452,7 +452,24 @@ category: Components
   color: #04a1d4;
 }
 
-.he-message-status, .he-positive, .he-negative, .he-danger, .can-publish, .late {
+/*doc
+
+---
+title: Message status indicators
+category: Components
+---
+
+```html_example
+
+<h5 class="he-message-status">Neutral</h5>
+<h5 class="he-message-status he-positive">Positive</h5>
+<h5 class="he-message-status he-negative">Negative</h5>
+<h5 class="he-message-status he-danger">Danger</h5>
+
+```
+
+*/
+.he-message-status, .he-positive, .he-negative, .he-danger {
   font-family: FFKarbidWebBoldItalic, 'Helvetica Neue', Helvetica, Arial, Sans-serif;
   font-style: italic;
   font-weight: bold;
@@ -471,31 +488,10 @@ category: Components
   color: #ce0057;
 }
 
-.can-publish {
-  color: #60b659;
-}
-
-.late {
-  color: #ce0057;
-}
-
 .he-message-content {
-  padding-top: 10px;
+  margin-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 10px;
-}
-
-.avatar {
-  width: 40px;
-  height: 40px;
-}
-
-.display-none {
-  display: none;
-}
-
-.message-actions {
-  padding-bottom: 20px;
 }
 
 .he-message-collapse {
@@ -505,11 +501,80 @@ category: Components
   border-radius: 0px;
 }
 
+/*doc
+
+---
+title: Comment block
+category: Components
+---
+Comments are contained under a comment header "Sisäiset kommentit" or other.
+
+```html_example
+
+<div class="row">
+  <div class="col-md-12 he-message-collapse">
+    <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default he-card-bg">
+        <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <div class="panel-heading panel-heading-int-comments" role="tab" id="headingTwo">
+          <h5 class="panel-title">
+              Sisäiset kommentit (2)
+          </h5>
+        </div>
+        </a>
+        <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel">
+          <div class="panel-body he-comment he-card">
+            <div class="media">
+              <div class="media-body">
+                <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Matti Meikäläinen <span class="text-muted text-right"><span class="date-separator"> – </span>26 min sitten</span></h5>
+              </div>
+              <p>Moi, mitä mieltä olet tuosta parkk Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod.</p>
+            </div>
+          </div>
+          <div class="panel-body he-comment he-card">
+            <div class="media">
+              <div class="media-body">
+                <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Hanna Raatikainen <span class="text-muted text-right"><span class="date-separator"> – </span>42 min sitten</span></h5>
+              </div>
+              <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+```
+
+*/
 .he-comment {
   border-left: solid 2px #04a1d4;
   margin: 15px;
 }
 
+/*doc
+
+---
+title: Sticky buttons
+category: Components
+---
+
+```html_example
+
+<div class="row">
+  <nav id="fixed-button">
+    <div id="container">
+      <a class="" role="button" href="siirra-1.html"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Siirrä</a>
+      <a class="" role="button" href="vastaa-1.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Vastaa</a>
+      <a class="" role="button" href="tiedoksi-1.html"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Tiedoksi</a>
+    </div>
+  </nav>
+</div>
+
+```
+
+*/
 @media (max-width: 768px) {
   #fixed-button {
     position: fixed;
@@ -579,6 +644,10 @@ category: Components
   }
 }
 
+.display-none {
+  display: none;
+}
+
 .hr {
   border-bottom: solid 1px #e6e6e6;
   margin-top: 20px;
@@ -590,12 +659,20 @@ category: Components
   margin: 0;
 }
 
-.pink {
-  background-color: pink;
-}
-
 .margin-top-20 {
   margin-top: 20px;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.margin-top-40 {
+  margin-top: 40px;
+}
+
+.margin-bottom-40 {
+  margin-bottom: 40px;
 }
 
 .ui-widget-content {
@@ -620,6 +697,27 @@ category: Components
   font-size: 14px;
   line-height: 20px;
   padding: 10px;
+}
+
+a[aria-expanded="false"] > div > h5:after {
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjE1cHgiIGhlaWdodD0iMTBweCIgdmlld0JveD0iMCAwIDE1IDEwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCAzLjcuMiAoMjgyNzYpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPlNoYXBlPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9IjE0LjY4IDIuNjUzMzMzMzMgNy4zNDY2NjY2NyAxMCAwIDIuNjUzMzMzMzMgMi42NCAwIDcuMzQ2NjY2NjcgNC43MDY2NjY2NyAxMi4wNTMzMzMzIDAiPjwvcG9seWdvbj4KICAgIDwvZz4KPC9zdmc+) no-repeat;
+  float: right;
+  width: 15px;
+  height: 10px;
+  margin: 4px;
+  content: '';
+  transition: all 200ms ease;
+}
+
+a[aria-expanded="true"] > div > h5:after {
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjE1cHgiIGhlaWdodD0iMTBweCIgdmlld0JveD0iMCAwIDE1IDEwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCAzLjcuMiAoMjgyNzYpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPlNoYXBlPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9IjE0LjY4IDIuNjUzMzMzMzMgNy4zNDY2NjY2NyAxMCAwIDIuNjUzMzMzMzMgMi42NCAwIDcuMzQ2NjY2NjcgNC43MDY2NjY2NyAxMi4wNTMzMzMzIDAiPjwvcG9seWdvbj4KICAgIDwvZz4KPC9zdmc+) no-repeat;
+  float: right;
+  width: 15px;
+  height: 10px;
+  margin: 4px;
+  content: '';
+  transform: rotate(180deg);
+  transition: all 200ms ease;
 }
 
 /*# sourceMappingURL=custom.css.map */
