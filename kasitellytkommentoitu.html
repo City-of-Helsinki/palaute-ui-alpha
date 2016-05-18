@@ -37,19 +37,16 @@
     <!-- Message subject -->
     <div class="row">
       <div class="col-md-12 he-message-subject">
-        <h4>Violan kentän maalit</h4>
+        <div class="media-body">
+          <p class="he-datestamp">25.04.16 11.21 <span class="he-positive he-message-status pull-right">Kommentoitu</span></p>
+          <h4>Violan kentän maalit </h4>
+        </div>
       </div>
     </div>
-    <!-- Message sender -->
+    <!-- message sender -->
     <div class="row">
       <div class="col-md-12 he-message-sender">
-        <h5>Lähettäjä: Tykki (hamakinen@hotmail.com) <span>11.21 25.04.16</span></h5>
-      </div>
-    </div>
-    <!-- Message status -->
-    <div class="row">
-      <div class="col-md-12 he-message-status late">
-        <h5>Tilatieto</h5>
+          <h5>Lähettäjä: Tykki (hamakinen@hotmail.com)</h5>
       </div>
     </div>
     <!-- Message content -->
@@ -120,73 +117,65 @@
             <p>
             </div>
           </div>
+
           <!-- #collapseTwo -->
-          <div class="row">
+          <div class="row comments">
             <div class="col-md-12 he-message-collapse">
               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <div class="panel-heading panel-heading-int-comments" role="tab" id="headingTwo">
-                      <h5 class="panel-title">
+                <div class="panel panel-default he-card-bg">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                  <div class="panel-heading panel-heading-int-comments" role="tab" id="headingTwo">
+                    <h5 class="panel-title">
                         Sisäiset kommentit (2)
-                      </h5>
-                    </div>
+                    </h5>
+                  </div>
                   </a>
                   <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-body he-message-status">
-                      <div class="media text-muted">
+                    <div class="panel-body he-message-status he-card">
+                      <div class="media">
                         <div class="media-body">
-                          <p class="">Hanna Raatikainen kutsuttiin keskusteluun.</p>
+                          <p><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Hanna Raatikainen (KSV) kutsuttiin keskusteluun.</p>
                         </div>
                       </div>
                     </div>
-                    <div class="panel-body he-comment">
+                    <div class="panel-body he-comment he-card">
                       <div class="media">
-                        <div class="media-left">
-                          <a href="#">
-                            <img class="avatar media-object" src="img/avatar.svg" alt="avatar">
-                          </a>
-                        </div>
                         <div class="media-body">
-                          <h5 class="media-heading">Tarja Koistinen <span class="text-muted text-right"><span class="date-separator"> – </span>26 min sitten</span></h5>
+                          <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Tarja Koistinen (KSV) <span class="text-muted text-right"><span class="date-separator"> – </span>26 min sitten</span></h5>
                         </div>
                         <p>Kenen alueella Violan kenttä on?</p>
+                      </div></p>
                       </div>
-                    </div>
-                    <div class="panel-body he-comment">
-                      <div class="media">
-                        <div class="media-left">
-                          <a href="#">
-                            <img class="avatar media-object" src="img/avatar.svg" alt="avatar">
-                          </a>
+                      <div class="panel-body he-comment he-card">
+                        <div class="media">
+                          <div class="media-body">
+                            <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Hanna Raatikainen (KSV) <span class="text-muted text-right"><span class="date-separator"> – </span>42 min sitten</span></h5>
+                          </div>
+                          <p>Moi, eiköhän se ole Tapsan aluetta.</p>
                         </div>
-                        <div class="media-body">
-                          <h5 class="media-heading">Hanna Raatikainen <span class="text-muted text-right"><span class="date-separator"> – </span>42 min sitten</span></h5>
-                        </div>
-                        <p>Moi, eiköhän se ole Tapsan aluetta.</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- textarea plus buttons-->
-          <div class="row">
-            <div class="col-md-12">
-              <form action="">
-                <textarea class="message-editor form-control scale" rows="1" placeholder="Kirjoita kommenttisi tähän"></textarea>
-                <div class="form-group pull-right">
-                  <button class="btn btn-default"type="button" name="button">
-                    Tallenna
-                  </button>
-                  <button class="btn btn-primary" type="button" name="button">
-                    Lähetä
-                  </button>
-                </div>
-              </form>
+
+            <!-- textarea plus buttons-->
+            <div class="row">
+              <div class="col-md-12">
+                <form action="">
+                  <textarea class="message-editor form-control scale" rows="1" placeholder="Kirjoita kommenttisi tähän"></textarea>
+                  <div class="form-group pull-right">
+                    <!-- <button class="btn btn-default"type="button" name="button">
+                      Tallenna
+                    </button> -->
+                    <button class="btn btn-primary" type="button" name="button">
+                      Lähetä kommentti
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
-          </div>
         </div>
         <!-- end container fluid -->
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
