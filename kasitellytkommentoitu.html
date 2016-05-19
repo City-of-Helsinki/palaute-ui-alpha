@@ -51,6 +51,25 @@
           <h5>Lähettäjä: Tykki (hamakinen@hotmail.com)</h5>
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-12 he-message-status">
+          <!-- New row inside the column element to make collapsible content-->
+          <div class="row collapse" id="collapseMore">
+            <div class="col-md-12">
+              <h5>Palautteen id: 5112950E3</h5>
+              <h5>Vastauksen määräaika: 21.04.2016</h5>
+              <h5>Palautteella ei ole julkaisulupaa.</h5>
+            </div>
+          </div> <!-- End row -->
+          <!-- Another row to make control for collapse button -->
+          <div class="row">
+            <div class="col-md-12">
+              <hr>
+              <button type="button" class="btn btn-default btn-xs btn-link pull-right" data-toggle="collapse" data-target="#collapseMore" aria-expanded="false" aria-controls="collapseMore"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
+            </div>
+          </div> <!-- End row -->
+      </div>
+    </div>
     <!-- Message content -->
     <div class="row">
       <div class="col-md-12 he-message-content">
@@ -89,23 +108,77 @@
             </div>
           </div>
         </div>
-        <!-- Comment section header -->
+        <div class="row comments">
+          <div class="col-md-12 he-message-collapse">
+            <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default he-card-bg">
+              <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <div class="panel-heading panel-heading-int-comments" role="tab" id="headingTwo">
+                  <h5 class="panel-title">
+                      Sisäiset kommentit (2)
+                  </h5>
+                </div>
+                </a>
+                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body he-message-status he-card">
+                    <div class="media">
+                      <div class="media-body">
+                        <p><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Hanna Raatikainen (KSV) kutsuttiin keskusteluun.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel-body he-comment he-card">
+                    <div class="media">
+                      <div class="media-body">
+                        <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Tarja Koistinen (KSV) <span class="text-muted text-right"><span class="date-separator"> – </span>42 min sitten</span></h5>
+                      </div>
+                      <p>Kenen alueella Violan kenttä on?</p>
+                    </div>
+                    </div>
+                    <div class="panel-body he-comment he-card">
+                      <div class="media">
+                        <div class="media-body">
+                          <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Hanna Raatikainen (KSV) <span class="text-muted text-right"><span class="date-separator"> – </span>26 min sitten</span></h5>
+                        </div>
+                        <p>Moi, eiköhän se ole Tapsan aluetta.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Answer section header -->
         <div class="row">
           <div class="col-md-12 he-message-subject">
-            <h4>Vastaus <small>Eilen klo 12.24</small></h4>
+            <h4>Vastaus <small>15 min sitten</small></h4>
           </div>
         </div>
-        <!-- Comment section header -->
+
         <div class="row">
           <div class="col-md-12 he-message-sender">
             <h5>Vastaaja: Tarja Koistinen (HKR)</h5>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 he-message-sender">
-            <h5>Lähetetty tiedoksi: Tapio Sarpila (HKR)</h5>
+          <div class="col-md-12 he-message-status">
+              <!-- New row inside the column element to make collapsible content-->
+              <div class="row collapse" id="collapseMore2">
+                <div class="col-md-12">
+                  <h5>Lähetetty tiedoksi:</h5>
+                  <h5><span class="glyphicon glyphicon-user"></span> Tapio Sarpila (HKR), 2 min sitten</h5>
+                </div>
+              </div>
+              <!-- Another row to make control for collapse button -->
+              <div class="row">
+                <div class="col-md-12">
+                  <hr>
+                  <button type="button" class="btn btn-default btn-xs btn-link pull-right" data-toggle="collapse" data-target="#collapseMore2" aria-expanded="false" aria-controls="collapseMore2"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
+                </div>
+              </div>
           </div>
         </div>
+
         <!-- message container -->
         <div class="row">
           <div class="col-md-12 he-message-content">
@@ -120,64 +193,39 @@
             <p>
             </div>
           </div>
-          <!-- #collapseTwo -->
+          <!-- comments -->
           <div class="row comments">
-            <div class="col-md-12 he-message-collapse">
-              <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default he-card-bg">
-                <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <div class="col-md-12 panel-group he-message-collapse" id="accordion1" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default ">
+                <a href="">
                   <div class="panel-heading panel-heading-int-comments" role="tab" id="headingTwo">
-                    <h5 class="panel-title">
-                        Sisäiset kommentit (2)
+                    <h5 class="panel-title ">
+                      Sisäiset kommentit
                     </h5>
                   </div>
-                  </a>
-                  <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-body he-message-status he-card">
-                      <div class="media">
-                        <div class="media-body">
-                          <p><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Hanna Raatikainen (KSV) kutsuttiin keskusteluun.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="panel-body he-comment he-card">
-                      <div class="media">
-                        <div class="media-body">
-                          <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Tarja Koistinen (KSV) <span class="text-muted text-right"><span class="date-separator"> – </span>26 min sitten</span></h5>
-                        </div>
-                        <p>Kenen alueella Violan kenttä on?</p>
-                      </div>
-                      </div>
-                      <div class="panel-body he-comment he-card">
-                        <div class="media">
-                          <div class="media-body">
-                            <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Hanna Raatikainen (KSV) <span class="text-muted text-right"><span class="date-separator"> – </span>42 min sitten</span></h5>
+                </a>
+                <div id="collapseComments" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    <span class="text-muted">Ei kommentteja! <a class="btn btn-default btn-sm" href="kutsu-1.html" role="button">Kutsu keskustelijoita</a></span>
+                  </div>
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <form action="#">
+                          <textarea class="message-editor form-control scale" rows="1" placeholder="Kirjoita sisäinen kommenttisi tähän"></textarea>
+                          <div class="form-group pull-right">
+                            <button class="btn btn-primary" type="button" name="button">
+                              Lähetä kommentti
+                            </button>
                           </div>
-                          <p>Moi, eiköhän se ole Tapsan aluetta.</p>
-                        </div>
+                        </form>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- textarea plus buttons-->
-            <div class="row">
-              <div class="col-md-12">
-                <form action="#">
-                  <textarea class="message-editor form-control scale" rows="1" placeholder="Kirjoita kommenttisi tähän"></textarea>
-                  <div class="form-group pull-right">
-                    <!-- <button class="btn btn-default"type="button" name="button">
-                      Tallenna
-                    </button> -->
-                    <button class="btn btn-primary" type="button" name="button">
-                      Lähetä kommentti
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
+          </div>
         </div>
         <!-- end container fluid -->
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

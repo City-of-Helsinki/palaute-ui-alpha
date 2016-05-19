@@ -273,6 +273,23 @@ Navbar should be wrapped in `<nav class="navbar navbar-default navbar-fixed-top"
   }
 }
 
+div.he-message-status .col-md-12 hr {
+  margin-bottom: 10px;
+
+}
+
+div.he-message-status .col-md-12 button {
+  margin-bottom: -20px;
+}
+
+.comments  p span {
+  padding-top: 10px;
+}
+
+.btn-xs{
+  font-size: 17px;
+  }
+
 /*doc
 
 ---
@@ -320,6 +337,7 @@ category: Components
   border-style: none;
   border-radius: 0px;
   padding-bottom: 2px;
+  box-shadow: none;
 }
 
 .panel-group {

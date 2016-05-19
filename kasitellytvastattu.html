@@ -53,9 +53,24 @@
     </div>
     <div class="row">
       <div class="col-md-12 he-message-status">
-          <h5>Palautteelle on annettu julkaisulupa.</h5>
+          <!-- New row inside the column element to make collapsible content-->
+          <div class="row collapse" id="collapseMore">
+            <div class="col-md-12">
+              <h5>Palautteen id: 5112950E3</h5>
+              <h5>Vastauksen määräaika: 21.04.2016</h5>
+              <h5>Palautteelle on annettu julkaisulupa.</h5>
+            </div>
+          </div> <!-- End row -->
+          <!-- Another row to make control for collapse button -->
+          <div class="row">
+            <div class="col-md-12">
+              <hr>
+              <button type="button" class="btn btn-default btn-xs btn-link pull-right" data-toggle="collapse" data-target="#collapseMore" aria-expanded="false" aria-controls="collapseMore"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
+            </div>
+          </div> <!-- End row -->
       </div>
     </div>
+
     <!-- Message content -->
     <div class="row">
       <div class="col-lg-12 he-message-content">
@@ -71,11 +86,9 @@
         <div class="panel panel-default">
           <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           <div class="panel-heading" role="tab" id="headingOne">
-            <div class="panel-title">
                 <h5 class="panel-title">
                   Lisätiedot: Kartta
                 </h5>
-            </div>
           </div>
           </a>
           <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
@@ -105,14 +118,14 @@
               <div class="panel-body he-message-status he-card">
                 <div class="media">
                   <div class="media-body">
-                    <p><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Maria Kuula (KSV) ja Tino Pirkkala (KSV) kutsuttiin keskusteluun.</p>
+                    <p><span class="glyphicon glyphicon-user" aria-hidden="true"></span>  Maria Kuula (KSV) ja <span class="glyphicon glyphicon-user" aria-hidden="true"></span>  Tino Pirkkala (KSV) kutsuttiin keskusteluun.</p>
                   </div>
                 </div>
               </div>
               <div class="panel-body he-comment he-card">
                 <div class="media">
                   <div class="media-body">
-                    <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Pekka Nikula (KSV) <span class="text-muted text-right"><span class="date-separator"> – </span>26 min sitten</span></h5>
+                    <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Pekka Nikula (KSV) <span class="text-muted text-right"><span class="date-separator"> – </span>45 min sitten</span></h5>
                   </div>
                   <p>Maria, tiedätkö, mikä on tuon risteyksen tilanne?</p>
                 </div>
@@ -128,7 +141,7 @@
               <div class="panel-body he-comment he-card">
                 <div class="media">
                   <div class="media-body">
-                    <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Tino Pirkkala (KSV) <span class="text-muted text-right"><span class="date-separator"> – </span>45 min sitten</span></h5>
+                    <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Tino Pirkkala (KSV) <span class="text-muted text-right"><span class="date-separator"> – </span>26 min sitten</span></h5>
                   </div>
                   <p>Siihen oli varmaan joku järkevä idea silloin. Jostain syystä siitä ei löydy mainintaa Katukortistosta, selvitän.</p>
                 </div>
@@ -136,7 +149,7 @@
               <div class="panel-body he-comment he-card">
                 <div class="media">
                   <div class="media-body">
-                    <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Tino Pirkkala (KSV) <span class="text-muted text-right"><span class="date-separator"> – </span>49 min sitten</span></h5>
+                    <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Tino Pirkkala (KSV) <span class="text-muted text-right"><span class="date-separator"> – </span>19 min sitten</span></h5>
                   </div>
                   <p>Joo, elikkä maili Suskille oli jotenkin vahingossa mennyt filtteriin, ja kaikkea dataa ei ollut Katukortistossa. Hyvä muuten, että huomattiin, sieltä puuttui vähän muutakin tähän keissiin liittyen..
                     Anyway, ei oteta kantaa tohon nupukivetykseen, mutta sinne Manskun varteenhan on tarkoitus rakentaa yksisuuntaiset pyörätiet. Katso toteutusaikataulusta, milloin, en muista ulkoa.</p>
@@ -150,7 +163,7 @@
       <!-- Comment section header -->
       <div class="row">
         <div class="col-xs-12 he-message-subject">
-          <h4>Vastaus <small>Eilen klo 12.24</small></h4>
+          <h4>Vastaus <small>12 min sitten</small></h4>
         </div>
       </div>
       <!-- Comment section header -->
@@ -176,7 +189,7 @@
         </div>
       </div>
       <!-- Sisäiset kommentit -->
-      <div class="row">
+      <div class="row comments">
         <div class="col-md-12 panel-group he-message-collapse" id="accordion2" role="tablist" aria-multiselectable="true">
           <div class="panel panel-default ">
             <a href="">
@@ -212,9 +225,9 @@
       <div class="row">
         <nav id="fixed-button">
           <div id="container">
-            <a class="disabled" role="button" href="#"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Siirrä</a>
-            <a role="button" href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Vastaa</a>
-            <a class="siirra-1.html" role="button" href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Tiedoksi</a>
+            <a role="button" href="siirra-1.html"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Siirrä</a>
+            <a role="button" href="vastaa-1.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Vastaa</a>
+            <a role="button" href="tiedoksi-3.html"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Tiedoksi</a>
           </div>
         </nav>
       </div>

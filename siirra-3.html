@@ -44,6 +44,14 @@
         </div>
       </div>
     </div>
+    <!-- alert for message sending, dismissed automatically after 2.5 sec, see jQuery below -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="alert alert-success" id="success-alert">
+          <strong>Palaute siirretty.</strong>
+        </div>
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-12 he-message-sender">
         <h5>Lähettäjä: Jussi (jussi@gmail.com)</h5>
@@ -57,7 +65,8 @@
               <h5>Palautteen id: 2E99g221</h5>
               <h5>Vastauksen määräaika: 01.04.2016</h5>
               <h5>Palautteelle on annettu julkaisulupa.</h5>
-              <h5>Siirretty: Sampsa Lappinen (KSV) 0 min sitten</h5>
+              <h5>Siirretty: </h5>
+              <h5><span class="glyphicon glyphicon-user"></span> Sampsa Lappinen (KSV), 0 min sitten</h5>
             </div>
           </div> <!-- End row -->
           <!-- Another row to make control for collapse button -->
@@ -67,14 +76,6 @@
               <button type="button" class="btn btn-default btn-xs btn-link pull-right" data-toggle="collapse" data-target="#collapseMore" aria-expanded="false" aria-controls="collapseMore"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
             </div>
           </div> <!-- End row -->
-      </div>
-    </div>
-    <!-- alert for message sending, dismissed automatically after 2.5 sec, see jQuery below -->
-    <div class="row">
-      <div class="col-md-12">
-        <div class="alert alert-success" id="success-alert">
-          <strong>Palaute siirretty.</strong>
-        </div>
       </div>
     </div>
     <!-- Message content -->
@@ -99,11 +100,11 @@
           <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">
               <figure>
-                <figcaption>Leiviskätie 2</figcaption>
+                <figcaption><span class="glyphicon glyphicon-map-marker"></span> Leiviskätie 2</figcaption>
                 <img class="img-responsive" src="img/leiviskatie2.png" alt="">
               </figure>
               <figure>
-                <figcaption>työmaa.jpg</figcaption>
+                <figcaption><span class="glyphicon glyphicon-picture"></span> työmaa.jpg</figcaption>
                 <img class="img-responsive" src="img/tyomaa.jpg" alt="">
                 </figure>
               </div>
@@ -124,7 +125,7 @@
             </a>
             <div id="collapseComments" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
               <div class="panel-body">
-                <span class="text-muted">Ei kommentteja! </span>
+                <span class="text-muted">Ei kommentteja! <a class="btn btn-default btn-sm" href="kutsu-1.html" role="button">Kutsu keskustelijoita</a></span>
               </div>
               <div class="panel-body">
                 <div class="row">
