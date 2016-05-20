@@ -273,22 +273,21 @@ Navbar should be wrapped in `<nav class="navbar navbar-default navbar-fixed-top"
   }
 }
 
-div.he-message-status .col-md-12 hr {
+div.he-message-status .col-md-12 hr, div.he-positive .col-md-12 hr, div.he-negative .col-md-12 hr, div.he-danger .col-md-12 hr {
   margin-bottom: 10px;
-
 }
 
-div.he-message-status .col-md-12 button {
+div.he-message-status .col-md-12 button, div.he-positive .col-md-12 button, div.he-negative .col-md-12 button, div.he-danger .col-md-12 button {
   margin-bottom: -20px;
 }
 
-.comments  p span {
+.comments p span {
   padding-top: 10px;
 }
 
-.btn-xs{
+.btn-xs {
   font-size: 17px;
-  }
+}
 
 /*doc
 
@@ -337,7 +336,6 @@ category: Components
   border-style: none;
   border-radius: 0px;
   padding-bottom: 2px;
-  box-shadow: none;
 }
 
 .panel-group {
@@ -421,7 +419,7 @@ category: Components
 <div class="row">
   <div class="col-md-12 he-message-subject">
     <div class="media-body">
-      <p class="he-datestamp">22.03.2016 klo 14.38 <span class="late he-message-status pull-right">Käsittely myöhässä</span></p>
+      <p class="he-datestamp">22.03.2016 klo 14.38 <span class="he-negative pull-right">Käsittely myöhässä</span></p>
       <h4>Pysäköintipaikkoja </h4>
     </div>
   </div>
@@ -691,6 +689,15 @@ category: Components
 
 .margin-bottom-40 {
   margin-bottom: 40px;
+}
+
+.bottom-info {
+  margin-top: 150px;
+  text-align: center;
+}
+
+figure:not(:first-child) {
+  margin-top: 10px;
 }
 
 .ui-widget-content {
